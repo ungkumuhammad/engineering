@@ -6,3 +6,6 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+
+# Source drawings (often confidential; not committed by default)
+input/
