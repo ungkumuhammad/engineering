@@ -1,0 +1,8 @@
+# pid-to-kg working directories (renders, tiles, hints, extractions, graphs)
+work/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
