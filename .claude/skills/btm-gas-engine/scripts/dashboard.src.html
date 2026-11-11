@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTM Gas Engine Project Dashboard</title>
+<style>
+:root{--ink:#1c2230;--muted:#5d6678;--faint:#8a93a5;--line:#dfe3ea;--bg:#f5f6f8;--card:#fff;--accent:#2a62c9;--accent-soft:#e8effc;--amber:#b7790a;--amber-soft:#fdf3df;--green:#1b8a4c;--green-soft:#e3f4ea;--red:#c23b3b;--red-soft:#fbe8e8;--teal:#0f7f84;--violet:#6b4fbb;--r:10px}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:600;letter-spacing:-.01em}
+h2{font-size:18px}h3{font-size:15px}h4{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+a{color:var(--accent)}
+.top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:12px;padding:10px 18px;flex-wrap:wrap}
+.brand{font-weight:700;font-size:15px}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.spacer{flex:1}
+.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:#b9c1cf}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:#2156b3}
+.btn.small{padding:3px 8px;font-size:12px}
+.btn.danger{color:var(--red)}
+.btn:disabled{opacity:.5;cursor:default}
+.dirty{font-size:12px;color:var(--amber);font-weight:600}
+.saved{font-size:12px;color:var(--green)}
+.stages{display:flex;gap:6px;padding:0 18px 10px;overflow-x:auto}
+.stg{flex:1;min-width:150px;border:1px solid var(--line);border-radius:9px;padding:7px 10px;background:#fff;cursor:pointer;text-align:left}
+.stg .t{font-size:12px;color:var(--muted)}
+.stg .n{font-weight:600}
+.stg .pb{height:4px;border-radius:2px;background:var(--line);margin-top:6px;overflow:hidden}
+.stg .pb i{display:block;height:100%;background:var(--accent)}
+.stg.current{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.stg.complete .pb i{background:var(--green)}
+.stg.skipped{opacity:.75}
+.stg.skipped .pb i{background:var(--faint)}
+.tabs{display:flex;gap:2px;padding:0 12px;overflow-x:auto;border-top:1px solid var(--line)}
+.tab{border:0;background:none;padding:10px 12px;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap}
+.tab.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+main{padding:18px;max-width:1400px;margin:0 auto}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:16px}
+.card>h3,.card>h2{margin-bottom:10px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px 12px}
+.tile .k{font-size:12px;color:var(--muted)}
+.tile .v{font-size:20px;font-weight:650;margin-top:2px;font-variant-numeric:tabular-nums}
+.tile .s{font-size:11.5px;color:var(--faint)}
+.muted{color:var(--muted)}.faint{color:var(--faint)}.small{font-size:12px}
+.chip{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:20px;white-space:nowrap}
+.chip.ok,.chip.Pass,.chip.Done,.chip.complete,.chip.Received,.chip.Approved{background:var(--green-soft);color:var(--green)}
+.chip.bad,.chip.Fail,.chip.Declined{background:var(--red-soft);color:var(--red)}
+.chip.warn,.chip.Unknown,.chip.Partial,.chip.in_progress,.chip.Fallback,.chip.Needs,.chip.default{background:var(--amber-soft);color:var(--amber)}
+.chip.na,.chip.not_started,.chip.skipped{background:#eef0f4;color:var(--muted)}
+.chip.src{background:#eef0f4;color:var(--muted);font-weight:500}
+table{border-collapse:collapse;width:100%}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600;background:#fafbfc}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+.tw{overflow-x:auto}
+table input,table select,table textarea{width:100%;min-width:60px;border:1px solid transparent;border-radius:6px;padding:3px 5px;background:transparent}
+table input:hover,table select:hover,table textarea:hover{border-color:var(--line)}
+table input:focus,table select:focus,table textarea:focus{border-color:var(--accent);outline:none;background:#fff}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:4px 22px}
+.fld{padding:8px 0;border-bottom:1px dashed var(--line)}
+.fld label.l{display:flex;gap:6px;align-items:baseline;font-weight:550;font-size:13px}
+.fld .req{color:var(--red)}
+.fld .row{display:flex;gap:6px;align-items:center;margin-top:4px}
+.fld input[type=text],.fld input[type=number],.fld input[type=date],.fld select,.fld textarea{flex:1;width:100%;border:1px solid var(--line);border-radius:7px;padding:6px 8px;background:#fff}
+.fld textarea{min-height:56px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.fld .help{font-size:12px;color:var(--faint);margin-top:3px}
+.fld .fb{font-size:12px;color:var(--amber);margin-top:3px}
+.fld.unk input,.fld.unk select,.fld.unk textarea{background:var(--amber-soft)}
+.fld .u{font-size:12px;color:var(--muted);white-space:nowrap}
+.fld .multi{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:4px}
+.fld .multi label,.chk{display:flex;gap:6px;align-items:center;font-weight:400;font-size:13px;cursor:pointer}
+.unkbtn{border:1px solid var(--line);background:#fff;border-radius:6px;font-size:11px;padding:3px 6px;cursor:pointer;color:var(--muted)}
+.unkbtn.on{background:var(--amber-soft);color:var(--amber);border-color:#f0d9a8}
+.grp{margin-top:18px}
+.grp>h4{margin-bottom:4px}
+.note{background:var(--accent-soft);border-radius:8px;padding:10px 12px;font-size:13px}
+.note.amber{background:var(--amber-soft)}
+.note.red{background:var(--red-soft)}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.opt{border:1px solid var(--line);border-radius:var(--r);padding:12px;background:#fff}
+.opt.best{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
+.opt h3{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.opt dl{display:grid;grid-template-columns:1fr auto;gap:2px 10px;margin:8px 0 0;font-size:12.5px}
+.opt dt{color:var(--muted)}.opt dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+svg.ch{width:100%;height:auto;display:block}
+svg.ch text{font-size:11px;fill:var(--muted)}
+svg.ch .ax{stroke:#c4cad6}
+svg.ch .gl{stroke:#eceff4}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:12px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.legend i.box{height:10px;width:10px}
+.heat{width:100%;image-rendering:pixelated;border-radius:6px;border:1px solid var(--line)}
+.drop{border:2px dashed #c9d0dc;border-radius:var(--r);padding:16px;text-align:center;color:var(--muted);background:#fbfcfd}
+.drop.over{border-color:var(--accent);background:var(--accent-soft)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.toolbar label{font-size:12.5px;color:var(--muted);display:flex;gap:5px;align-items:center}
+.toolbar select,.toolbar input[type=text]{border:1px solid var(--line);border-radius:7px;padding:4px 6px;background:#fff}
+.md{font-size:13.5px}
+.md h1{font-size:20px;margin:6px 0 10px}.md h2{font-size:16px;margin:16px 0 6px}.md h3{font-size:14px;margin:12px 0 4px}
+.md table{margin:6px 0 12px}.md p{margin:6px 0}.md ul{margin:4px 0 8px;padding-left:22px}
+.md code{background:#f0f2f6;padding:0 4px;border-radius:4px}
+.modal-bg{position:fixed;inset:0;background:rgba(20,26,38,.45);display:flex;align-items:center;justify-content:center;z-index:50;padding:16px}
+.modal{background:#fff;border-radius:12px;max-width:640px;width:100%;padding:18px;max-height:90vh;overflow:auto;box-shadow:0 10px 40px rgba(0,0,0,.2)}
+.modal h3{margin-bottom:8px}
+.modal textarea,.modal input[type=text]{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px;margin-top:8px}
+.modal .acts{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:9px 16px;border-radius:9px;z-index:60;font-size:13px;max-width:90vw}
+.toast.err{background:var(--red)}
+.sub{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.sub .btn.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px}
+.kv b{font-weight:550;color:var(--muted)}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+.welcome{max-width:760px;margin:30px auto}
+.welcome .card{padding:24px}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:20px;padding:2px 10px;font-size:12px;margin:2px 4px 2px 0;background:#fff}
+@media (max-width:700px){.g2{grid-template-columns:1fr}main{padding:10px}.form{grid-template-columns:1fr}}
+@media print{.top,.btn,.toolbar,.drop{display:none!important}main{max-width:none}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="bar">
+    <div class="brand">BTM Gas Engine · Project dashboard<small id="projname">No project open</small></div>
+    <div class="spacer"></div>
+    <span id="dirty"></span>
+    <button class="btn" data-act="new">New project</button>
+    <button class="btn" data-act="open">Open project file</button>
+    <button class="btn primary" data-act="save" id="savebtn" disabled>Save project file</button>
+    <input type="file" id="openfile" accept=".json,application/json" hidden>
+  </div>
+  <div class="stages" id="stages"></div>
+  <nav class="tabs" id="tabs"></nav>
+</div>
+<main id="main"></main>
+<div id="modal"></div>
+<script>/*__ENGINE__*/</script>
+<script>
+(function () {
+  'use strict';
+  var B = window.BTM;
+  var P = null, A = null, dirty = false, lastSaved = null;
+  var tab = 'overview', stageView = 0, optId = null, docView = null, heatMode = 'day';
+  var DRAFT_KEY = 'btm-dashboard-draft-v1';
+  var TABS = [
+    ['overview', 'Overview'], ['stages', 'Stage data'], ['load', 'Load data · E2'], ['tariff', 'Tariff · E3'], ['sizing', 'Sizing · E4'],
+    ['electrical', 'Electrical · E5'], ['gas', 'Gas and heat · E6–E7'], ['business', 'Business case · E10–E11'],
+    ['registers', 'Registers · E1 E12 E13 E14'], ['deliverables', 'Deliverables'], ['log', 'Log']
+  ];
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s === null || s === undefined ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function n(x, d) { return B.fmt(x, d); }
+  function cur() { return (P && P.fields['meta.currency']) || ''; }
+  function money(x) { return B.fmtMoney(x, cur()); }
+  function isNum(x) { return typeof x === 'number' && isFinite(x); }
+  function chip(status, text) { var c = String(status || '').split(/[ :(]/)[0]; return '<span class="chip ' + esc(c) + '">' + esc(text || status) + '</span>'; }
+
+  // ------------------------------------------------------------------ toast + modal
+  var toastT = null;
+  function toast(msg, err) {
+    var t = document.querySelector('.toast'); if (t) t.remove();
+    t = document.createElement('div'); t.className = 'toast' + (err ? ' err' : ''); t.textContent = msg; document.body.appendChild(t);
+    clearTimeout(toastT); toastT = setTimeout(function () { t.remove(); }, err ? 6000 : 2600);
+  }
+  function modal(o) {
+    // o: {title, body (html), input: {label, value, multiline}, ok, cancel, onOk(value)}
+    var m = $('modal');
+    var inp = o.input ? (o.input.multiline ? '<textarea id="mdl-in" rows="4">' + esc(o.input.value || '') + '</textarea>' : '<input type="text" id="mdl-in" value="' + esc(o.input.value || '') + '">') : '';
+    m.innerHTML = '<div class="modal-bg"><div class="modal" role="dialog" aria-modal="true"><h3>' + esc(o.title) + '</h3><div>' + (o.body || '') + '</div>' +
+      (o.input ? '<div class="small muted" style="margin-top:8px">' + esc(o.input.label || '') + '</div>' + inp : '') +
+      '<div class="acts">' + (o.cancel === false ? '' : '<button class="btn" id="mdl-no">' + esc(o.cancel || 'Cancel') + '</button>') +
+      '<button class="btn primary" id="mdl-ok">' + esc(o.ok || 'OK') + '</button></div></div></div>';
+    var close = function () { m.innerHTML = ''; };
+    if ($('mdl-no')) $('mdl-no').onclick = close;
+    $('mdl-ok').onclick = function () {
+      var v = $('mdl-in') ? $('mdl-in').value : null;
+      if (o.input && o.input.required && !String(v).trim()) { $('mdl-in').focus(); return; }
+      close(); if (o.onOk) o.onOk(v);
+    };
+    var i = $('mdl-in'); if (i) i.focus(); else $('mdl-ok').focus();
+  }
+
+  // ------------------------------------------------------------------ file save / open
+  var downloadsP = null;
+  function getDownloads() {
+    if (downloadsP) return downloadsP;
+    downloadsP = (window.claude && typeof window.claude.use === 'function') ? window.claude.use('downloads').catch(function () { return null; }) : Promise.resolve(null);
+    return downloadsP;
+  }
+  function saveFile(filename, text) {
+    return getDownloads().then(function (dl) {
+      if (dl) {
+        return dl.save({ filename: filename, data: text }).then(function () { return true; }, function (e) {
+          if (e && e.code === 'declined') { toast('Save cancelled.'); return false; }
+          return fallbackSave(filename, text);
+        });
+      }
+      return fallbackSave(filename, text);
+    });
+  }
+  function fallbackSave(filename, text) {
+    try {
+      var blob = new Blob([text], { type: /\.json$/.test(filename) ? 'application/json' : /\.csv$/.test(filename) ? 'text/csv' : 'text/markdown' });
+      var url = URL.createObjectURL(blob), a = document.createElement('a');
+      a.href = url; a.download = filename; document.body.appendChild(a); a.click();
+      setTimeout(function () { URL.revokeObjectURL(url); a.remove(); }, 1500);
+      return Promise.resolve(true);
+    } catch (e) {
+      modal({ title: 'Copy the file contents', body: '<p class="small">This view cannot download files. Copy the text below into a file named <b>' + esc(filename) + '</b>.</p>', input: { value: text, multiline: true }, cancel: false, ok: 'Close' });
+      return Promise.resolve(false);
+    }
+  }
+  function saveProject() {
+    if (!P) return;
+    var text = B.serialize(P);
+    saveFile(B.fileName(P), text).then(function (ok) {
+      if (ok) { dirty = false; lastSaved = new Date(); clearDraft(); renderChrome(); toast('Saved ' + B.fileName(P) + '. Upload it again to continue later.'); }
+    });
+  }
+  function openText(text, name) {
+    try {
+      var p = B.parseProject(text);
+      setProject(p, false);
+      toast('Opened ' + (name || 'project'));
+    } catch (e) { toast(e.message, true); }
+  }
+  function setProject(p, isDirty) {
+    P = p; dirty = !!isDirty; optId = null; docView = null;
+    stageView = P.current_stage || 0;
+    recompute(); renderAll();
+  }
+
+  // ------------------------------------------------------------------ draft recovery (this browser only)
+  function saveDraft() {
+    try { if (P && dirty) localStorage.setItem(DRAFT_KEY, JSON.stringify({ t: new Date().toISOString(), name: B.fileName(P), text: B.serialize(P) })); } catch (e) { /* storage full or blocked */ }
+  }
+  function clearDraft() { try { localStorage.removeItem(DRAFT_KEY); } catch (e) { } }
+  function readDraft() { try { var d = localStorage.getItem(DRAFT_KEY); return d ? JSON.parse(d) : null; } catch (e) { return null; } }
+
+  // ------------------------------------------------------------------ state changes
+  function recompute() { A = P ? B.analyse(P) : null; if (A && (!optId || !A.options.some(function (o) { return o.id === optId; }))) optId = A.selected[0] ? A.selected[0].id : (A.options[0] && A.options[0].id); }
+  var renderT = null;
+  function changed() {
+    dirty = true; recompute(); saveDraft();
+    clearTimeout(renderT);
+    renderT = setTimeout(function () {
+      var ae = document.activeElement, fid = ae && ae.id, ss = null;
+      try { ss = ae && ae.selectionStart; } catch (e) { }
+      renderChrome(); renderTab();
+      if (fid && $(fid)) { var el = $(fid); el.focus(); try { if (ss !== null && ss !== undefined) el.setSelectionRange(ss, ss); } catch (e) { } }
+    }, 0);
+  }
+  function getPath(path) { return path.split('.').reduce(function (o, k) { return o === undefined || o === null ? undefined : o[k]; }, P); }
+  function setPath(path, value) {
+    var keys = path.split('.'), o = P;
+    for (var i = 0; i < keys.length - 1; i++) { if (o[keys[i]] === undefined) o[keys[i]] = {}; o = o[keys[i]]; }
+    o[keys[keys.length - 1]] = value;
+  }
+
+  // ------------------------------------------------------------------ chrome
+  function renderChrome() {
+    $('projname').textContent = P ? (P.fields['meta.project_name'] || 'Untitled project') + (P.fields['client.name'] ? ' · ' + P.fields['client.name'] : '') : 'No project open';
+    $('savebtn').disabled = !P;
+    $('dirty').innerHTML = !P ? '' : dirty ? '<span class="dirty">Unsaved changes</span>' : (lastSaved ? '<span class="saved">Saved ' + lastSaved.toLocaleTimeString() + '</span>' : '');
+    if (!P) { $('stages').innerHTML = ''; $('tabs').innerHTML = ''; return; }
+    $('stages').innerHTML = B.STAGES.map(function (s) {
+      var st = P.stages[s.n], pr = B.stageProgress(P, s.n);
+      var cls = 'stg ' + st.status + (P.current_stage === s.n ? ' current' : '');
+      return '<button class="' + cls + '" data-act="goto-stage" data-n="' + s.n + '"><div class="t">Stage ' + s.n + ' · ' + esc(st.status.replace('_', ' ')) + '</div><div class="n">' + esc(s.short) + '</div><div class="pb"><i style="width:' + (st.status === 'complete' || st.status === 'skipped' ? 100 : pr.pct) + '%"></i></div></button>';
+    }).join('');
+    $('tabs').innerHTML = TABS.map(function (t) { return '<button class="tab' + (tab === t[0] ? ' on' : '') + '" data-act="tab" data-tab="' + t[0] + '">' + esc(t[1]) + '</button>'; }).join('');
+  }
+  function renderAll() { renderChrome(); renderTab(); }
+  function renderTab() {
+    var m = $('main');
+    if (!P) { m.innerHTML = welcome(); bindDrop(); return; }
+    var fn = { overview: vOverview, stages: vStages, load: vLoad, tariff: vTariff, sizing: vSizing, electrical: vElectrical, gas: vGas, business: vBusiness, registers: vRegisters, deliverables: vDeliverables, log: vLog }[tab] || vOverview;
+    m.innerHTML = fn();
+    afterRender();
+  }
+  var post = [];
+  function afterRender() { var q = post; post = []; q.forEach(function (f) { try { f(); } catch (e) { console.error(e); } }); bindDrop(); }
+
+  function welcome() {
+    var d = readDraft();
+    return '<div class="welcome"><div class="card"><h2>Start or continue a project</h2>' +
+      '<p class="muted">Everything for one project lives in a single file (<code>name.btm.json</code>): stage answers, load data, analysis inputs, registers and the written deliverables. There is no database. Save the file when you stop, and open it again to continue, here or with the agent in Claude.</p>' +
+      '<div class="toolbar" style="margin:14px 0"><button class="btn primary" data-act="new">New project</button><button class="btn" data-act="open">Open project file</button><button class="btn" data-act="demo">Open the demo project</button></div>' +
+      (d ? '<div class="note amber" style="margin-bottom:12px">Unsaved work from ' + esc(new Date(d.t).toLocaleString()) + ' (' + esc(d.name) + ') is in this browser. <button class="btn small" data-act="restore">Restore it</button> <button class="btn small" data-act="discard-draft">Discard</button></div>' : '') +
+      '<div class="drop" id="drop">Or drop a <b>.btm.json</b> project file here</div>' +
+      '<h3 style="margin-top:18px">The five stages</h3><ol class="muted">' + B.STAGES.map(function (s) { return '<li><b>' + esc(s.title.replace(/^Stage \d · /, '')) + '</b>: ' + esc(s.goal) + '</li>'; }).join('') + '</ol></div></div>';
+  }
+
+  // ------------------------------------------------------------------ field rendering
+  function fieldHtml(fd, opts) {
+    opts = opts || {};
+    var v = P.fields[fd.k], unk = P.unknown && P.unknown[fd.k], id = 'f-' + fd.k.replace(/\./g, '_');
+    var ph = opts.placeholder !== undefined ? ' placeholder="' + esc(opts.placeholder) + '"' : '';
+    var input;
+    if (fd.t === 'bool') {
+      return '<div class="fld"><label class="chk"><input type="checkbox" id="' + id + '" data-field="' + fd.k + '"' + (v ? ' checked' : '') + '> ' + esc(fd.l) + (fd.req ? ' <span class="req">*</span>' : '') + '</label>' + (fd.help ? '<div class="help">' + esc(fd.help) + '</div>' : '') + '</div>';
+    }
+    if (fd.t === 'select') {
+      input = '<select id="' + id + '" data-field="' + fd.k + '"><option value="">' + (opts.placeholder ? esc('Auto: ' + opts.placeholder) : '—') + '</option>' + fd.opts.map(function (o) { return '<option' + (o === v ? ' selected' : '') + '>' + esc(o) + '</option>'; }).join('') + '</select>';
+    } else if (fd.t === 'multi') {
+      input = '<div class="multi">' + fd.opts.map(function (o, i) { return '<label><input type="checkbox" id="' + id + '_' + i + '" data-field="' + fd.k + '" data-multi="' + esc(o) + '"' + (Array.isArray(v) && v.indexOf(o) >= 0 ? ' checked' : '') + '> ' + esc(o) + '</label>'; }).join('') + '</div>';
+    } else if (fd.t === 'textarea') {
+      input = '<textarea id="' + id + '" data-field="' + fd.k + '"' + ph + '>' + esc(v || '') + '</textarea>';
+    } else {
+      var type = fd.t === 'number' ? 'number" step="any' : fd.t === 'date' ? 'date' : 'text';
+      input = '<input type="' + type + '" id="' + id + '" data-field="' + fd.k + '" value="' + esc(v === undefined || v === null ? '' : v) + '"' + ph + '>';
+    }
+    var unkBtn = opts.noUnknown ? '' : '<button id="u-' + id + '" class="unkbtn' + (unk ? ' on' : '') + '" data-act="unknown" data-key="' + fd.k + '" title="Mark as unknown and log it in the assumptions">' + (unk ? 'Unknown' : '?') + '</button>';
+    return '<div class="fld' + (unk ? ' unk' : '') + '"><label class="l" for="' + id + '">' + esc(fd.l) + (fd.req ? '<span class="req">*</span>' : '') + (opts.src ? ' ' + opts.src : '') + '</label>' +
+      '<div class="row">' + input + (fd.u ? '<span class="u">' + esc(fd.u.replace(/^currency/, cur() || 'currency').replace(/^per /, (cur() ? cur() + ' ' : '') + 'per ')) + '</span>' : '') + unkBtn + '</div>' +
+      (unk ? '<div class="fb">Unknown: ' + esc(unk) + '</div>' : '') +
+      (fd.help ? '<div class="help">' + esc(fd.help) + '</div>' : '') +
+      (fd.fb && !B.answered(P, fd.k) ? '<div class="fb">If missing: ' + esc(fd.fb) + '</div>' : '') + '</div>';
+  }
+  function fieldsHtml(keys, optsFn) {
+    return '<div class="form">' + keys.map(function (k) { return fieldHtml(B.FIELDS[k], optsFn ? optsFn(k) : null); }).join('') + '</div>';
+  }
+  function srcChip(k) {
+    var s = A.src[k] || '';
+    var label = s === 'input' ? 'your input' : s === 'default' ? 'default' : s.replace(/^project:/, 'from ');
+    return '<span class="chip ' + (s === 'default' ? 'default' : 'src') + '">' + esc(label) + '</span>';
+  }
+  function calcFields(keys) {
+    return fieldsHtml(keys.map(function (k) { return 'calc.' + k; }), function (ck) {
+      var k = ck.slice(5), v = A.v[k];
+      return { placeholder: v === null || v === undefined ? '' : String(typeof v === 'number' ? Math.round(v * 1000) / 1000 : v), src: srcChip(k), noUnknown: true };
+    });
+  }
+
+  // ------------------------------------------------------------------ charts
+  function niceStep(range, target) {
+    var raw = range / Math.max(1, target), mag = Math.pow(10, Math.floor(Math.log10(raw || 1))), r = raw / mag;
+    return (r < 1.5 ? 1 : r < 3 ? 2 : r < 7 ? 5 : 10) * mag;
+  }
+  function frame(o, draw) {
+    var W = o.w || 760, H = o.h || 260, L = o.left || 52, R = o.right || 16, T = o.top || 12, Bm = o.bottom || 34;
+    var sx = function (x) { return L + (W - L - R) * (x - o.x0) / ((o.x1 - o.x0) || 1); };
+    var sy = function (y) { return H - Bm - (H - T - Bm) * (y - o.y0) / ((o.y1 - o.y0) || 1); };
+    var s = '<svg class="ch" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(o.label || 'chart') + '">';
+    var st = niceStep(o.y1 - o.y0, 5);
+    for (var y = Math.ceil(o.y0 / st) * st; !o.noY && y <= o.y1 + 1e-9; y += st) {
+      s += '<line class="gl" x1="' + L + '" x2="' + (W - R) + '" y1="' + sy(y) + '" y2="' + sy(y) + '"/><text x="' + (L - 6) + '" y="' + (sy(y) + 4) + '" text-anchor="end">' + esc(o.yfmt ? o.yfmt(y) : n(y, st < 1 ? 1 : 0)) + '</text>';
+    }
+    (o.xticks || []).forEach(function (t) { s += '<line class="gl" x1="' + sx(t.v) + '" x2="' + sx(t.v) + '" y1="' + T + '" y2="' + (H - Bm) + '"/><text x="' + sx(t.v) + '" y="' + (H - Bm + 15) + '" text-anchor="middle">' + esc(t.l) + '</text>'; });
+    s += '<line class="ax" x1="' + L + '" x2="' + (W - R) + '" y1="' + (H - Bm) + '" y2="' + (H - Bm) + '"/>';
+    if (o.ylabel) s += '<text x="12" y="' + (T + (H - T - Bm) / 2) + '" transform="rotate(-90 12 ' + (T + (H - T - Bm) / 2) + ')" text-anchor="middle">' + esc(o.ylabel) + '</text>';
+    if (o.xlabel) s += '<text x="' + (L + (W - L - R) / 2) + '" y="' + (H - 4) + '" text-anchor="middle">' + esc(o.xlabel) + '</text>';
+    s += draw(sx, sy, { W: W, H: H, L: L, R: R, T: T, B: Bm });
+    return s + '</svg>';
+  }
+  function poly(pts, sx, sy) { return pts.filter(function (p) { return p[1] !== null && isNum(p[1]); }).map(function (p) { return sx(p[0]).toFixed(1) + ',' + sy(p[1]).toFixed(1); }).join(' '); }
+  function hline(y, sx, sy, x0, x1, color, label, dash, left) {
+    return '<line x1="' + sx(x0) + '" x2="' + sx(x1) + '" y1="' + sy(y) + '" y2="' + sy(y) + '" stroke="' + color + '" stroke-width="1.5"' + (dash ? ' stroke-dasharray="5 4"' : '') + '/>' +
+      (label ? '<text x="' + (left ? sx(x0) + 4 : sx(x1) - 4) + '" y="' + (sy(y) - 4) + '" text-anchor="' + (left ? 'start' : 'end') + '" style="fill:' + color + '">' + esc(label) + '</text>' : '');
+  }
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  function legend(items) { return '<div class="legend">' + items.map(function (i) { return '<span><i class="' + (i[2] || '') + '" style="background:' + i[0] + '"></i>' + esc(i[1]) + '</span>'; }).join('') + '</div>'; }
+
+  function chartDaily(ls) {
+    var d = ls.daily, max = Math.max.apply(null, d.map(function (x) { return x.max; })) * 1.08;
+    var ticks = [];
+    d.forEach(function (x, i) { if (x.date.slice(8) === '01') ticks.push({ v: i, l: MONTHS[+x.date.slice(5, 7) - 1] + (x.date.slice(5, 7) === '01' ? ' ' + x.date.slice(2, 4) : '') }); });
+    if (ticks.length > 14) ticks = ticks.filter(function (t, i) { return i % 2 === 0; });
+    return frame({ w: 1240, h: 330, x0: 0, x1: Math.max(1, d.length - 1), y0: 0, y1: max, xticks: ticks, ylabel: 'MW', label: 'Daily minimum, average and maximum load' }, function (sx, sy) {
+      var up = d.map(function (x, i) { return [i, x.max]; }), lo = d.map(function (x, i) { return [i, x.min]; }).reverse();
+      return '<polygon points="' + poly(up.concat(lo), sx, sy) + '" fill="#cfdcf5"/>' +
+        '<polyline points="' + poly(d.map(function (x, i) { return [i, x.mean]; }), sx, sy) + '" fill="none" stroke="#2a62c9" stroke-width="1.4"/>' +
+        hline(A.v.minload, sx, sy, 0, d.length - 1, '#b7790a', 'Minimum used for sizing ' + n(A.v.minload, 2) + ' MW', true);
+    }) + legend([['#cfdcf5', 'Daily range (min to max)', 'box'], ['#2a62c9', 'Daily average'], ['#b7790a', 'Minimum used for sizing']]);
+  }
+  function chartLdc(ls, opts, wide) {
+    var max = ls.ldc[0] * 1.08;
+    opts = opts || [];
+    var colors = ['#1b8a4c', '#6b4fbb'];
+    return frame({ w: wide ? 1240 : 620, h: wide ? 340 : 300, x0: 0, x1: 100, y0: 0, y1: Math.max(max, opts.reduce(function (m, o) { return Math.max(m, o.duty); }, 0) * 1.1), xticks: [0, 20, 40, 60, 80, 100].map(function (v) { return { v: v, l: v + '%' }; }), ylabel: 'MW', xlabel: 'Share of time the load is at or above this level', label: 'Load duration curve' }, function (sx, sy) {
+      var s = '<polyline points="' + poly(ls.ldc.map(function (y, i) { return [i, y]; }), sx, sy) + '" fill="none" stroke="#2a62c9" stroke-width="2"/>';
+      opts.forEach(function (o, i) {
+        s += hline(o.duty, sx, sy, 0, 100, colors[i % 2], o.label + ' duty ' + n(o.duty, 1) + ' MW', false, i === 1);
+        s += hline(o.floor, sx, sy, 0, 100, colors[i % 2], o.label + ' lowest stable ' + n(o.floor, 2) + ' MW', true, i === 1);
+      });
+      return s;
+    }) + legend([['#2a62c9', 'Site load']].concat(opts.map(function (o, i) { return [colors[i % 2], o.label + ': duty capacity (solid) and lowest stable output (dashed)']; })));
+  }
+  function chartProfile(ls, rt, genCost) {
+    var max = Math.max.apply(null, ls.profile_weekday.concat(ls.profile_weekend).filter(isNum)) * 1.15;
+    var s = frame({ w: 620, h: 300, x0: 0, x1: 23, y0: 0, y1: max, xticks: [0, 3, 6, 9, 12, 15, 18, 21].map(function (v) { return { v: v, l: v + ':00' }; }), ylabel: 'MW', label: 'Average daily profile' }, function (sx, sy) {
+      return '<polyline points="' + poly(ls.profile_weekday.map(function (y, i) { return [i, y]; }), sx, sy) + '" fill="none" stroke="#2a62c9" stroke-width="2"/>' +
+        '<polyline points="' + poly(ls.profile_weekend.map(function (y, i) { return [i, y]; }), sx, sy) + '" fill="none" stroke="#0f7f84" stroke-width="2" stroke-dasharray="6 4"/>';
+    });
+    return s + legend([['#2a62c9', 'Weekday average'], ['#0f7f84', 'Weekend average']]);
+  }
+  function chartRates(rt, genCost) {
+    var max = Math.max(genCost || 0, Math.max.apply(null, rt[0].concat(rt[1]))) * 1.2;
+    return frame({ w: 620, h: 300, x0: -0.5, x1: 23.5, y0: 0, y1: max, xticks: [0, 3, 6, 9, 12, 15, 18, 21].map(function (v) { return { v: v, l: v + ':00' }; }), ylabel: (cur() || '') + ' per MWh', label: 'Tariff by hour' }, function (sx, sy) {
+      var s = '', w = (sx(1) - sx(0)) * 0.38;
+      for (var h = 0; h < 24; h++) {
+        s += '<rect x="' + (sx(h) - w) + '" y="' + sy(rt[0][h]) + '" width="' + w + '" height="' + (sy(0) - sy(rt[0][h])) + '" fill="#2a62c9"/>';
+        s += '<rect x="' + sx(h) + '" y="' + sy(rt[1][h]) + '" width="' + w + '" height="' + (sy(0) - sy(rt[1][h])) + '" fill="#9fb8e8"/>';
+      }
+      if (genCost) s += hline(genCost, sx, sy, -0.5, 23.5, '#c23b3b', 'Generation cost ' + n(genCost, 1), true);
+      return s;
+    }) + legend([['#2a62c9', 'Weekday rate', 'box'], ['#9fb8e8', 'Weekend rate', 'box'], ['#c23b3b', 'Generation cost of the selected option']]);
+  }
+  function chartMonthly(ls) {
+    var m = ls.monthly, max = Math.max.apply(null, m.map(function (x) { return x.mwh; })) * 1.12;
+    return frame({ w: 620, h: 300, x0: -0.5, x1: m.length - 0.5, y0: 0, y1: max, xticks: m.map(function (x, i) { return { v: i, l: MONTHS[+x.month.slice(5) - 1] }; }), ylabel: 'MWh', yfmt: function (y) { return n(y / 1000, 0) + 'k'; }, label: 'Monthly energy' }, function (sx, sy) {
+      var w = (sx(1) - sx(0)) * 0.7;
+      return m.map(function (x, i) { return '<rect x="' + (sx(i) - w / 2) + '" y="' + sy(x.mwh) + '" width="' + w + '" height="' + (sy(0) - sy(x.mwh)) + '" fill="#2a62c9" rx="2"><title>' + x.month + ': ' + n(x.mwh, 0) + ' MWh</title></rect>'; }).join('');
+    });
+  }
+  var HEAT_STOPS = [[247, 250, 255], [198, 219, 239], [107, 174, 214], [33, 113, 181], [8, 48, 107]];
+  function heatColor(t) {
+    t = Math.max(0, Math.min(1, t)); var x = t * (HEAT_STOPS.length - 1), i = Math.min(HEAT_STOPS.length - 2, Math.floor(x)), f = x - i;
+    return HEAT_STOPS[i].map(function (c, k) { return Math.round(c + (HEAT_STOPS[i + 1][k] - c) * f); });
+  }
+  function drawHeat(canvasId, ls) {
+    var cv = $(canvasId); if (!cv || !P.load) return;
+    var L = P.load, t0 = Date.parse(L.start + 'Z'), step = L.interval_min * 60000;
+    var d0 = Math.floor(t0 / 86400000), days = Math.floor((t0 + (L.kw.length - 1) * step) / 86400000) - d0 + 1;
+    var sums = new Float64Array(days * 24), cnt = new Uint16Array(days * 24);
+    for (var i = 0; i < L.kw.length; i++) {
+      if (L.kw[i] === null) continue;
+      var t = t0 + i * step, di = Math.floor(t / 86400000) - d0, h = new Date(t).getUTCHours();
+      if (di < 0 || di >= days) continue;
+      sums[di * 24 + h] += L.kw[i]; cnt[di * 24 + h]++;
+    }
+    cv.width = days; cv.height = 24;
+    var ctx = cv.getContext('2d'), img = ctx.createImageData(days, 24), lo = ls.min_abs * 1000, hi = ls.peak * 1000;
+    for (var dd = 0; dd < days; dd++) for (var hh = 0; hh < 24; hh++) {
+      var k = (hh * days + dd) * 4, c = cnt[dd * 24 + hh];
+      if (!c) { img.data[k] = 240; img.data[k + 1] = 240; img.data[k + 2] = 240; img.data[k + 3] = 255; continue; }
+      var col = heatColor((sums[dd * 24 + hh] / c - lo) / ((hi - lo) || 1));
+      img.data[k] = col[0]; img.data[k + 1] = col[1]; img.data[k + 2] = col[2]; img.data[k + 3] = 255;
+    }
+    ctx.putImageData(img, 0, 0);
+  }
+  function heatLegend(ls) {
+    var g = []; for (var i = 0; i <= 10; i++) { var c = heatColor(i / 10); g.push('rgb(' + c.join(',') + ') ' + (i * 10) + '%'); }
+    return '<div class="legend"><span>' + n(ls.min_abs, 1) + ' MW</span><span style="display:inline-block;width:160px;height:10px;border-radius:5px;background:linear-gradient(90deg,' + g.join(',') + ')"></span><span>' + n(ls.peak, 1) + ' MW</span><span>Rows: hour of day (00 at top). Columns: days. Grey: no data.</span></div>';
+  }
+  function chartSizing(opts) {
+    var v = A.v, rows = opts, W = 1240, left = 160, right = 1220, top = 52, rh = 40, H = top + rows.length * rh + 40;
+    var maxV = Math.max(v.peak * 1.08, v.target * 1.2, Math.max.apply(null, rows.map(function (r) { return r.installed; }))) * 1.04;
+    var x = function (a) { return left + (right - left) * a / maxV; };
+    var st = niceStep(maxV, 8), s = '<svg class="ch" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Installed site-rated output per configuration">';
+    var axisY = top + rows.length * rh;
+    for (var t = 0; t <= maxV; t += st) s += '<line class="gl" x1="' + x(t) + '" x2="' + x(t) + '" y1="' + (top - 6) + '" y2="' + axisY + '"/><text x="' + x(t) + '" y="' + (axisY + 15) + '" text-anchor="middle">' + n(t, st < 1 ? 1 : 0) + '</text>';
+    s += '<text x="' + ((left + right) / 2) + '" y="' + (axisY + 32) + '" text-anchor="middle">Output at site rating (MW)</text>';
+    rows.forEach(function (r, i) {
+      var y0 = top + i * rh + 7;
+      s += '<rect x="' + left + '" y="' + y0 + '" width="' + Math.max(0, x(r.duty) - left) + '" height="22" fill="' + (r.pass ? '#2a62c9' : '#9aa6bb') + '" rx="2"/>';
+      if (r.nTot > r.nBase) s += '<rect x="' + x(r.duty) + '" y="' + y0 + '" width="' + Math.max(0, x(r.installed) - x(r.duty)) + '" height="22" fill="none" stroke="' + (r.pass ? '#2a62c9' : '#9aa6bb') + '" stroke-dasharray="4 3"/>';
+      s += '<text x="' + (left - 8) + '" y="' + (y0 + 15) + '" text-anchor="end" style="fill:#1c2230;font-weight:600">' + esc(r.label) + '</text>';
+    });
+    [[v.target, '#1c2230', 'Required ' + n(v.target, 1), 12], [v.minload, '#b7790a', 'Site min ' + n(v.minload, 1), 26], [v.peak, '#5d6678', 'Site peak ' + n(v.peak, 1), 40]].forEach(function (Lr) {
+      var xx = x(Lr[0]), anchor = xx > right - 110 ? 'end' : 'start';
+      s += '<line x1="' + xx + '" x2="' + xx + '" y1="' + (Lr[3] + 3) + '" y2="' + axisY + '" stroke="' + Lr[1] + '" stroke-width="1.5" stroke-dasharray="5 4"/><text x="' + (anchor === 'end' ? xx - 4 : xx + 4) + '" y="' + Lr[3] + '" text-anchor="' + anchor + '" style="fill:' + Lr[1] + '">' + esc(Lr[2]) + ' MW</text>';
+    });
+    return s + '</svg>' + legend([['#2a62c9', 'Duty units, option passes all checks', 'box'], ['#9aa6bb', 'Duty units, option fails a check', 'box'], ['#ffffff', 'Dashed outline: spare unit (N+1)', 'box']]);
+  }
+  function chartFault(o) {
+    var v = A.v, est = o.elec.est, util = est && est.utility_ka !== undefined ? est.utility_ka : v.ifault, motor = est && est.motor_ka ? est.motor_ka : 0;
+    if (!(est && est.utility_ka !== undefined)) { util = v.ifault; motor = 0; }
+    var total = v.ifault + o.iGen, max = Math.max(total, v.rating) * 1.15;
+    return frame({ w: 620, x0: 0, x1: max, y0: 0, y1: 2, h: 170, left: 110, noY: true, xticks: (function () { var st = niceStep(max, 6), t = []; for (var x = 0; x <= max; x += st) t.push({ v: x, l: n(x, 0) }); return t; })(), xlabel: 'Fault current at the bus (kA)', label: 'Fault level before and after' }, function (sx, sy) {
+      var s = '', bar = function (y, parts, label) {
+        var x0 = 0; s += '<text x="104" y="' + (sy(y) + 4) + '" text-anchor="end" style="fill:#1c2230;font-weight:600">' + label + '</text>';
+        parts.forEach(function (p) { if (p[0] <= 0) return; s += '<rect x="' + sx(x0) + '" y="' + (sy(y) - 13) + '" width="' + (sx(x0 + p[0]) - sx(x0)) + '" height="26" fill="' + p[1] + '"><title>' + esc(p[2]) + ': ' + n(p[0], 1) + ' kA</title></rect>'; x0 += p[0]; });
+        s += '<text x="' + (sx(x0) + 5) + '" y="' + (sy(y) + 4) + '">' + n(x0, 1) + ' kA</text>';
+      };
+      bar(1.5, [[util, '#7f93b8', 'Utility'], [motor, '#b3c1d9', 'Motors']], 'Before');
+      bar(0.6, [[util, '#7f93b8', 'Utility'], [motor, '#b3c1d9', 'Motors'], [o.iGen, '#d98e04', 'New engines']], 'After');
+      s += '<line x1="' + sx(v.rating) + '" x2="' + sx(v.rating) + '" y1="' + sy(2) + '" y2="' + sy(0) + '" stroke="#c23b3b" stroke-width="2" stroke-dasharray="5 4"/><text x="' + (sx(v.rating) + 4) + '" y="' + (sy(2) + 12) + '" style="fill:#c23b3b">Rating ' + n(v.rating, 1) + ' kA</text>';
+      return s;
+    }) + legend([['#7f93b8', 'Utility (existing)', 'box'], ['#b3c1d9', 'Motors', 'box'], ['#d98e04', 'New engines', 'box'], ['#c23b3b', 'Switchboard rating']]);
+  }
+  function chartCash(e) {
+    var rows = e.rows, ys = [-e.capex].concat(rows.map(function (r) { return r.cumulative; }));
+    var min = Math.min.apply(null, ys), max = Math.max.apply(null, ys.concat([0]));
+    return frame({ w: 620, h: 320, x0: 0, x1: rows.length, y0: min * 1.1, y1: max * 1.1 + 1, xticks: ys.map(function (y, i) { return { v: i, l: i % (rows.length > 15 ? 5 : 2) === 0 ? String(i) : '' }; }), ylabel: cur(), xlabel: 'Year', yfmt: function (y) { return B.fmtMoney(y, ''); }, left: 64, label: 'Cumulative cash flow' }, function (sx, sy) {
+      return '<line x1="' + sx(0) + '" x2="' + sx(rows.length) + '" y1="' + sy(0) + '" y2="' + sy(0) + '" stroke="#1c2230"/>' +
+        '<polyline points="' + poly(ys.map(function (y, i) { return [i, y]; }), sx, sy) + '" fill="none" stroke="#1b8a4c" stroke-width="2.2"/>' +
+        ys.map(function (y, i) { return '<circle cx="' + sx(i) + '" cy="' + sy(y) + '" r="2.5" fill="#1b8a4c"><title>Year ' + i + ': ' + B.fmtMoney(y, cur()) + '</title></circle>'; }).join('');
+    });
+  }
+  function chartTornado(o) {
+    var base = o.econ.npv, rows = o.sens, vals = [];
+    rows.forEach(function (r) { vals.push(r.npvLo, r.npvHi); });
+    var min = Math.min.apply(null, vals.concat([base])), max = Math.max.apply(null, vals.concat([base])), pad = (max - min) * 0.15 || 1;
+    var H = 40 + rows.length * 34;
+    return frame({ w: 620, x0: min - pad, x1: max + pad, y0: 0, y1: rows.length, h: H, left: 190, noY: true, xticks: (function () { var st = niceStep(max - min + 2 * pad, 5), t = []; for (var x = Math.ceil((min - pad) / st) * st; x <= max + pad; x += st) t.push({ v: x, l: B.fmtMoney(x, '') }); return t; })(), xlabel: 'NPV (' + cur() + ')', label: 'Sensitivity of NPV' }, function (sx, sy) {
+      var s = '';
+      rows.forEach(function (r, i) {
+        var y = sy(rows.length - i - 0.5);
+        s += '<text x="184" y="' + (y + 4) + '" text-anchor="end" style="fill:#1c2230">' + esc(r.name) + '</text>';
+        [[r.npvLo, '#9fb8e8', r.lo], [r.npvHi, '#2a62c9', r.hi]].forEach(function (b) {
+          var a = Math.min(base, b[0]), z = Math.max(base, b[0]);
+          s += '<rect x="' + sx(a) + '" y="' + (y - 10) + '" width="' + Math.max(1, sx(z) - sx(a)) + '" height="20" fill="' + b[1] + '" opacity=".75"><title>' + esc(r.name + ' ' + b[2]) + ': ' + B.fmtMoney(b[0], cur()) + '</title></rect>';
+        });
+      });
+      s += '<line x1="' + sx(base) + '" x2="' + sx(base) + '" y1="' + sy(rows.length) + '" y2="' + sy(0) + '" stroke="#1c2230" stroke-width="1.5"/>';
+      return s;
+    }) + legend([['#9fb8e8', 'Driver at its low case', 'box'], ['#2a62c9', 'Driver at its high case', 'box'], ['#1c2230', 'Base NPV ' + money(base)]]);
+  }
+  function chartGantt(rows) {
+    var end = Math.max.apply(null, rows.map(function (r) { return (+r.start || 0) + (+r.weeks || 0); }).concat([4]));
+    var H = 40 + rows.length * 24;
+    return frame({ w: 1240, x0: 0, x1: end, y0: 0, y1: rows.length, h: H, left: 300, noY: true, xticks: (function () { var st = niceStep(end, 8), t = []; for (var x = 0; x <= end; x += st) t.push({ v: x, l: 'wk ' + x }); return t; })(), label: 'Schedule' }, function (sx, sy) {
+      return rows.map(function (r, i) {
+        var y = sy(rows.length - i - 0.5), a = +r.start || 0, b = a + (+r.weeks || 0);
+        return '<text x="294" y="' + (y + 4) + '" text-anchor="end" style="fill:#1c2230">' + esc(String(r.task).slice(0, 48)) + '</text><rect x="' + sx(a) + '" y="' + (y - 7) + '" width="' + Math.max(2, sx(b) - sx(a)) + '" height="14" rx="3" fill="#2a62c9"><title>' + esc(r.task) + ': week ' + a + ' to ' + b + '</title></rect>';
+      }).join('');
+    });
+  }
+
+  // ------------------------------------------------------------------ views
+  function opt() { return A.options.filter(function (o) { return o.id === optId; })[0] || A.ranked[0]; }
+  function optPicker(label) {
+    return '<div class="toolbar" style="margin-bottom:12px"><label>' + esc(label || 'Option') + ' <select data-act-change="pick-opt">' + A.ranked.map(function (o) {
+      return '<option value="' + esc(o.id) + '"' + (o.id === optId ? ' selected' : '') + '>' + esc(o.label) + (o.pass ? '' : ' (fails a check)') + (A.selected.some(function (s) { return s.id === o.id; }) ? ' · in proposal' : '') + '</option>';
+    }).join('') + '</select></label></div>';
+  }
+
+  function vOverview() {
+    var s = '', st = B.STAGES[P.current_stage], pr = B.stageProgress(P, P.current_stage), F = P.fields;
+    s += '<div class="grid g2"><div class="card"><h3>' + esc(F['meta.project_name'] || 'Untitled project') + '</h3><div class="kv">' +
+      '<b>Client</b><span>' + esc(F['client.name'] || '—') + (F['client.industry'] ? ' · ' + esc(F['client.industry']) : '') + '</span>' +
+      '<b>Site</b><span>' + esc([F['client.site_name'], F['site.city'], F['site.country']].filter(Boolean).join(', ') || '—') + '</span>' +
+      '<b>Team</b><span>' + esc([F['team.tsm'], F['team.account_lead']].filter(Boolean).join(' · ') || '—') + '</span>' +
+      '<b>Currency</b><span>' + esc(cur() || '—') + '</span><b>File</b><span>' + esc(B.fileName(P)) + ', created ' + esc((P.created || '').slice(0, 10)) + '</span></div>' +
+      '<p class="small muted" style="margin-top:12px">Save the project file when you stop work. To continue, open it here or upload it to the agent in Claude.</p></div>';
+    s += '<div class="card"><h3>Now: ' + esc(st.title) + '</h3><p class="muted small">' + esc(st.goal) + '</p>';
+    var open = pr.missing.map(function (k) { return B.FIELDS[k].l; }).concat(pr.extra).concat(pr.deliverables.filter(function (d) { return !d.done; }).map(function (d) { return 'Deliverable: ' + d.title; }));
+    s += open.length ? '<h4 style="margin:10px 0 4px">Open items (' + open.length + ')</h4><ul class="small" style="margin:0;padding-left:18px">' + open.slice(0, 12).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + (open.length > 12 ? '<li>… ' + (open.length - 12) + ' more</li>' : '') + '</ul>' : '<div class="note">Nothing open. Mark the stage complete in Stage data.</div>';
+    s += '<div class="toolbar" style="margin-top:10px"><button class="btn" data-act="goto-stage" data-n="' + P.current_stage + '">Go to stage ' + P.current_stage + '</button></div></div></div>';
+    // tiles
+    var b = A.best || A.ranked[0];
+    s += '<div class="tiles">' +
+      tile('Site peak', n(A.v.peak, 2) + ' MW', srcText('peak')) + tile('Minimum for sizing', n(A.v.minload, 2) + ' MW', srcText('minload')) +
+      tile('Annual energy', A.ls ? n(A.ls.annual_mwh, 0) + ' MWh' : A.bills ? n(A.bills.annual_mwh, 0) + ' MWh' : '—', A.ls ? 'load data' : A.bills ? 'bills' : 'no data yet') +
+      tile('Best option', A.best ? A.best.label : 'none passes', A.best ? 'passes turn-down, fault, availability' : 'see Sizing') +
+      tile('Payback', b && b.econ.simplePayback ? n(b.econ.simplePayback, 1) + ' yr' : '—', b ? b.label : '') +
+      tile('IRR', b && b.econ.irr !== null ? n(100 * b.econ.irr, 1) + '%' : '—', b ? 'NPV ' + money(b.econ.npv) : '') + '</div>';
+    s += '<div class="grid g2"><div class="card"><h3>Go/no-go gates</h3><table>' + A.gates.map(function (g) { return '<tr><td>' + chip(g.status) + '</td><td><b>' + esc(g.id) + '</b> ' + esc(g.title) + '<div class="small muted">' + esc(g.detail) + '</div></td></tr>'; }).join('') + '</table></div>';
+    s += '<div class="card"><h3>Stages</h3><table>' + B.STAGES.map(function (sg) {
+      var ss = P.stages[sg.n], pp = B.stageProgress(P, sg.n);
+      return '<tr><td>' + esc(sg.title) + '<div class="small faint">' + esc(sg.when) + (ss.skip_reason ? ' · ' + esc(ss.skip_reason) : '') + '</div></td><td>' + chip(ss.status, ss.status.replace('_', ' ')) + '</td><td class="r">' + (ss.status === 'complete' || ss.status === 'skipped' ? '' : pp.pct + '%') + '</td></tr>';
+    }).join('') + '</table>' +
+      '<p class="small muted" style="margin-top:8px">Defaults still feeding the numbers: <b>' + A.assumptions.filter(function (x) { return x.source === 'Playbook default'; }).length + '</b>. See Registers · E1.</p></div></div>';
+    if (A.ls) s += '<div class="card"><h3>Load at a glance</h3>' + chartDaily(A.ls) + '</div>';
+    return s;
+  }
+  function tile(k, v, sub) { return '<div class="tile"><div class="k">' + esc(k) + '</div><div class="v">' + esc(v) + '</div>' + (sub ? '<div class="s">' + esc(sub) + '</div>' : '') + '</div>'; }
+  function srcText(k) { var s = A.src[k] || ''; return s === 'input' ? 'your input' : s === 'default' ? 'playbook default' : s.replace(/^project:/, 'from '); }
+
+  function vStages() {
+    var sg = B.STAGES[stageView], st = P.stages[stageView], pr = B.stageProgress(P, stageView), s = '';
+    s += '<div class="sub">' + B.STAGES.map(function (x) { return '<button class="btn' + (x.n === stageView ? ' on' : '') + '" data-act="stage-view" data-n="' + x.n + '">Stage ' + x.n + ' · ' + esc(x.short) + '</button>'; }).join('') + '</div>';
+    s += '<div class="card"><div class="toolbar"><h2 style="margin-right:8px">' + esc(sg.title) + '</h2>' + chip(st.status, st.status.replace('_', ' ')) + '<span class="muted small">' + esc(sg.when) + '</span><div class="spacer"></div>';
+    if (st.status === 'complete' || st.status === 'skipped') s += '<button class="btn" data-act="stage" data-op="reopen" data-n="' + stageView + '">Reopen</button>';
+    else {
+      if (st.status === 'not_started') s += '<button class="btn" data-act="stage" data-op="start" data-n="' + stageView + '">Start stage</button>';
+      s += '<button class="btn" data-act="stage" data-op="skip" data-n="' + stageView + '">Skip stage…</button><button class="btn primary" data-act="stage" data-op="complete" data-n="' + stageView + '">Mark complete</button>';
+    }
+    s += '</div><p class="muted">' + esc(sg.goal) + '</p>';
+    if (st.skip_reason) s += '<div class="note amber">' + (st.status === 'skipped' ? 'Skipped' : 'Completed with open items') + ': ' + esc(st.skip_reason) + '</div>';
+    s += '<p class="small">Progress ' + pr.pct + '% · required answers ' + (pr.required - pr.missing.length) + ' of ' + pr.required + ' · fields answered ' + pr.filled + ' of ' + pr.total + '</p>';
+    s += '<h4 style="margin-top:8px">Deliverables</h4><div>' + pr.deliverables.map(function (d) { return '<span class="pill">' + (d.done ? '✓ ' : '○ ') + esc(d.title) + ' <span class="faint">(' + (d.by === 'cli' ? 'generate in Deliverables' : 'written by the agent') + ')</span></span>'; }).join('') + '</div></div>';
+    if (stageView === 2) s += drTable();
+    if (stageView === 3) s += '<div class="card"><h3>Exercises E1 to E14</h3>' + exTable() + '<p class="small muted">The numbers for E2 to E7, E10 and E11 are in their own tabs. Change the inputs below or in those tabs; leave a field empty to use the project data or the playbook default shown in grey.</p></div>';
+    sg.groups.forEach(function (g) {
+      s += '<div class="card grp"><h3>' + esc(g.title) + '</h3>';
+      if (stageView === 3) s += calcFields(g.fields.map(function (fd) { return fd.k.slice(5); }));
+      else s += '<div class="form">' + g.fields.map(function (fd) { return fieldHtml(fd); }).join('') + '</div>';
+      s += '</div>';
+    });
+    return s;
+  }
+  function drTable() {
+    return '<div class="card"><h3>Data request tracker</h3><div class="tw"><table><tr><th>ID</th><th>Item</th><th>Owner</th><th>Due</th><th>Status</th><th>Received</th><th>Note</th></tr>' +
+      P.data_request.map(function (d, i) {
+        return '<tr><td><b>' + esc(d.id) + '</b></td><td>' + esc(d.item) + '<div class="small faint">' + esc(d.why) + ' · feeds ' + esc(d.ex) + '</div><details class="small"><summary class="muted">Fallback</summary>' + esc(d.fallback) + '</details></td>' +
+          '<td><input id="dr-o-' + i + '" data-path="data_request.' + i + '.owner" value="' + esc(d.owner) + '"></td><td><input id="dr-d-' + i + '" data-path="data_request.' + i + '.due" value="' + esc(d.due) + '"></td>' +
+          '<td><select id="dr-s-' + i + '" data-path="data_request.' + i + '.status">' + B.DR_STATUS.map(function (o) { return '<option' + (o === d.status ? ' selected' : '') + '>' + o + '</option>'; }).join('') + '</select></td>' +
+          '<td><input type="date" id="dr-r-' + i + '" data-path="data_request.' + i + '.received" value="' + esc(d.received) + '"></td><td><textarea id="dr-n-' + i + '" data-path="data_request.' + i + '.note" rows="2">' + esc(d.note) + '</textarea></td></tr>';
+      }).join('') + '</table></div><p class="small muted">Set "Fallback used" when an item will not arrive; it then goes into the E1 assumptions log automatically.</p></div>';
+  }
+  function exTable() {
+    return '<div class="tw"><table><tr><th>Exercise</th><th>What you do</th><th>Status</th><th>Note</th></tr>' + P.exercises.map(function (e, i) {
+      var d = B.EXERCISES.filter(function (x) { return x.id === e.id; })[0] || {};
+      return '<tr><td><b>' + esc(e.id) + '</b> ' + esc(d.title) + '<div class="small faint">' + (d.auto ? 'calculated in this dashboard' : 'your work') + ' · ' + esc(d.ref) + '</div></td><td class="small">' + esc(d.what) + '<div class="faint">Output: ' + esc(d.out) + '</div></td>' +
+        '<td><select id="ex-s-' + i + '" data-path="exercises.' + i + '.status">' + B.EX_STATUS.map(function (o) { return '<option' + (o === e.status ? ' selected' : '') + '>' + o + '</option>'; }).join('') + '</select></td>' +
+        '<td><textarea id="ex-n-' + i + '" data-path="exercises.' + i + '.note" rows="2">' + esc(e.note) + '</textarea></td></tr>';
+    }).join('') + '</table></div>';
+  }
+
+  function vLoad() {
+    var s = '<div class="card"><h3>Import load data</h3><div class="grid g2"><div>' +
+      '<div class="drop" id="drop">Drop CSV files here, or <button class="btn small" data-act="pick-csv">choose files</button><input type="file" id="csvfile" accept=".csv,.txt,text/csv" multiple hidden></div>' +
+      '<div class="toolbar" style="margin-top:10px"><label>Unit <select id="imp-unit"><option value="auto">Auto from header</option><option>kW</option><option>MW</option><option value="kWh">kWh per interval</option><option value="MWh">MWh per interval</option></select></label>' +
+      '<label>Dates <select id="imp-order"><option value="auto">Auto</option><option value="dmy">Day/Month/Year</option><option value="mdy">Month/Day/Year</option></select></label>' +
+      '<label>Value column <input type="text" id="imp-col" placeholder="auto" size="8"></label><label><input type="checkbox" id="imp-replace"> Replace existing data</label></div>' +
+      '<p class="small muted">Format: timestamp in the first column (or date and time in two columns), then a load column. 15 to 60 minute intervals. Several files (e.g. one per month) merge into one series. Data finer than 15 minutes is averaged to 15.</p></div><div>' +
+      '<h4>Monthly bills (fallback when there is no interval data)</h4><div class="toolbar" style="margin:6px 0"><button class="btn small" data-act="pick-bills">Import bills CSV</button><input type="file" id="billsfile" accept=".csv,.txt" hidden>' + (P.bills.length ? '<button class="btn small danger" data-act="clear-bills">Clear bills</button>' : '') + '</div>' +
+      '<p class="small muted">Columns: month, kWh, maximum demand kW, cost (optional).</p>' +
+      (A.bills ? '<p class="small">' + A.bills.months + ' months: ' + n(A.bills.annual_mwh, 0) + ' MWh/yr, peak ' + n(A.bills.peak, 2) + ' MW' + (A.bills.avg_cost_per_mwh ? ', average all-in cost ' + n(A.bills.avg_cost_per_mwh, 1) + ' ' + esc(cur()) + '/MWh' : '') + '</p>' : '') +
+      (P.load ? '<h4 style="margin-top:12px">Imported</h4><ul class="small" style="padding-left:18px;margin:4px 0">' + (P.load.sources || []).map(function (x) { return '<li>' + esc(x.file) + ': ' + x.rows + ' rows, ' + esc(x.unit) + ', ' + x.interval_min + ' min, column "' + esc(x.column) + '"' + (x.skipped ? ', ' + x.skipped + ' rows skipped' : '') + '</li>'; }).join('') + '</ul><div class="toolbar"><button class="btn small" data-act="dl-series">Download cleaned series (CSV)</button><button class="btn small" data-act="dl-monthly">Download monthly table (CSV)</button><button class="btn small danger" data-act="clear-load">Clear load data</button></div>' : '') +
+      '</div></div></div>';
+    var ls = A.ls;
+    if (!ls) return s + '<div class="card empty">No interval data yet. Import the client\'s meter, BMS or logger export above.' + (A.bills ? ' Until then the analysis uses the bills and the minimum load the client gave you.' : '') + '</div>';
+    var cm = P.fields['ops.min_load_mw'];
+    s += '<div class="tiles">' + tile('Period', ls.start.slice(0, 10) + ' → ' + ls.end.slice(0, 10), n(ls.days, 0) + ' days, ' + ls.interval_min + ' min') +
+      tile('Coverage', n(100 * ls.coverage, 1) + '%', (ls.slots - ls.points) + ' missing intervals') +
+      tile('Peak', n(ls.peak, 2) + ' MW', ls.peak_time.replace('T', ' ')) +
+      tile('Absolute minimum', n(ls.min_abs, 2) + ' MW', ls.min_time.replace('T', ' ')) +
+      tile('Minimum for sizing', n(ls.p05, 2) + ' MW', '5th percentile' + (isNum(cm) ? '; client said ' + n(cm, 2) : '')) +
+      tile('Average', n(ls.mean, 2) + ' MW', 'load factor ' + n(100 * ls.load_factor, 0) + '%') +
+      tile('Annual energy', n(ls.annual_mwh, 0) + ' MWh', ls.short_record ? 'scaled from a short record' : 'per year') + '</div>';
+    if (ls.short_record) s += '<div class="note amber" style="margin-bottom:16px">Less than 11 months of data. Seasonal swings are not captured: treat the minimum load and savings as estimates and show them as a range.</div>';
+    if (ls.coverage < 0.95) s += '<div class="note amber" style="margin-bottom:16px">' + n(100 * (1 - ls.coverage), 1) + '% of intervals are missing. Check with the client whether the gaps are meter faults or shutdowns.</div>';
+    s += '<div class="card"><h3>Daily load over the period</h3>' + chartDaily(ls) + '</div>';
+    s += '<div class="grid g2"><div class="card"><h3>Load duration curve</h3>' + chartLdc(ls, A.selected) + '<p class="small muted">The area under the curve and below an option\'s duty line is the energy the engines can supply. Where the curve drops below the dashed line, the plant must shut down (or export).</p></div>' +
+      '<div class="card"><h3>Average day</h3>' + chartProfile(ls) + '</div></div>';
+    s += '<div class="card"><h3>Hour-by-day heat map</h3><canvas id="heat" class="heat" style="height:220px"></canvas>' + heatLegend(ls) + '</div>';
+    post.push(function () { drawHeat('heat', ls); });
+    s += '<div class="grid g2"><div class="card"><h3>Monthly energy</h3>' + chartMonthly(ls) + '</div><div class="card"><h3>Monthly table</h3><div class="tw"><table><tr><th>Month</th><th class="r">MWh</th><th class="r">Max MW</th><th class="r">Min MW</th><th class="r">Average MW</th></tr>' +
+      ls.monthly.map(function (m) { return '<tr><td>' + m.month + '</td><td class="r">' + n(m.mwh, 0) + '</td><td class="r">' + n(m.max, 2) + '</td><td class="r">' + n(m.min, 2) + '</td><td class="r">' + n(m.mean, 2) + '</td></tr>'; }).join('') + '</table></div></div></div>';
+    s += '<div class="card"><h3>E2 notes</h3>' + exNote('E2') + '</div>';
+    return s;
+  }
+  function exNote(id) {
+    var i = P.exercises.findIndex(function (e) { return e.id === id; }), e = P.exercises[i];
+    return '<div class="toolbar"><label>Status <select id="exn-s-' + id + '" data-path="exercises.' + i + '.status">' + B.EX_STATUS.map(function (o) { return '<option' + (o === e.status ? ' selected' : '') + '>' + o + '</option>'; }).join('') + '</select></label></div>' +
+      '<textarea id="exn-n-' + id + '" data-path="exercises.' + i + '.note" rows="3" style="width:100%;margin-top:8px;border:1px solid var(--line);border-radius:8px;padding:8px" placeholder="Findings for the proposal">' + esc(e.note) + '</textarea>';
+  }
+
+  function vTariff() {
+    var o = opt(), t = A.tariff, s = '';
+    s += '<div class="card"><h3>Base tariff</h3>' + fieldsHtml(['tariff.energy_rate', 'tariff.demand_charge', 'tariff.class', 'tariff.has_tou']) + '</div>';
+    s += '<div class="card"><h3>Time-of-use bands</h3><p class="small muted">A band overrides the base rate in its hours. Hours run from the start hour up to (not including) the end hour; 22 to 6 wraps past midnight. Later rows win where bands overlap.</p><div class="tw"><table><tr><th>Name</th><th>Rate (' + esc(cur()) + '/MWh)</th><th>Days</th><th>From hour</th><th>To hour</th><th></th></tr>' +
+      P.tariff_periods.map(function (p, i) {
+        return '<tr><td><input id="tp-n-' + i + '" data-path="tariff_periods.' + i + '.name" value="' + esc(p.name) + '"></td><td><input type="number" step="any" id="tp-r-' + i + '" data-type="number" data-path="tariff_periods.' + i + '.rate" value="' + esc(p.rate) + '"></td>' +
+          '<td><select id="tp-d-' + i + '" data-path="tariff_periods.' + i + '.days">' + ['all', 'weekday', 'weekend'].map(function (d) { return '<option' + (d === p.days ? ' selected' : '') + '>' + d + '</option>'; }).join('') + '</select></td>' +
+          '<td><input type="number" min="0" max="24" id="tp-f-' + i + '" data-type="number" data-path="tariff_periods.' + i + '.from" value="' + esc(p.from) + '"></td><td><input type="number" min="0" max="24" id="tp-t-' + i + '" data-type="number" data-path="tariff_periods.' + i + '.to" value="' + esc(p.to) + '"></td>' +
+          '<td><button class="btn small danger" data-act="del-row" data-path="tariff_periods" data-i="' + i + '">Remove</button></td></tr>';
+      }).join('') + '</table></div><div class="toolbar" style="margin-top:8px"><button class="btn small" data-act="add-tou">Add band</button></div></div>';
+    s += '<div class="tiles">' + tile('Base energy rate', n(A.v.tariff, 1), esc(cur()) + '/MWh · ' + srcText('tariff')) + tile('Time-weighted average', n(t.avg_simple, 1), 'all hours equal') +
+      tile('Load-weighted average', t.avg_load_weighted ? n(t.avg_load_weighted, 1) : '—', t.avg_load_weighted ? 'weighted by the site profile' : 'needs load data') +
+      tile('Blended incl. demand charge', t.blended ? n(t.blended, 1) : '—', t.blended ? 'demand charge spread over energy' : 'needs load data and a demand charge') +
+      (A.bills && A.bills.avg_cost_per_mwh ? tile('Bills: average all-in cost', n(A.bills.avg_cost_per_mwh, 1), 'cross-check against the tariff') : '') + '</div>';
+    s += optPicker('Generation cost of');
+    s += '<div class="grid g2"><div class="card"><h3>Tariff by hour vs generation cost</h3>' + chartRates(t.table, o.genCost) + '</div><div class="card"><h3>Running window (' + esc(A.v.run_mode) + ')</h3>' + runGrid(o) +
+      '<p class="small muted">Green hours: the engines run. With the "economic" rule they run whenever the tariff is above the generation cost of ' + n(o.genCost, 1) + ' ' + esc(cur()) + '/MWh. Change the rule under Sizing · Dispatch inputs.</p></div></div>';
+    s += '<div class="card"><h3>E3 notes</h3>' + exNote('E3') + '</div>';
+    return s;
+  }
+  function runGrid(o) {
+    var m = o.dispatch.mask || null, rt = A.tariff.table;
+    if (!m) { m = [[], []]; for (var d = 0; d < 2; d++) for (var h = 0; h < 24; h++) m[d][h] = rt[d][h] > o.genCost; }
+    var s = '<div class="tw"><table class="small"><tr><th></th>';
+    for (var h2 = 0; h2 < 24; h2++) s += '<th style="padding:3px 2px;text-align:center">' + h2 + '</th>';
+    s += '</tr>';
+    ['Weekday', 'Weekend'].forEach(function (lbl, d) {
+      s += '<tr><td>' + lbl + '</td>';
+      for (var h = 0; h < 24; h++) s += '<td title="' + n(rt[d][h], 1) + '" style="padding:3px 2px;text-align:center;background:' + (m[d][h] ? '#d8efe2' : '#f3f4f6') + ';font-size:10.5px">' + n(rt[d][h], 0) + '</td>';
+      s += '</tr>';
+    });
+    return s + '</table></div>';
+  }
+
+  function vSizing() {
+    var s = '', v = A.v;
+    s += '<div class="card"><h3>Result</h3>' + (A.best ? '<p><b>Lowest payback among options that pass all three checks: ' + esc(A.best.label) + ' (' + n(A.best.econ.simplePayback, 1) + ' years).</b></p>' : '<p><b>No option passes all three checks with these inputs.</b> Change the redundancy, engine sizes, tapping point or switchboard; the cards show which check fails.</p>') +
+      '<p class="small muted">Required ' + n(v.target, 1) + ' MW at the generator terminals, ' + esc(v.red) + ', derate ' + n(A.derate.pct, 1) + '% (' + (A.derate.override ? 'your override' : 'planning rule') + '). Peak ' + n(v.peak, 2) + ' MW, minimum ' + n(v.minload, 2) + ' MW. ' + (P.load ? 'Energy from dispatch against the load data.' : 'No load data: energy from the capacity factor.') + '</p>' + chartSizing(A.ranked) + '</div>';
+    s += '<div class="card"><h3>Options</h3><p class="small muted">Tick up to two options for the proposal (Option A first). If none is ticked the best two are used.</p><div class="opts">' + A.ranked.map(function (o) {
+      var sel = (P.selected_options || []).indexOf(o.id);
+      return '<div class="opt' + (A.best && A.best.id === o.id ? ' best' : '') + '"><h3><span>' + esc(o.label) + '</span>' + (o.pass ? chip('Pass', 'passes') : chip('Fail', 'fails')) + '</h3>' +
+        '<div style="margin-top:6px">' + chip(o.exportOk ? 'ok' : 'bad', 'turn-down') + ' ' + chip(o.faultOk ? 'ok' : 'bad', 'fault') + ' ' + chip(o.availOk ? 'ok' : 'bad', 'availability') + '</div><dl>' +
+        '<dt>Site rating per unit</dt><dd>' + n(o.ps, 2) + ' MW</dd><dt>Duty / installed</dt><dd>' + n(o.duty, 1) + ' / ' + n(o.installed, 1) + ' MW</dd>' +
+        '<dt>Lowest stable output</dt><dd>' + n(o.floor, 2) + ' MW</dd><dt>Fault level after</dt><dd>' + n(o.iTot, 1) + ' kA</dd>' +
+        '<dt>Chance of full output</dt><dd>' + n(100 * o.avail, 1) + '%</dd><dt>Generation</dt><dd>' + n(o.dispatch.genMWh, 0) + ' MWh/yr</dd>' +
+        '<dt>Capacity factor</dt><dd>' + n(100 * o.dispatch.cf, 0) + '%</dd>' + (o.dispatch.share !== null ? '<dt>Share of site energy</dt><dd>' + n(100 * o.dispatch.share, 0) + '%</dd>' : '') +
+        (o.dispatch.lowLoadHours !== null ? '<dt>Hours stopped, low load</dt><dd>' + n(o.dispatch.lowLoadHours, 0) + '</dd><dt>Hours outside window</dt><dd>' + n(o.dispatch.offWindowHours, 0) + '</dd>' : '') +
+        '<dt>Generation cost</dt><dd>' + n(o.genCost, 1) + ' /MWh</dd><dt>Capex</dt><dd>' + money(o.econ.capex) + '</dd>' +
+        '<dt>Net saving yr 1</dt><dd>' + money(o.econ.year1) + '</dd><dt>Payback</dt><dd>' + (o.econ.simplePayback ? n(o.econ.simplePayback, 1) + ' yr' : 'none') + '</dd></dl>' +
+        '<label class="chk" style="margin-top:8px"><input type="checkbox" data-act-change="sel-opt" data-id="' + esc(o.id) + '"' + (sel >= 0 ? ' checked' : '') + '> In proposal' + (sel >= 0 ? ' as Option ' + 'AB'[sel] : '') + '</label></div>';
+    }).join('') + '</div></div>';
+    if (A.ls) s += '<div class="card"><h3>Proposal options against the load duration curve</h3>' + chartLdc(A.ls, A.selected, true) + '</div>';
+    s += '<div class="card"><h3>Engine classes</h3><p class="small muted">Example values for planning only. Replace each row with the OEM\'s data and quote. Set rated MW to 0 to drop a class.</p><div class="tw"><table><tr><th>Rated MW</th><th>Efficiency %</th><th>Min stable load %</th><th>Generator kV</th><th>O&amp;M per MWh</th><th>Installed cost per kW</th><th></th></tr>' +
+      P.engine_classes.map(function (c, i) {
+        return '<tr>' + ['mw', 'eff', 'min', 'kv', 'om', 'cx'].map(function (k) { return '<td><input type="number" step="any" id="ec-' + i + '-' + k + '" data-type="number" data-path="engine_classes.' + i + '.' + k + '" value="' + esc(c[k]) + '"></td>'; }).join('') +
+          '<td><button class="btn small danger" data-act="del-row" data-path="engine_classes" data-i="' + i + '">Remove</button></td></tr>';
+      }).join('') + '</table></div><div class="toolbar" style="margin-top:8px"><button class="btn small" data-act="add-class">Add class</button><button class="btn small" data-act="reset-classes">Reset to playbook examples</button></div></div>';
+    s += '<div class="card"><h3>Sizing inputs</h3><p class="small muted">Leave a field empty to use the value shown (from project data, load data or the playbook default).</p>' + calcFields(['target', 'red', 'pf', 'peak', 'minload', 'ambient', 'alt', 'mn', 'override', 'avail', 'req', 'cf']) + '</div>';
+    s += '<div class="card"><h3>Dispatch inputs</h3>' + calcFields(['run_mode', 'run_hours', 'run_days', 'import_margin_mw', 'demand_credit_pct']) +
+      '<p class="small muted">Dispatch: in each interval the duty units follow the site load minus the import margin, never exporting. If that is below one unit\'s minimum stable load, the plant stops. Output is scaled by the expected share of duty units available. Part-load efficiency loss is not modelled.</p></div>';
+    s += '<div class="card"><h3>How the numbers are worked out</h3><ul class="small muted">' +
+      '<li><b>Derate:</b> 1% per 100 m above 500 m, 1% per °C above 30 °C, 0.5% per methane number point below 70. Use the OEM curve when you have it, or the override.</li>' +
+      '<li><b>Units:</b> duty units = required output ÷ site-rated unit output, rounded up. N+1 adds one spare.</li>' +
+      '<li><b>Turn-down:</b> lowest stable output = one unit at its minimum load; it must be at or below the site minimum unless export is allowed.</li>' +
+      '<li><b>Fault level:</b> each installed unit adds kVA ÷ (√3 × V × (X″d + step-up impedance if any)), spare included as the worst case.</li>' +
+      '<li><b>Availability:</b> chance that at least the duty number of units is running (binomial).</li>' +
+      '<li><b>Generation cost:</b> gas price × 3.412 × 1.108 ÷ efficiency + O&amp;M.</li></ul></div>';
+    s += '<div class="card"><h3>E4 notes</h3>' + exNote('E4') + '</div>';
+    return s;
+  }
+
+  function vElectrical() {
+    var o = opt(), s = optPicker('Option');
+    s += '<div class="grid g2"><div class="card"><h3>Fault level at the bus</h3>' + chartFault(o) +
+      '<p class="small">' + esc(o.elec.checks.C1.detail) + '</p>' + (o.elec.est ? '<p class="small muted">Existing level: ' + esc(o.elec.est.src) + '.</p>' : '<p class="small muted">Existing level: ' + esc(srcText('ifault')) + '. Enter the transformer data or the utility figure below to replace it.</p>') +
+      (!o.faultOk ? '<div class="note red small">Over the rating. Options: replace the board or the over-stressed breakers; current-limiting reactors in the generator cable; a generator with higher X″d or a step-up transformer with higher impedance; a different bus section or run with the bus tie open; connect at a higher voltage.</div>' : '') + '</div>';
+    s += '<div class="card"><h3>Reverse power and currents</h3><div class="kv"><b>Lowest stable output</b><span>' + n(o.floor, 2) + ' MW</span><b>Site minimum</b><span>' + n(A.v.minload, 2) + ' MW</span>' +
+      '<b>Export if uncontrolled</b><span>' + n(o.elec.exportPotential, 2) + ' MW at minimum load with full duty output</span><b>Engine current</b><span>' + n(o.elec.genA, 0) + ' A at ' + n(A.v.vconn, 1) + ' kV (installed)</span>' +
+      '<b>Site peak from grid</b><span>' + n(o.elec.sitePeakA, 0) + ' A with the engines tripped</span><b>Peak (making) current</b><span>' + n(o.elec.peakKa, 1) + ' kA vs ' + n(o.elec.making, 1) + ' kA</span></div>' +
+      '<p class="small muted" style="margin-top:8px">Protection to price: generator 87G, 32, 40, 46, 59/27, 81, 51V, 64; interconnection 25, 27/59, 81 O/U, 32R, ROCOF or vector shift, and transfer trip if the utility requires it.</p></div></div>';
+    s += '<div class="card"><h3>Six checks on the single line diagram</h3><div class="tw"><table><tr><th>Check</th><th>Status</th><th>Detail and notes</th></tr>' + B.SLD_CHECKS.map(function (c) {
+      var i = P.checks.findIndex(function (x) { return x.id === c.id; }), man = P.checks[i], auto = o.elec.checks[c.id];
+      return '<tr><td><b>' + c.id.slice(1) + '</b> ' + esc(c.title) + '</td><td>' + (auto ? chip(auto.status) + '<div class="small faint">calculated</div>' :
+        '<select id="ck-s-' + i + '" data-path="checks.' + i + '.status">' + B.CHECK_STATUS.map(function (x) { return '<option' + (x === man.status ? ' selected' : '') + '>' + x + '</option>'; }).join('') + '</select>') + '</td>' +
+        '<td class="small">' + (auto ? esc(auto.detail) : '<span class="muted">' + esc(c.hint) + '</span>') + '<textarea id="ck-n-' + i + '" data-path="checks.' + i + '.note" rows="2" placeholder="Notes" style="margin-top:4px">' + esc(man.note) + '</textarea></td></tr>';
+    }).join('') + '</table></div><p class="small muted">Have a protection engineer review the chosen tapping point before you finalise it (E14).</p></div>';
+    s += '<div class="card"><h3>Electrical data</h3>' + fieldsHtml(['elec.connection_kv', 'elec.candidate_bus', 'elec.spare_bay', 'elec.switchgear_rating_ka', 'elec.switchgear_making_ka', 'elec.tx_mva', 'elec.tx_z_pct', 'elec.tx_count', 'elec.grid_fault_mva', 'elec.existing_fault_ka', 'elec.motor_ka', 'elec.bus_tie', 'elec.incomer_rating_a', 'elec.busbar_rating_a']) + '</div>';
+    s += '<div class="card"><h3>Overrides for the calculation</h3>' + calcFields(['vconn', 'ifault', 'rating', 'xd', 'zt', 'pf']) + '</div>';
+    s += '<div class="card"><h3>E5 notes</h3>' + exNote('E5') + '</div>';
+    return s;
+  }
+
+  function vGas() {
+    var o = opt(), g = o.gas, h = o.heat, s = optPicker('Option');
+    s += '<div class="tiles">' + tile('Fuel at full duty output', n(g.fuel_mw_full, 1) + ' MW', 'efficiency ' + n(100 * o.eff, 1) + '%') + tile('Gas flow at full output', n(g.nm3h_full, 0) + ' Nm³/h', 'LHV ' + n(A.v.lhv, 2) + ' kWh/Nm³') +
+      tile('Annual gas', n(g.annual_nm3 / 1e6, 2) + ' M Nm³', n(g.annual_mmbtu, 0) + ' MMBtu (HHV)') + tile('Generation cost', n(o.genCost, 1) + ' /MWh', 'at ' + n(A.v.gas, 2) + ' ' + cur() + '/MMBtu') + '</div>';
+    s += '<div class="card"><h3>E6 Gas supply options</h3><p class="small muted">Delivered price per MMBtu (HHV) for each route. An empty price on the pipeline row uses the project gas price.</p><div class="tw"><table><tr><th>Route</th><th>Delivered price</th><th class="r">Generation cost /MWh</th><th class="r">Spread to base tariff</th><th class="r">Annual gas cost</th><th>Note</th><th></th></tr>' +
+      P.gas_options.map(function (x, i) {
+        var r = g.options[i] || {};
+        return '<tr><td><input id="go-n-' + i + '" data-path="gas_options.' + i + '.name" value="' + esc(x.name) + '"></td><td><input type="number" step="any" id="go-p-' + i + '" data-type="number" data-path="gas_options.' + i + '.price" value="' + esc(x.price === null ? '' : x.price) + '"></td>' +
+          '<td class="r">' + (r.genCost ? n(r.genCost, 1) : '—') + '</td><td class="r">' + (r.spread !== undefined && r.price !== null ? '<span style="color:' + (r.spread > 0 ? 'var(--green)' : 'var(--red)') + '">' + n(r.spread, 1) + '</span>' : '—') + '</td><td class="r">' + (r.annualCost ? money(r.annualCost) : '—') + '</td>' +
+          '<td><input id="go-t-' + i + '" data-path="gas_options.' + i + '.note" value="' + esc(x.note) + '"></td><td><button class="btn small danger" data-act="del-row" data-path="gas_options" data-i="' + i + '">Remove</button></td></tr>';
+      }).join('') + '</table></div><div class="toolbar" style="margin-top:8px"><button class="btn small" data-act="add-gas">Add route</button></div></div>';
+    s += '<div class="card"><h3>Gas data</h3>' + fieldsHtml(['gas.availability', 'gas.distributor', 'gas.price_per_mmbtu', 'gas.lhv_kwh_nm3', 'gas.methane_number', 'gas.pressure_bar', 'gas.tie_in', 'obj.gas_source']) + '<p class="small muted">Check gas quality with the OEM: heating value, methane number, H₂S. Match the supply pressure to the engine fuel train.</p></div>';
+    s += '<div class="card"><h3>E7 Heat recovery</h3><div class="tiles">' + tile('Heat available at full output', n(h.avail_mw_full, 1) + ' MWth', n(A.v.heat_frac, 0) + '% of fuel') + tile('Heat available per year', n(h.annual_avail_mwh, 0) + ' MWh', 'from the dispatch') +
+      tile('Heat demand per year', n(h.demand_mwh, 0) + ' MWh', 'demand × hours') + tile('Heat credit', h.enabled ? money(h.credit) + '/yr' : 'not counted', h.enabled ? n(h.used_mwh, 0) + ' MWh at ' + n(h.boilerCostPerMWh, 1) + '/MWh' : 'set "heat user" to Yes') + '</div>' +
+      fieldsHtml(['heat.enabled', 'heat.type', 'heat.demand_mw', 'heat.hours', 'heat.boiler_eff']) + calcFields(['heat_frac', 'heat_recovery']) +
+      '<p class="small muted">Without a heat user the economics rest on gas price against tariff alone. Hot water, steam or an absorption chiller can use the jacket water and exhaust heat.</p></div>';
+    s += '<div class="grid g2"><div class="card"><h3>E6 notes</h3>' + exNote('E6') + '</div><div class="card"><h3>E7 notes</h3>' + exNote('E7') + '</div></div>';
+    return s;
+  }
+
+  function vBusiness() {
+    var o = opt(), e = o.econ, s = optPicker('Option');
+    s += '<div class="tiles">' + tile('Capex', money(e.capex), n(e.capexPerKw, 0) + ' per kW installed') + tile('Net saving, year 1', money(e.year1), 'after fuel, O&M and fixed costs') +
+      tile('Simple payback', e.simplePayback ? n(e.simplePayback, 1) + ' yr' : 'none', 'with escalation: ' + (e.payback ? n(e.payback, 1) + ' yr' : '—')) + tile('IRR', e.irr !== null ? n(100 * e.irr, 1) + '%' : 'n/a', A.v.years + ' years') +
+      tile('NPV', money(e.npv), 'at ' + n(A.v.discount_pct, 1) + '%') + tile('LCOE', n(e.lcoe, 1), cur() + '/MWh vs ' + n(e.avgAvoidedPerMWh, 1) + ' avoided') + '</div>';
+    s += '<div class="grid g2"><div class="card"><h3>E10 Capex build-up</h3><table>' + e.capexLines.map(function (l) { return '<tr><td>' + esc(l.item) + '</td><td class="r">' + n(l.cost, 0) + '</td></tr>'; }).join('') + '<tr><th>Total (' + esc(cur()) + ')</th><th class="r">' + n(e.capex, 0) + '</th></tr></table>' +
+      calcFields(['switchgear_upgrade', 'gas_connection', 'heat_recovery', 'development', 'contingency_pct']) + '<p class="small muted">The engine class "installed cost per kW" is all-in (engines, electrical, mechanical, civil, engineering, commissioning). Add site-specific items above.</p></div>';
+    s += '<div class="card"><h3>Annual savings and costs (year 1)</h3><table>' +
+      [['Generation', n(e.genMWh, 0) + ' MWh'], ['Avoided energy cost', money(e.avoided)], ['Demand-charge saving credited', money(e.demand)], ['Heat credit', money(e.heatCredit)], ['Fuel', '−' + money(e.fuel)], ['O&M (per MWh, incl. LTSA)', '−' + money(e.om)], ['Fixed: staff and insurance', '−' + money(e.fixed)], ['<b>Net saving</b>', '<b>' + money(e.year1) + '</b>']]
+        .map(function (r) { return '<tr><td>' + r[0] + '</td><td class="r">' + r[1] + '</td></tr>'; }).join('') + '</table>' +
+      calcFields(['staff_per_yr', 'insurance_pct']) + '</div></div>';
+    s += '<div class="grid g2"><div class="card"><h3>Cumulative cash flow</h3>' + chartCash(e) + '</div><div class="card"><h3>Sensitivities</h3>' + chartTornado(o) +
+      '<table class="small" style="margin-top:8px"><tr><th>Driver</th><th class="r">Payback low case</th><th class="r">Payback high case</th></tr>' + o.sens.map(function (x) { return '<tr><td>' + esc(x.name) + ' (' + esc(x.lo) + ' / ' + esc(x.hi) + ')</td><td class="r">' + (x.pbLo ? n(x.pbLo, 1) : 'none') + '</td><td class="r">' + (x.pbHi ? n(x.pbHi, 1) : 'none') + '</td></tr>'; }).join('') + '</table></div></div>';
+    s += '<div class="card"><h3>Capex vs PPA</h3><div class="grid g2"><div><div class="kv"><b>Indicative PPA price</b><span>' + n(e.ppa, 1) + ' ' + esc(cur()) + '/MWh for a ' + n(A.v.ppa_irr_pct, 0) + '% investor IRR over ' + A.v.years + ' years</span>' +
+      '<b>Client saving under PPA</b><span>' + money(e.ppaClientSaving) + '/yr, no capex</span><b>Client saving with capex</b><span>' + money(e.year1) + '/yr after ' + money(e.capex) + ' capex</span></div>' +
+      '<p class="small muted" style="margin-top:8px">PPA terms to cover: tariff structure, take-or-pay, gas price pass-through, availability guarantee, contract term (BOO or BOOT). The PPA price ignores escalation.</p></div><div>' +
+      calcFields(['years', 'discount_pct', 'tariff_esc_pct', 'gas_esc_pct', 'om_esc_pct', 'ppa_irr_pct']) + '</div></div></div>';
+    s += '<div class="card"><h3>Cash flow table</h3><div class="tw"><table class="small"><tr><th>Year</th><th class="r">Savings</th><th class="r">Heat</th><th class="r">Fuel</th><th class="r">O&amp;M + fixed</th><th class="r">Net</th><th class="r">Cumulative</th></tr><tr><td>0</td><td colspan="4" class="r">Capex</td><td class="r">' + n(-e.capex, 0) + '</td><td class="r">' + n(-e.capex, 0) + '</td></tr>' +
+      e.rows.map(function (r) { return '<tr><td>' + r.year + '</td><td class="r">' + n(r.savings, 0) + '</td><td class="r">' + n(r.heat, 0) + '</td><td class="r">' + n(-r.fuel, 0) + '</td><td class="r">' + n(-r.om, 0) + '</td><td class="r">' + n(r.net, 0) + '</td><td class="r">' + n(r.cumulative, 0) + '</td></tr>'; }).join('') + '</table></div></div>';
+    s += '<div class="grid g2"><div class="card"><h3>E10 notes</h3>' + exNote('E10') + '</div><div class="card"><h3>E11 notes</h3>' + exNote('E11') + '</div></div>';
+    return s;
+  }
+
+  function editTable(path, cols, rows, addAct) {
+    return '<div class="tw"><table><tr>' + cols.map(function (c) { return '<th>' + esc(c[1]) + '</th>'; }).join('') + '<th></th></tr>' + rows.map(function (r, i) {
+      return '<tr>' + cols.map(function (c) {
+        var id = path + '-' + i + '-' + c[0], v = r[c[0]];
+        if (Array.isArray(c[2])) return '<td><select id="' + id + '" data-path="' + path + '.' + i + '.' + c[0] + '">' + c[2].map(function (o) { return '<option' + (o === v ? ' selected' : '') + '>' + esc(o) + '</option>'; }).join('') + '</select></td>';
+        if (c[2] === 'number') return '<td style="width:90px"><input type="number" step="any" id="' + id + '" data-type="number" data-path="' + path + '.' + i + '.' + c[0] + '" value="' + esc(v) + '"></td>';
+        if (c[2] === 'date') return '<td style="width:140px"><input type="date" id="' + id + '" data-path="' + path + '.' + i + '.' + c[0] + '" value="' + esc(v) + '"></td>';
+        return '<td><textarea rows="1" id="' + id + '" data-path="' + path + '.' + i + '.' + c[0] + '">' + esc(v) + '</textarea></td>';
+      }).join('') + '<td><button class="btn small danger" data-act="del-row" data-path="' + path + '" data-i="' + i + '">Remove</button></td></tr>';
+    }).join('') + '</table></div>' + (addAct ? '<div class="toolbar" style="margin-top:8px"><button class="btn small" data-act="' + addAct + '">Add row</button></div>' : '');
+  }
+  function vRegisters() {
+    var s = '';
+    s += '<div class="card"><h3>E1 Assumptions log</h3><p class="small muted">Generated from defaults still in use, unknown answers, and data requests set to "Fallback used". Add your own below.</p><div class="tw"><table><tr><th>Item</th><th>Assumption</th><th>Source or fallback</th><th>Risk</th></tr>' +
+      A.assumptions.map(function (x) { return '<tr><td>' + esc(x.item) + '</td><td>' + esc(x.assumption) + '</td><td class="small">' + esc(x.source) + '</td><td class="small">' + esc(x.risk) + '</td></tr>'; }).join('') + '</table></div>' +
+      '<h4 style="margin-top:14px">Your assumptions</h4>' + editTable('assumptions', [['item', 'Item'], ['assumption', 'Assumption'], ['source', 'Source or fallback'], ['risk', 'Risk']], P.assumptions, 'add-assumption') + exNote('E1') + '</div>';
+    s += '<div class="card"><h3>E12 Risk register</h3>' + editTable('risks', [['risk', 'Risk'], ['effect', 'What happens'], ['mitigation', 'Mitigation'], ['l', 'Likelihood', ['L', 'M', 'H']], ['i', 'Impact', ['L', 'M', 'H']], ['owner', 'Owner']], P.risks, 'add-risk') + exNote('E12') + '</div>';
+    s += '<div class="card"><h3>E13 Schedule</h3>' + chartGantt(P.schedule) + editTable('schedule', [['task', 'Task'], ['start', 'Start week', 'number'], ['weeks', 'Weeks', 'number']], P.schedule, 'add-task') + exNote('E13') + '</div>';
+    s += '<div class="card"><h3>E14 Internal review</h3>' + editTable('review', [['role', 'Review'], ['name', 'Name'], ['date', 'Date', 'date'], ['status', 'Status', ['Pending', 'Approved', 'Changes requested']], ['note', 'Note']], P.review, 'add-review') + exNote('E14') + '</div>';
+    s += '<div class="grid g2"><div class="card"><h3>E8 Site layout concept</h3>' + exNote('E8') + '<p class="small muted">Footprint, cable and gas routes, stack, noise distances. Containerised packages need less civil work than a built hall.</p></div><div class="card"><h3>E9 Permits and utility pathway</h3>' + exNote('E9') + '<p class="small muted">Utility interconnection (needed even for zero export), generation licence, emissions and noise, gas supply agreement, building and fire. Start the utility approval early.</p></div></div>';
+    return s;
+  }
+
+  var GEN = [['hypothesis', 's0-hypothesis', 0, 'First hypothesis (ballpark)', 'hypothesisMd'], ['meeting-pack', 's1-pack', 1, 'Meeting agenda, question sheet and site walk checklist', 'meetingPackMd'],
+    ['data-request', 's2-request', 2, 'Formal data request (table and email)', 'dataRequestMd'], ['results', 's3-results', 3, 'Exercise results summary (E1 to E14)', 'resultsMd'], ['proposal', 's4-proposal', 4, 'Proposal package (draft)', 'proposalMd']];
+  function vDeliverables() {
+    var s = '<div class="card"><h3>Generate from the project data</h3><p class="small muted">These are built from the numbers and answers in the file and saved into it, so the agent sees them too. Regenerate after the data changes. The agent writes the narrative deliverables (briefs, emails, notes).</p><div class="toolbar">' +
+      GEN.map(function (g) { return '<button class="btn small" data-act="gen-doc" data-kind="' + g[0] + '">Stage ' + g[2] + ': ' + esc(g[3]) + '</button>'; }).join('') +
+      '<button class="btn small" data-act="dl-dr-csv">Data request (CSV)</button></div></div>';
+    var list = (P.deliverables || []).slice().sort(function (a, b) { return a.stage - b.stage || (a.id < b.id ? -1 : 1); });
+    s += '<div class="card"><h3>Saved in this project (' + list.length + ')</h3>' + (list.length ? '<table><tr><th>Stage</th><th>Deliverable</th><th>Updated</th><th></th></tr>' + list.map(function (d) {
+      return '<tr><td>' + d.stage + '</td><td><b>' + esc(d.title) + '</b> <span class="faint small">' + esc(d.id) + '</span></td><td class="small">' + esc((d.updated || '').replace('T', ' ').slice(0, 16)) + '</td><td style="white-space:nowrap"><button class="btn small" data-act="view-doc" data-id="' + esc(d.id) + '">View</button> <button class="btn small" data-act="dl-doc" data-id="' + esc(d.id) + '">Download .md</button> <button class="btn small danger" data-act="del-doc" data-id="' + esc(d.id) + '">Delete</button></td></tr>';
+    }).join('') + '</table><div class="toolbar" style="margin-top:8px"><button class="btn small" data-act="dl-all-docs">Download all as one .md</button></div>' : '<div class="empty">None yet.</div>') + '</div>';
+    var d = docView && list.filter(function (x) { return x.id === docView; })[0];
+    if (d) s += '<div class="card md"><div class="toolbar" style="justify-content:flex-end"><button class="btn small" data-act="close-doc">Close</button></div>' + mdToHtml(d.markdown) + '</div>';
+    return s;
+  }
+  function vLog() {
+    return '<div class="card"><h3>Activity log</h3><p class="small muted">Who changed what, from the dashboard or the agent. Last 500 entries.</p><table class="small"><tr><th>When (UTC)</th><th>Who</th><th>What</th></tr>' + (P.log || []).slice().reverse().map(function (l) { return '<tr><td style="white-space:nowrap">' + esc(l.t.replace('T', ' ').slice(0, 16)) + '</td><td>' + esc(l.who) + '</td><td>' + esc(l.text) + '</td></tr>'; }).join('') + '</table></div>';
+  }
+
+  // minimal markdown → html (headings, lists, tables, bold, italics, code, paragraphs)
+  function inline(t) { return esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/(^|[^*])_(.+?)_(?=[^\w]|$)/g, '$1<i>$2</i>').replace(/`([^`]+)`/g, '<code>$1</code>'); }
+  function mdToHtml(md) {
+    var lines = String(md).split('\n'), out = [], i = 0;
+    while (i < lines.length) {
+      var l = lines[i];
+      if (/^#{1,4} /.test(l)) { var lv = l.match(/^#+/)[0].length; out.push('<h' + lv + '>' + inline(l.replace(/^#+ /, '')) + '</h' + lv + '>'); i++; continue; }
+      if (/^\|/.test(l)) {
+        var rows = []; while (i < lines.length && /^\|/.test(lines[i])) { rows.push(lines[i]); i++; }
+        var cells = function (r) { return r.replace(/^\||\|$/g, '').split(/(?<!\\)\|/).map(function (c) { return c.trim().replace(/\\\|/g, '|'); }); };
+        var h = cells(rows[0]), body = rows.slice(2);
+        out.push('<div class="tw"><table><tr>' + h.map(function (c) { return '<th>' + inline(c) + '</th>'; }).join('') + '</tr>' + body.map(function (r) { return '<tr>' + cells(r).map(function (c) { return '<td>' + inline(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</table></div>');
+        continue;
+      }
+      if (/^\s*[-*] /.test(l)) {
+        var items = []; while (i < lines.length && /^\s*[-*] /.test(lines[i])) { items.push(lines[i].replace(/^\s*[-*] /, '').replace(/^\[( |x)\] /, function (m, x) { return x === 'x' ? '☑ ' : '☐ '; })); i++; }
+        out.push('<ul>' + items.map(function (x) { return '<li>' + inline(x) + '</li>'; }).join('') + '</ul>'); continue;
+      }
+      if (/^\s*\d+\. /.test(l)) {
+        var oi = []; while (i < lines.length && /^\s*\d+\. /.test(lines[i])) { oi.push(lines[i].replace(/^\s*\d+\. /, '')); i++; }
+        out.push('<ol>' + oi.map(function (x) { return '<li>' + inline(x) + '</li>'; }).join('') + '</ol>'); continue;
+      }
+      if (!l.trim()) { i++; continue; }
+      var para = []; while (i < lines.length && lines[i].trim() && !/^(#|\||\s*[-*] |\s*\d+\. )/.test(lines[i])) { para.push(lines[i]); i++; }
+      out.push('<p>' + inline(para.join(' ')) + '</p>');
+    }
+    return out.join('\n');
+  }
+
+  // ------------------------------------------------------------------ CSV helpers
+  function csvEsc(x) { x = String(x === null || x === undefined ? '' : x); return /[",\n]/.test(x) ? '"' + x.replace(/"/g, '""') + '"' : x; }
+  function seriesCsv() {
+    var L = P.load, t0 = Date.parse(L.start + 'Z'), st = L.interval_min * 60000, rows = ['timestamp,load_kW'];
+    for (var i = 0; i < L.kw.length; i++) rows.push(new Date(t0 + i * st).toISOString().slice(0, 16).replace('T', ' ') + ',' + (L.kw[i] === null ? '' : L.kw[i]));
+    return rows.join('\n') + '\n';
+  }
+  function monthlyCsv() { return ['month,MWh,max_MW,min_MW,mean_MW'].concat(A.ls.monthly.map(function (m) { return [m.month, m.mwh.toFixed(1), m.max.toFixed(3), m.min.toFixed(3), m.mean.toFixed(3)].join(','); })).join('\n') + '\n'; }
+
+  function importCsvFiles(files) {
+    var unit = $('imp-unit') ? $('imp-unit').value : 'auto', order = $('imp-order') ? $('imp-order').value : 'auto', col = $('imp-col') ? $('imp-col').value.trim() : '', replace = $('imp-replace') && $('imp-replace').checked;
+    var list = Array.prototype.slice.call(files), msgs = [], first = true;
+    var next = function () {
+      if (!list.length) { changed(); toast(msgs.join(' · ')); return; }
+      var file = list.shift();
+      file.text().then(function (text) {
+        try {
+          var parsed = B.parseLoadCsv(text, { unit: unit, dateOrder: order, valueColumn: col || null });
+          B.importLoad(P, parsed, file.name, { replace: replace && first, who: 'dashboard' }); first = false;
+          msgs.push(file.name + ': ' + parsed.points.length + ' rows, ' + parsed.unit + ', ' + parsed.interval_min + ' min');
+        } catch (e) { toast(file.name + ': ' + e.message, true); }
+        next();
+      });
+    };
+    next();
+  }
+
+  // ------------------------------------------------------------------ events
+  function bindDrop() {
+    var d = $('drop'); if (!d || d._b) return; d._b = 1;
+    d.addEventListener('dragover', function (e) { e.preventDefault(); d.classList.add('over'); });
+    d.addEventListener('dragleave', function () { d.classList.remove('over'); });
+    d.addEventListener('drop', function (e) {
+      e.preventDefault(); d.classList.remove('over');
+      var files = e.dataTransfer.files; if (!files.length) return;
+      if (!P || /\.json$/i.test(files[0].name)) files[0].text().then(function (t) { openText(t, files[0].name); });
+      else importCsvFiles(files);
+    });
+  }
+  function confirmDiscard(then) {
+    if (!P || !dirty) return then();
+    modal({ title: 'Unsaved changes', body: '<p>The open project has changes that are not saved to a file. Continue without saving?</p>', ok: 'Continue without saving', onOk: then });
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act]'); if (!b || b.tagName === 'SELECT' || (b.tagName === 'INPUT' && b.type === 'checkbox')) return;
+    var act = b.getAttribute('data-act');
+    switch (act) {
+      case 'tab': tab = b.getAttribute('data-tab'); renderAll(); window.scrollTo(0, 0); break;
+      case 'goto-stage': stageView = +b.getAttribute('data-n'); tab = 'stages'; renderAll(); window.scrollTo(0, 0); break;
+      case 'stage-view': stageView = +b.getAttribute('data-n'); renderTab(); break;
+      case 'new': confirmDiscard(function () {
+        modal({ title: 'New project', body: '<p class="small muted">Give the project a short name. Everything else is asked stage by stage.</p>', input: { label: 'Project name', value: '', required: true }, ok: 'Create', onOk: function (name) {
+          var p = B.newProject({ name: name.trim(), by: 'dashboard' }); setProject(p, true); tab = 'stages'; renderAll();
+        } });
+      }); break;
+      case 'open': confirmDiscard(function () { $('openfile').value = ''; $('openfile').click(); }); break;
+      case 'save': saveProject(); break;
+      case 'demo': fetchDemo(); break;
+      case 'restore': var d = readDraft(); if (d) { openText(d.text, d.name); dirty = true; renderChrome(); } break;
+      case 'discard-draft': clearDraft(); renderTab(); break;
+      case 'unknown': (function () {
+        var k = b.getAttribute('data-key');
+        if (P.unknown[k]) { delete P.unknown[k]; B.addLog(P, 'Cleared unknown ' + k, 'dashboard'); changed(); return; }
+        modal({ title: 'Mark as unknown', body: '<p class="small"><b>' + esc(B.FIELDS[k].l) + '</b></p>' + (B.FIELDS[k].fb ? '<p class="small muted">Playbook fallback: ' + esc(B.FIELDS[k].fb) + '</p>' : ''), input: { label: 'Why it is unknown, and what you will do instead (goes into the assumptions log)', value: '', multiline: true }, ok: 'Mark unknown', onOk: function (note) { B.setUnknown(P, k, note || 'Unknown', 'dashboard'); changed(); } });
+      })(); break;
+      case 'stage': (function () {
+        var op = b.getAttribute('data-op'), n0 = +b.getAttribute('data-n');
+        var run = function (reason) { try { B.setStage(P, n0, op, reason || null, 'dashboard'); changed(); toast('Stage ' + n0 + ': ' + op); } catch (err) { toast(err.message, true); } };
+        if (op === 'skip') modal({ title: 'Skip stage ' + n0, body: '<p class="small muted">Skip only when you have decided to. The reason is recorded in the project file.</p>', input: { label: 'Reason', value: '', required: true, multiline: true }, ok: 'Skip stage', onOk: run });
+        else if (op === 'complete') {
+          var pr = B.stageProgress(P, n0);
+          if (pr.ready) run();
+          else modal({ title: 'Stage ' + n0 + ' has open items', body: '<ul class="small">' + pr.missing.map(function (k) { return '<li>' + esc(B.FIELDS[k].l) + '</li>'; }).concat(pr.extra.map(function (x) { return '<li>' + esc(x) + '</li>'; })).concat(pr.deliverables.filter(function (d) { return !d.done; }).map(function (d) { return '<li>Deliverable: ' + esc(d.title) + '</li>'; })).join('') + '</ul>', input: { label: 'Complete anyway? Give the reason (recorded).', value: '', required: true, multiline: true }, ok: 'Complete with open items', onOk: run });
+        } else run();
+      })(); break;
+      case 'pick-csv': $('csvfile').click(); break;
+      case 'pick-bills': $('billsfile').click(); break;
+      case 'clear-load': modal({ title: 'Clear load data', body: '<p>Remove all imported interval data from this project?</p>', ok: 'Clear', onOk: function () { P.load = null; B.addLog(P, 'Cleared load data', 'dashboard'); changed(); } }); break;
+      case 'clear-bills': P.bills = []; B.addLog(P, 'Cleared bills', 'dashboard'); changed(); break;
+      case 'dl-series': saveFile(B.slugify(P.fields['meta.project_name']) + '-load-series.csv', seriesCsv()); break;
+      case 'dl-monthly': saveFile(B.slugify(P.fields['meta.project_name']) + '-load-monthly.csv', monthlyCsv()); break;
+      case 'del-row': (function () { var arr = getPath(b.getAttribute('data-path')); arr.splice(+b.getAttribute('data-i'), 1); B.addLog(P, 'Removed a row from ' + b.getAttribute('data-path'), 'dashboard'); changed(); })(); break;
+      case 'add-tou': P.tariff_periods.push({ name: 'Peak', rate: null, days: 'weekday', from: 8, to: 22 }); changed(); break;
+      case 'add-class': P.engine_classes.push({ mw: null, eff: 42, min: 50, kv: 11, om: 13, cx: 1250 }); changed(); break;
+      case 'reset-classes': P.engine_classes = JSON.parse(JSON.stringify(B.ENGINE_CLASSES)); changed(); break;
+      case 'add-gas': P.gas_options.push({ name: 'New route', price: null, note: '' }); changed(); break;
+      case 'add-assumption': P.assumptions.push({ item: '', assumption: '', source: '', risk: '' }); changed(); break;
+      case 'add-risk': P.risks.push({ risk: '', effect: '', mitigation: '', l: 'M', i: 'M', owner: '' }); changed(); break;
+      case 'add-task': P.schedule.push({ task: 'New task', start: 0, weeks: 4 }); changed(); break;
+      case 'add-review': P.review.push({ role: 'Reviewer', name: '', date: '', status: 'Pending', note: '' }); changed(); break;
+      case 'gen-doc': (function () {
+        var g = GEN.filter(function (x) { return x[0] === b.getAttribute('data-kind'); })[0];
+        B.addDeliverable(P, { id: g[1], stage: g[2], title: g[3], markdown: B[g[4]](P) }, 'dashboard'); docView = g[1]; changed(); toast('Generated and saved in the project: ' + g[3]);
+      })(); break;
+      case 'view-doc': docView = b.getAttribute('data-id'); renderTab(); break;
+      case 'close-doc': docView = null; renderTab(); break;
+      case 'dl-doc': (function () { var d = P.deliverables.filter(function (x) { return x.id === b.getAttribute('data-id'); })[0]; saveFile(B.slugify(P.fields['meta.project_name']) + '-' + d.id + '.md', d.markdown); })(); break;
+      case 'dl-all-docs': saveFile(B.slugify(P.fields['meta.project_name']) + '-deliverables.md', P.deliverables.slice().sort(function (a, b2) { return a.stage - b2.stage; }).map(function (d) { return d.markdown; }).join('\n\n---\n\n')); break;
+      case 'dl-dr-csv': saveFile(B.slugify(P.fields['meta.project_name']) + '-data-request.csv', B.dataRequestCsv(P)); break;
+      case 'del-doc': (function () { var id = b.getAttribute('data-id'); modal({ title: 'Delete deliverable', body: '<p>Delete ' + esc(id) + ' from the project?</p>', ok: 'Delete', onOk: function () { P.deliverables = P.deliverables.filter(function (x) { return x.id !== id; }); if (docView === id) docView = null; B.addLog(P, 'Deleted deliverable ' + id, 'dashboard'); changed(); } }); })(); break;
+    }
+  });
+  document.addEventListener('change', function (e) {
+    var t = e.target;
+    if (t.id === 'openfile') { var f = t.files[0]; if (f) f.text().then(function (x) { openText(x, f.name); }); return; }
+    if (t.id === 'csvfile') { if (t.files.length) importCsvFiles(t.files); t.value = ''; return; }
+    if (t.id === 'billsfile') {
+      var bf = t.files[0]; if (!bf) return;
+      bf.text().then(function (x) { try { P.bills = B.parseBillsCsv(x); B.addLog(P, 'Imported ' + P.bills.length + ' months of bills', 'dashboard'); changed(); toast(P.bills.length + ' months of bills imported'); } catch (err) { toast(err.message, true); } });
+      t.value = ''; return;
+    }
+    var ac = t.getAttribute('data-act-change');
+    if (ac === 'pick-opt') { optId = t.value; renderTab(); return; }
+    if (ac === 'sel-opt') {
+      var id = t.getAttribute('data-id'), sel = (P.selected_options || []).filter(function (x) { return x !== id; });
+      if (t.checked) { if (sel.length >= 2) { toast('Two options at most. Untick one first.', true); t.checked = false; return; } sel.push(id); }
+      P.selected_options = sel; B.addLog(P, 'Selected options ' + sel.join(', '), 'dashboard'); changed(); return;
+    }
+    var key = t.getAttribute('data-field');
+    if (key) {
+      var fd = B.FIELDS[key], val;
+      if (fd.t === 'bool') val = t.checked;
+      else if (fd.t === 'multi') val = Array.prototype.slice.call(document.querySelectorAll('[data-field="' + key + '"]')).filter(function (x) { return x.checked; }).map(function (x) { return x.getAttribute('data-multi'); });
+      else val = t.value;
+      try { B.setField(P, key, fd.t === 'multi' && !val.length ? null : val, 'dashboard'); changed(); } catch (err) { toast(err.message, true); }
+      return;
+    }
+    var path = t.getAttribute('data-path');
+    if (path) {
+      var v = t.value;
+      if (t.getAttribute('data-type') === 'number') v = v === '' ? null : Number(v);
+      setPath(path, v); B.addLog(P, 'Set ' + path + ' = ' + v, 'dashboard'); changed();
+    }
+  });
+  window.addEventListener('beforeunload', function (e) { if (P && dirty) { e.preventDefault(); e.returnValue = ''; } });
+
+  function fetchDemo() {
+    var p = B.newProject({ name: 'Demo factory 10 MW BTM', client: 'Demo Foods', currency: 'USD', by: 'dashboard' });
+    var F = { 'client.industry': 'Food processing', 'team.tsm': 'You', 'site.city': 'Demo City', 'site.country': 'Demo', 'site.altitude_m': 40, 'site.hot_day_temp_c': 34,
+      'utility.name': 'Demo Utility', 'tariff.class': 'Industrial MV', 'tariff.energy_rate': 110, 'tariff.demand_charge': 8.5, 'tariff.has_tou': 'Yes', 'gas.availability': 'Pipeline nearby', 'gas.price_per_mmbtu': 7.5,
+      'reg.parallel_allowed': 'Yes, with conditions', 'reg.export_allowed': 'No', 'elec.connection_kv': 11, 'elec.switchgear_rating_ka': 16, 'elec.tx_mva': 20, 'elec.tx_z_pct': 10, 'elec.grid_fault_mva': 500, 'elec.motor_ka': 1.5, 'elec.bus_tie': 'Normally open', 'obj.export': 'Zero export' };
+    Object.keys(F).forEach(function (k) { B.setField(p, k, F[k], 'dashboard'); });
+    p.tariff_periods.push({ name: 'Peak', rate: 140, days: 'weekday', from: 8, to: 22 });
+    // synthetic year like assets/sample_load_hourly.csv
+    var seed = 42, rnd = function () { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }, kw = [];
+    var t0 = Date.UTC(2025, 0, 1);
+    for (var i = 0; i < 8760; i++) {
+      var d = new Date(t0 + i * 3600e3), h = d.getUTCHours(), dow = d.getUTCDay(), doy = Math.floor(i / 24), we = dow === 0 || dow === 6;
+      var sd = d.getUTCMonth() === 11 && d.getUTCDate() >= 24, season = 1 + 0.06 * Math.sin((doy - 100) / 365 * 2 * Math.PI), mw;
+      if (sd) mw = 1.6 + 0.3 * rnd(); else if (we) mw = (dow === 6 && h >= 7 && h < 15) ? 9.5 : 6.2; else if (h >= 7 && h < 23) mw = 13.2 + (h >= 11 && h < 17 ? 1 : 0); else mw = 5.8;
+      if (!sd) mw = mw * season + (rnd() - 0.5) * 0.9;
+      kw.push(Math.round(mw * 1000));
+    }
+    p.load = { start: '2025-01-01T00:00', interval_min: 60, kw: kw, sources: [{ file: 'demo (synthetic)', rows: 8760, skipped: 0, unit: 'kW', interval_min: 60, column: 'load_kW', date_order: 'dmy', imported: B.nowIso() }] };
+    setProject(p, true);
+    tab = 'overview'; renderAll();
+  }
+
+  renderAll();
+})();
+</script>
+</body>
+</html>

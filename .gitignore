@@ -12,3 +12,6 @@ venv/
 
 # Source drawings (often confidential; not committed by default)
 input/
+
+# BTM gas engine client projects (client data; commit only on purpose with git add -f)
+projects/
