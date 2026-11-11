@@ -1,0 +1,8372 @@
+{
+ "schema_version": "1.0",
+ "generator": "pid-to-kg 0.1.0",
+ "generated_at": "2026-11-11T06:10:08+00:00",
+ "plant": {
+  "id": "h2-gas-purification-unit",
+  "name": "H2 Gas Purification Unit",
+  "source_file": "AQ010-B50-333_PID_H2_GAS_PURIFICATION_UNIT.pdf",
+  "sheets": [
+   "SHEET:AQ010-B50-333"
+  ]
+ },
+ "nodes": [
+  {
+   "id": "SHEET:AQ010-B50-333",
+   "type": "Sheet",
+   "label": "AQ010-B50-333",
+   "name": "P&ID H2 GAS PURIFICATION UNIT",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 1.0,
+   "attributes": {
+    "page": 1,
+    "drawing_number": "AQ010-B50-333",
+    "title": "P&ID H2 GAS PURIFICATION UNIT",
+    "revision": "A",
+    "drawing_type": "pid",
+    "issue_status": "FOR APPROVAL (Apr-12-2024)",
+    "notes": [
+     "Contractor DWG NO DG-A000-12251-333; job code 000145-00-0000; Project Kronos FEED (Asahi Kasei / Gentari / JGC).",
+     "GENERAL NOTE 1: All components on the drawing belong to AK assets.",
+     "GENERAL NOTE 2: Refer to B50-001 thru B50-002 for symbols and abbreviations.",
+     "NOTE 1: Details shall be provided by vendor.",
+     "NOTE 2: PSV orifice designation, PSV inlet and outlet line size to be finalized during detail engineering.",
+     "HOLD 1: Detail configuration of flow control to cover wide range of pressure drop to utilize H2 in the upstream storage as much as possible.",
+     "HOLD 2: Requirement of H2 gas analyzer to be finalized during detail engineering.",
+     "FB = full bore; CSO/CSC = car sealed open/closed."
+    ],
+    "tiles_reviewed": [
+     "r1c1",
+     "r1c2",
+     "r1c3",
+     "r1c4",
+     "r2c1",
+     "r2c2",
+     "r2c3",
+     "r2c4",
+     "r3c1",
+     "r3c2",
+     "r3c3",
+     "r3c4"
+    ],
+    "unreadable": []
+   },
+   "provenance": []
+  },
+  {
+   "id": "U-36001A",
+   "type": "Equipment",
+   "label": "U-36001A",
+   "tag": "U-36001A",
+   "kind": "package_unit",
+   "name": "H2 GAS PURIFICATION UNIT (U-36001A/B, train A)",
+   "dexpi_class": "Equipment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.203,
+      0.277,
+      0.347,
+      0.445
+     ],
+     "source": "vision",
+     "local_id": "U-36001A"
+    }
+   ]
+  },
+  {
+   "id": "U-36001B",
+   "type": "Equipment",
+   "label": "U-36001B",
+   "tag": "U-36001B",
+   "kind": "package_unit",
+   "name": "H2 GAS PURIFICATION UNIT (U-36001A/B, train B)",
+   "dexpi_class": "Equipment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.203,
+      0.747,
+      0.347,
+      0.914
+     ],
+     "source": "vision",
+     "local_id": "U-36001B"
+    }
+   ]
+  },
+  {
+   "id": "P01.V1",
+   "type": "Component",
+   "label": "globe valve",
+   "kind": "globe_valve",
+   "dexpi_class": "GlobeValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.304,
+      0.249,
+      0.316,
+      0.261
+     ],
+     "source": "vision",
+     "local_id": "V1"
+    }
+   ]
+  },
+  {
+   "id": "P01.V2",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.8,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.232,
+      0.23,
+      0.244,
+      0.242
+     ],
+     "source": "vision",
+     "local_id": "V2"
+    }
+   ]
+  },
+  {
+   "id": "SG-36001A",
+   "type": "Component",
+   "label": "SG-36001A",
+   "tag": "SG-36001A",
+   "kind": "sight_glass",
+   "dexpi_class": "SightGlass",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.9,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.232,
+      0.252,
+      0.244,
+      0.264
+     ],
+     "source": "vision",
+     "local_id": "SG-36001A"
+    }
+   ]
+  },
+  {
+   "id": "P01.V3",
+   "type": "Component",
+   "label": "globe valve",
+   "kind": "globe_valve",
+   "dexpi_class": "GlobeValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.268,
+      0.716,
+      0.28,
+      0.728
+     ],
+     "source": "vision",
+     "local_id": "V3"
+    }
+   ]
+  },
+  {
+   "id": "P01.V4",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.8,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.22,
+      0.694,
+      0.232,
+      0.706
+     ],
+     "source": "vision",
+     "local_id": "V4"
+    }
+   ]
+  },
+  {
+   "id": "SG-36001B",
+   "type": "Component",
+   "label": "SG-36001B",
+   "tag": "SG-36001B",
+   "kind": "sight_glass",
+   "dexpi_class": "SightGlass",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.9,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.22,
+      0.714,
+      0.232,
+      0.726
+     ],
+     "source": "vision",
+     "local_id": "SG-36001B"
+    }
+   ]
+  },
+  {
+   "id": "P01.V5",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.192,
+      0.313,
+      0.204,
+      0.325
+     ],
+     "source": "vision",
+     "local_id": "V5"
+    }
+   ]
+  },
+  {
+   "id": "P01.V6",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.192,
+      0.78,
+      0.204,
+      0.792
+     ],
+     "source": "vision",
+     "local_id": "V6"
+    }
+   ]
+  },
+  {
+   "id": "P01.V7",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.192,
+      0.396,
+      0.204,
+      0.408
+     ],
+     "source": "vision",
+     "local_id": "V7"
+    }
+   ]
+  },
+  {
+   "id": "P01.V8",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.192,
+      0.863,
+      0.204,
+      0.875
+     ],
+     "source": "vision",
+     "local_id": "V8"
+    }
+   ]
+  },
+  {
+   "id": "P01.V9",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.343,
+      0.313,
+      0.355,
+      0.325
+     ],
+     "source": "vision",
+     "local_id": "V9"
+    }
+   ]
+  },
+  {
+   "id": "P01.V10",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.343,
+      0.396,
+      0.355,
+      0.408
+     ],
+     "source": "vision",
+     "local_id": "V10"
+    }
+   ]
+  },
+  {
+   "id": "P01.V11",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.315,
+      0.734,
+      0.327,
+      0.746
+     ],
+     "source": "vision",
+     "local_id": "V11"
+    }
+   ]
+  },
+  {
+   "id": "P01.V12",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.343,
+      0.863,
+      0.355,
+      0.875
+     ],
+     "source": "vision",
+     "local_id": "V12"
+    }
+   ]
+  },
+  {
+   "id": "P01.V13",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.8,
+   "attributes": {
+    "size": "2\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.474,
+      0.481,
+      0.486,
+      0.493
+     ],
+     "source": "vision",
+     "local_id": "V13"
+    }
+   ]
+  },
+  {
+   "id": "P01.SB1",
+   "type": "Component",
+   "label": "spectacle blind",
+   "kind": "spectacle_blind",
+   "dexpi_class": "SpectacleBlind",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.479,
+      0.492,
+      0.491,
+      0.504
+     ],
+     "source": "vision",
+     "local_id": "SB1"
+    }
+   ]
+  },
+  {
+   "id": "ZV-39001",
+   "type": "Component",
+   "label": "ZV-39001",
+   "tag": "ZV-39001",
+   "kind": "on_off_valve",
+   "dexpi_class": "OperatedValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.9,
+   "attributes": {
+    "actuator": "solenoid",
+    "fail_position": "FC",
+    "size": "2\"",
+    "isa_letters": "ZV",
+    "variable": "position",
+    "role": "final_element",
+    "loop_key": "Z-39001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.474,
+      0.529,
+      0.486,
+      0.541
+     ],
+     "source": "vision",
+     "local_id": "ZV-39001"
+    }
+   ]
+  },
+  {
+   "id": "P01.V14",
+   "type": "Component",
+   "label": "globe valve",
+   "kind": "globe_valve",
+   "dexpi_class": "GlobeValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "size": "1\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.525,
+      0.481,
+      0.537,
+      0.493
+     ],
+     "source": "vision",
+     "local_id": "V14"
+    }
+   ]
+  },
+  {
+   "id": "P01.SP1",
+   "type": "Component",
+   "label": "sample point",
+   "kind": "sample_point",
+   "name": "S",
+   "dexpi_class": "PipingComponent",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.525,
+      0.46,
+      0.537,
+      0.472
+     ],
+     "source": "vision",
+     "local_id": "SP1"
+    }
+   ]
+  },
+  {
+   "id": "P01.V15",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.8,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.57,
+      0.48,
+      0.582,
+      0.492
+     ],
+     "source": "vision",
+     "local_id": "V15"
+    }
+   ]
+  },
+  {
+   "id": "P01.V16",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.8,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.581,
+      0.497,
+      0.593,
+      0.509
+     ],
+     "source": "vision",
+     "local_id": "V16"
+    }
+   ]
+  },
+  {
+   "id": "P01.R1",
+   "type": "Component",
+   "label": "reducer",
+   "kind": "reducer",
+   "dexpi_class": "PipeReducer",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.596,
+      0.497,
+      0.608,
+      0.509
+     ],
+     "source": "vision",
+     "local_id": "R1"
+    }
+   ]
+  },
+  {
+   "id": "PV-36001",
+   "type": "Component",
+   "label": "PV-36001",
+   "tag": "PV-36001",
+   "kind": "control_valve",
+   "dexpi_class": "OperatedValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "pneumatic",
+    "fail_position": "FC",
+    "isa_letters": "PV",
+    "variable": "pressure",
+    "role": "final_element",
+    "loop_key": "P-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.606,
+      0.497,
+      0.618,
+      0.509
+     ],
+     "source": "vision",
+     "local_id": "PV-36001"
+    }
+   ]
+  },
+  {
+   "id": "P01.R2",
+   "type": "Component",
+   "label": "reducer",
+   "kind": "reducer",
+   "dexpi_class": "PipeReducer",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.619,
+      0.497,
+      0.631,
+      0.509
+     ],
+     "source": "vision",
+     "local_id": "R2"
+    }
+   ]
+  },
+  {
+   "id": "ZV-36001",
+   "type": "Component",
+   "label": "ZV-36001",
+   "tag": "ZV-36001",
+   "kind": "on_off_valve",
+   "dexpi_class": "OperatedValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "solenoid",
+    "fail_position": "FC",
+    "isa_letters": "ZV",
+    "variable": "position",
+    "role": "final_element",
+    "loop_key": "Z-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.632,
+      0.497,
+      0.644,
+      0.509
+     ],
+     "source": "vision",
+     "local_id": "ZV-36001"
+    }
+   ]
+  },
+  {
+   "id": "P01.CV1",
+   "type": "Component",
+   "label": "check valve",
+   "kind": "check_valve",
+   "dexpi_class": "CheckValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.651,
+      0.497,
+      0.663,
+      0.509
+     ],
+     "source": "vision",
+     "local_id": "CV1"
+    }
+   ]
+  },
+  {
+   "id": "P01.V17",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.8,
+   "attributes": {
+    "size": "1\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.664,
+      0.48,
+      0.676,
+      0.492
+     ],
+     "source": "vision",
+     "local_id": "V17"
+    }
+   ]
+  },
+  {
+   "id": "P01.CV2",
+   "type": "Component",
+   "label": "check valve",
+   "kind": "check_valve",
+   "dexpi_class": "CheckValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.591,
+      0.386,
+      0.603,
+      0.398
+     ],
+     "source": "vision",
+     "local_id": "CV2"
+    }
+   ]
+  },
+  {
+   "id": "P01.X1",
+   "type": "Component",
+   "label": "in-line item: rectangle with diagonal and pivot dot",
+   "kind": "other",
+   "name": "in-line item: rectangle with diagonal and pivot dot",
+   "dexpi_class": "PipingComponent",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.5,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.722,
+      0.4105,
+      0.734,
+      0.4225
+     ],
+     "source": "vision",
+     "local_id": "X1"
+    }
+   ]
+  },
+  {
+   "id": "ZV-36002",
+   "type": "Component",
+   "label": "ZV-36002",
+   "tag": "ZV-36002",
+   "kind": "on_off_valve",
+   "dexpi_class": "OperatedValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "solenoid",
+    "fail_position": "FO",
+    "isa_letters": "ZV",
+    "variable": "position",
+    "role": "final_element",
+    "loop_key": "Z-36002"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.737,
+      0.369,
+      0.749,
+      0.381
+     ],
+     "source": "vision",
+     "local_id": "ZV-36002"
+    }
+   ]
+  },
+  {
+   "id": "P01.R3",
+   "type": "Component",
+   "label": "reducer",
+   "kind": "reducer",
+   "dexpi_class": "PipeReducer",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.737,
+      0.355,
+      0.749,
+      0.367
+     ],
+     "source": "vision",
+     "local_id": "R3"
+    }
+   ]
+  },
+  {
+   "id": "PV-36002",
+   "type": "Component",
+   "label": "PV-36002",
+   "tag": "PV-36002",
+   "kind": "control_valve",
+   "dexpi_class": "OperatedValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "pneumatic",
+    "fail_position": "FO",
+    "isa_letters": "PV",
+    "variable": "pressure",
+    "role": "final_element",
+    "loop_key": "P-36002"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.737,
+      0.343,
+      0.749,
+      0.355
+     ],
+     "source": "vision",
+     "local_id": "PV-36002"
+    }
+   ]
+  },
+  {
+   "id": "P01.R4",
+   "type": "Component",
+   "label": "reducer",
+   "kind": "reducer",
+   "dexpi_class": "PipeReducer",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.737,
+      0.327,
+      0.749,
+      0.339
+     ],
+     "source": "vision",
+     "local_id": "R4"
+    }
+   ]
+  },
+  {
+   "id": "P01.V18",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO",
+    "normal_position": "open"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.485,
+      0.334,
+      0.497,
+      0.346
+     ],
+     "source": "vision",
+     "local_id": "V18"
+    }
+   ]
+  },
+  {
+   "id": "PSV-36001A",
+   "type": "Component",
+   "label": "PSV-36001A",
+   "tag": "PSV-36001A",
+   "kind": "relief_valve",
+   "dexpi_class": "SafetyValveOrFitting",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "self",
+    "isa_letters": "PSV",
+    "variable": "pressure",
+    "role": "relief_device",
+    "loop_key": "P-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.475,
+      0.175,
+      0.487,
+      0.187
+     ],
+     "source": "vision",
+     "local_id": "PSV-36001A"
+    }
+   ]
+  },
+  {
+   "id": "P01.V19",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.499,
+      0.205,
+      0.511,
+      0.217
+     ],
+     "source": "vision",
+     "local_id": "V19"
+    }
+   ]
+  },
+  {
+   "id": "P01.V20",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.499,
+      0.171,
+      0.511,
+      0.183
+     ],
+     "source": "vision",
+     "local_id": "V20"
+    }
+   ]
+  },
+  {
+   "id": "P01.V21",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO",
+    "normal_position": "open"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.513,
+      0.189,
+      0.525,
+      0.201
+     ],
+     "source": "vision",
+     "local_id": "V21"
+    }
+   ]
+  },
+  {
+   "id": "P01.V22",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSC",
+    "normal_position": "closed"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.526,
+      0.334,
+      0.538,
+      0.346
+     ],
+     "source": "vision",
+     "local_id": "V22"
+    }
+   ]
+  },
+  {
+   "id": "PSV-36001B",
+   "type": "Component",
+   "label": "PSV-36001B",
+   "tag": "PSV-36001B",
+   "kind": "relief_valve",
+   "dexpi_class": "SafetyValveOrFitting",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "self",
+    "isa_letters": "PSV",
+    "variable": "pressure",
+    "role": "relief_device",
+    "loop_key": "P-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.516,
+      0.227,
+      0.528,
+      0.239
+     ],
+     "source": "vision",
+     "local_id": "PSV-36001B"
+    }
+   ]
+  },
+  {
+   "id": "P01.V23",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.54,
+      0.257,
+      0.552,
+      0.269
+     ],
+     "source": "vision",
+     "local_id": "V23"
+    }
+   ]
+  },
+  {
+   "id": "P01.V24",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.54,
+      0.226,
+      0.552,
+      0.238
+     ],
+     "source": "vision",
+     "local_id": "V24"
+    }
+   ]
+  },
+  {
+   "id": "P01.V25",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO",
+    "normal_position": "open"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.553,
+      0.241,
+      0.565,
+      0.253
+     ],
+     "source": "vision",
+     "local_id": "V25"
+    }
+   ]
+  },
+  {
+   "id": "P01.V26",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO",
+    "normal_position": "open"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.512,
+      0.684,
+      0.524,
+      0.696
+     ],
+     "source": "vision",
+     "local_id": "V26"
+    }
+   ]
+  },
+  {
+   "id": "PSV-39001A",
+   "type": "Component",
+   "label": "PSV-39001A",
+   "tag": "PSV-39001A",
+   "kind": "relief_valve",
+   "dexpi_class": "SafetyValveOrFitting",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "self",
+    "isa_letters": "PSV",
+    "variable": "pressure",
+    "role": "relief_device",
+    "loop_key": "P-39001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.522,
+      0.586,
+      0.534,
+      0.598
+     ],
+     "source": "vision",
+     "local_id": "PSV-39001A"
+    }
+   ]
+  },
+  {
+   "id": "P01.V27",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.5,
+      0.621,
+      0.512,
+      0.633
+     ],
+     "source": "vision",
+     "local_id": "V27"
+    }
+   ]
+  },
+  {
+   "id": "P01.V28",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.496,
+      0.587,
+      0.508,
+      0.599
+     ],
+     "source": "vision",
+     "local_id": "V28"
+    }
+   ]
+  },
+  {
+   "id": "P01.V29",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO",
+    "normal_position": "open"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.483,
+      0.599,
+      0.495,
+      0.611
+     ],
+     "source": "vision",
+     "local_id": "V29"
+    }
+   ]
+  },
+  {
+   "id": "P01.V30",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSC",
+    "normal_position": "closed"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.559,
+      0.684,
+      0.571,
+      0.696
+     ],
+     "source": "vision",
+     "local_id": "V30"
+    }
+   ]
+  },
+  {
+   "id": "PSV-39001B",
+   "type": "Component",
+   "label": "PSV-39001B",
+   "tag": "PSV-39001B",
+   "kind": "relief_valve",
+   "dexpi_class": "SafetyValveOrFitting",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "self",
+    "isa_letters": "PSV",
+    "variable": "pressure",
+    "role": "relief_device",
+    "loop_key": "P-39001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.569,
+      0.551,
+      0.581,
+      0.563
+     ],
+     "source": "vision",
+     "local_id": "PSV-39001B"
+    }
+   ]
+  },
+  {
+   "id": "P01.V31",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.547,
+      0.579,
+      0.559,
+      0.591
+     ],
+     "source": "vision",
+     "local_id": "V31"
+    }
+   ]
+  },
+  {
+   "id": "P01.V32",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.547,
+      0.545,
+      0.559,
+      0.557
+     ],
+     "source": "vision",
+     "local_id": "V32"
+    }
+   ]
+  },
+  {
+   "id": "P01.V33",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO",
+    "normal_position": "open"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.533,
+      0.56,
+      0.545,
+      0.572
+     ],
+     "source": "vision",
+     "local_id": "V33"
+    }
+   ]
+  },
+  {
+   "id": "P01.V34",
+   "type": "Component",
+   "label": "globe valve",
+   "kind": "globe_valve",
+   "dexpi_class": "GlobeValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.8,
+   "attributes": {
+    "size": "1\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.658,
+      0.722,
+      0.67,
+      0.734
+     ],
+     "source": "vision",
+     "local_id": "V34"
+    }
+   ]
+  },
+  {
+   "id": "ZV-39004",
+   "type": "Component",
+   "label": "ZV-39004",
+   "tag": "ZV-39004",
+   "kind": "on_off_valve",
+   "dexpi_class": "OperatedValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "solenoid",
+    "fail_position": "FC",
+    "isa_letters": "ZV",
+    "variable": "position",
+    "role": "final_element",
+    "loop_key": "Z-39004"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.632,
+      0.694,
+      0.644,
+      0.706
+     ],
+     "source": "vision",
+     "local_id": "ZV-39004"
+    }
+   ]
+  },
+  {
+   "id": "FV-39001",
+   "type": "Component",
+   "label": "FV-39001",
+   "tag": "FV-39001",
+   "kind": "control_valve",
+   "dexpi_class": "OperatedValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "pneumatic",
+    "fail_position": "FC",
+    "loop": "F-39002",
+    "isa_letters": "FV",
+    "variable": "flow",
+    "role": "final_element",
+    "loop_key": "F-39002"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.599,
+      0.694,
+      0.611,
+      0.706
+     ],
+     "source": "vision",
+     "local_id": "FV-39001"
+    }
+   ]
+  },
+  {
+   "id": "ZV-39005",
+   "type": "Component",
+   "label": "ZV-39005",
+   "tag": "ZV-39005",
+   "kind": "on_off_valve",
+   "dexpi_class": "OperatedValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "solenoid",
+    "fail_position": "FC",
+    "isa_letters": "ZV",
+    "variable": "position",
+    "role": "final_element",
+    "loop_key": "Z-39005"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.632,
+      0.744,
+      0.644,
+      0.756
+     ],
+     "source": "vision",
+     "local_id": "ZV-39005"
+    }
+   ]
+  },
+  {
+   "id": "FV-39002",
+   "type": "Component",
+   "label": "FV-39002",
+   "tag": "FV-39002",
+   "kind": "control_valve",
+   "dexpi_class": "OperatedValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "actuator": "pneumatic",
+    "fail_position": "FC",
+    "loop": "F-39003",
+    "isa_letters": "FV",
+    "variable": "flow",
+    "role": "final_element",
+    "loop_key": "F-39003"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.599,
+      0.744,
+      0.611,
+      0.756
+     ],
+     "source": "vision",
+     "local_id": "FV-39002"
+    }
+   ]
+  },
+  {
+   "id": "P01.CV3",
+   "type": "Component",
+   "label": "check valve",
+   "kind": "check_valve",
+   "dexpi_class": "CheckValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.472,
+      0.678,
+      0.484,
+      0.69
+     ],
+     "source": "vision",
+     "local_id": "CV3"
+    }
+   ]
+  },
+  {
+   "id": "P01.V35",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.8,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.472,
+      0.657,
+      0.484,
+      0.669
+     ],
+     "source": "vision",
+     "local_id": "V35"
+    }
+   ]
+  },
+  {
+   "id": "P01.SB2",
+   "type": "Component",
+   "label": "spectacle blind",
+   "kind": "spectacle_blind",
+   "dexpi_class": "SpectacleBlind",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {},
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.478,
+      0.648,
+      0.49,
+      0.66
+     ],
+     "source": "vision",
+     "local_id": "SB2"
+    }
+   ]
+  },
+  {
+   "id": "P01.V36",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "size": "1\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.484,
+      0.634,
+      0.496,
+      0.646
+     ],
+     "source": "vision",
+     "local_id": "V36"
+    }
+   ]
+  },
+  {
+   "id": "P01.V37",
+   "type": "Component",
+   "label": "ball valve",
+   "kind": "ball_valve",
+   "dexpi_class": "BallValve",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.8,
+   "attributes": {
+    "size": "4\""
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.472,
+      0.622,
+      0.484,
+      0.634
+     ],
+     "source": "vision",
+     "local_id": "V37"
+    }
+   ]
+  },
+  {
+   "id": "TT-36001",
+   "type": "Instrument",
+   "label": "TT-36001",
+   "tag": "TT-36001",
+   "kind": "transmitter",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "location": "field",
+    "isa_letters": "TT",
+    "variable": "temperature",
+    "functions": [
+     "transmit"
+    ],
+    "role": "transmitter",
+    "loop_key": "T-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.4,
+      0.438,
+      0.411,
+      0.454
+     ],
+     "source": "vision",
+     "local_id": "TT-36001"
+    }
+   ]
+  },
+  {
+   "id": "TI-36001",
+   "type": "Instrument",
+   "label": "TI-36001",
+   "tag": "TI-36001",
+   "kind": "indicator",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "alarms": [
+     "HH",
+     "H"
+    ],
+    "location": "dcs",
+    "isa_letters": "TI",
+    "variable": "temperature",
+    "functions": [
+     "indicate"
+    ],
+    "role": "indicator",
+    "loop_key": "T-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.4,
+      0.398,
+      0.411,
+      0.409
+     ],
+     "source": "vision",
+     "local_id": "TI-36001"
+    }
+   ]
+  },
+  {
+   "id": "AT-36002",
+   "type": "Instrument",
+   "label": "AT-36002",
+   "tag": "AT-36002",
+   "kind": "transmitter",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.9,
+   "attributes": {
+    "component": "H2",
+    "location": "field",
+    "isa_letters": "AT",
+    "variable": "analysis",
+    "functions": [
+     "transmit"
+    ],
+    "role": "transmitter",
+    "loop_key": "A-36002"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.426,
+      0.443,
+      0.437,
+      0.454
+     ],
+     "source": "vision",
+     "local_id": "AT-36002"
+    }
+   ]
+  },
+  {
+   "id": "AC-36002",
+   "type": "Instrument",
+   "label": "AC-36002",
+   "tag": "AC-36002",
+   "kind": "controller",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "alarms": [
+     "H"
+    ],
+    "location": "dcs",
+    "isa_letters": "AC",
+    "variable": "analysis",
+    "functions": [
+     "control"
+    ],
+    "role": "controller",
+    "loop_key": "A-36002"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.426,
+      0.398,
+      0.437,
+      0.409
+     ],
+     "source": "vision",
+     "local_id": "AC-36002"
+    }
+   ]
+  },
+  {
+   "id": "AT-36001",
+   "type": "Instrument",
+   "label": "AT-36001",
+   "tag": "AT-36001",
+   "kind": "transmitter",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "component": "O2",
+    "location": "field",
+    "isa_letters": "AT",
+    "variable": "analysis",
+    "functions": [
+     "transmit"
+    ],
+    "role": "transmitter",
+    "loop_key": "A-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.45,
+      0.443,
+      0.46,
+      0.454
+     ],
+     "source": "vision",
+     "local_id": "AT-36001"
+    }
+   ]
+  },
+  {
+   "id": "AC-36001",
+   "type": "Instrument",
+   "label": "AC-36001",
+   "tag": "AC-36001",
+   "kind": "controller",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "alarms": [
+     "H"
+    ],
+    "location": "dcs",
+    "isa_letters": "AC",
+    "variable": "analysis",
+    "functions": [
+     "control"
+    ],
+    "role": "controller",
+    "loop_key": "A-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.45,
+      0.398,
+      0.46,
+      0.409
+     ],
+     "source": "vision",
+     "local_id": "AC-36001"
+    }
+   ]
+  },
+  {
+   "id": "PT-36001",
+   "type": "Instrument",
+   "label": "PT-36001",
+   "tag": "PT-36001",
+   "kind": "transmitter",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "location": "field",
+    "isa_letters": "PT",
+    "variable": "pressure",
+    "functions": [
+     "transmit"
+    ],
+    "role": "transmitter",
+    "loop_key": "P-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.543,
+      0.461,
+      0.554,
+      0.472
+     ],
+     "source": "vision",
+     "local_id": "PT-36001"
+    }
+   ]
+  },
+  {
+   "id": "PC-36001",
+   "type": "Instrument",
+   "label": "PC-36001",
+   "tag": "PC-36001",
+   "kind": "controller",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "alarms": [
+     "HH",
+     "H",
+     "L"
+    ],
+    "location": "dcs",
+    "isa_letters": "PC",
+    "variable": "pressure",
+    "functions": [
+     "control"
+    ],
+    "role": "controller",
+    "loop_key": "P-36001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.543,
+      0.421,
+      0.554,
+      0.432
+     ],
+     "source": "vision",
+     "local_id": "PC-36001"
+    }
+   ]
+  },
+  {
+   "id": "FT-39001",
+   "type": "Instrument",
+   "label": "FT-39001",
+   "tag": "FT-39001",
+   "kind": "transmitter",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "location": "field",
+    "isa_letters": "FT",
+    "variable": "flow",
+    "functions": [
+     "transmit"
+    ],
+    "role": "transmitter",
+    "loop_key": "F-39001",
+    "inline": true
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.405,
+      0.713,
+      0.416,
+      0.724
+     ],
+     "source": "vision",
+     "local_id": "FT-39001"
+    }
+   ]
+  },
+  {
+   "id": "FC-39001",
+   "type": "Instrument",
+   "label": "FC-39001",
+   "tag": "FC-39001",
+   "kind": "controller",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "location": "dcs",
+    "isa_letters": "FC",
+    "variable": "flow",
+    "functions": [
+     "control"
+    ],
+    "role": "controller",
+    "loop_key": "F-39001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.386,
+      0.83,
+      0.397,
+      0.842
+     ],
+     "source": "vision",
+     "local_id": "FC-39001"
+    }
+   ]
+  },
+  {
+   "id": "FT-39002",
+   "type": "Instrument",
+   "label": "FT-39002",
+   "tag": "FT-39002",
+   "kind": "transmitter",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "location": "field",
+    "isa_letters": "FT",
+    "variable": "flow",
+    "functions": [
+     "transmit"
+    ],
+    "role": "transmitter",
+    "loop_key": "F-39003",
+    "inline": true
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.676,
+      0.71,
+      0.687,
+      0.721
+     ],
+     "source": "vision",
+     "local_id": "FT-39002"
+    }
+   ]
+  },
+  {
+   "id": "PT-39004",
+   "type": "Instrument",
+   "label": "PT-39004",
+   "tag": "PT-39004",
+   "kind": "transmitter",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "location": "field",
+    "isa_letters": "PT",
+    "variable": "pressure",
+    "functions": [
+     "transmit"
+    ],
+    "role": "transmitter",
+    "loop_key": "P-39004"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.713,
+      0.7,
+      0.724,
+      0.711
+     ],
+     "source": "vision",
+     "local_id": "PT-39004"
+    }
+   ]
+  },
+  {
+   "id": "PI-39004",
+   "type": "Instrument",
+   "label": "PI-39004",
+   "tag": "PI-39004",
+   "kind": "indicator",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "location": "dcs",
+    "isa_letters": "PI",
+    "variable": "pressure",
+    "functions": [
+     "indicate"
+    ],
+    "role": "indicator",
+    "loop_key": "P-39004"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.713,
+      0.661,
+      0.724,
+      0.672
+     ],
+     "source": "vision",
+     "local_id": "PI-39004"
+    }
+   ]
+  },
+  {
+   "id": "FC-39002",
+   "type": "Instrument",
+   "label": "FC-39002",
+   "tag": "FC-39002",
+   "kind": "controller",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "alarms": [
+     "H",
+     "L"
+    ],
+    "location": "dcs",
+    "isa_letters": "FC",
+    "variable": "flow",
+    "functions": [
+     "control"
+    ],
+    "role": "controller",
+    "loop_key": "F-39002"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.676,
+      0.64,
+      0.687,
+      0.652
+     ],
+     "source": "vision",
+     "local_id": "FC-39002"
+    }
+   ]
+  },
+  {
+   "id": "FC-39003",
+   "type": "Instrument",
+   "label": "FC-39003",
+   "tag": "FC-39003",
+   "kind": "controller",
+   "dexpi_class": "ProcessInstrumentationFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "alarms": [
+     "H",
+     "L"
+    ],
+    "location": "dcs",
+    "isa_letters": "FC",
+    "variable": "flow",
+    "functions": [
+     "control"
+    ],
+    "role": "controller",
+    "loop_key": "F-39003"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.676,
+      0.661,
+      0.688,
+      0.672
+     ],
+     "source": "vision",
+     "local_id": "FC-39003"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC1",
+   "type": "OffPageConnector",
+   "label": "COOLING WATER SUPPLY B50-423 FROM HEADER",
+   "name": "COOLING WATER SUPPLY B50-423 FROM HEADER",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "in",
+    "other_drawing": "B50-423",
+    "other_item": "CWS header",
+    "line_number": "4\"-CWS-A10-610033"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.042,
+      0.625,
+      0.096,
+      0.651
+     ],
+     "source": "vision",
+     "local_id": "OPC1"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC2",
+   "type": "OffPageConnector",
+   "label": "COOLING WATER RETURN B50-423 TO HEADER",
+   "name": "COOLING WATER RETURN B50-423 TO HEADER",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "out",
+    "other_drawing": "B50-423",
+    "other_item": "CWR header",
+    "line_number": "4\"-CWR-A10-610024"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.042,
+      0.666,
+      0.096,
+      0.693
+     ],
+     "source": "vision",
+     "local_id": "OPC2"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC3",
+   "type": "OffPageConnector",
+   "label": "INSTRUMENT AIR B50-451 FROM HEADER",
+   "name": "INSTRUMENT AIR B50-451 FROM HEADER",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "in",
+    "other_drawing": "B50-451",
+    "other_item": "IA header",
+    "line_number": "1\"-IA-A12-660023"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.042,
+      0.776,
+      0.096,
+      0.802
+     ],
+     "source": "vision",
+     "local_id": "OPC3"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC4",
+   "type": "OffPageConnector",
+   "label": "HYDROGEN GAS B50-332 FROM C-34001A/B",
+   "name": "HYDROGEN GAS B50-332 FROM C-34001A/B",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "in",
+    "other_drawing": "B50-332",
+    "other_item": "C-34001A/B",
+    "line_number": "4\"-H2-C50H-340003"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.042,
+      0.86,
+      0.096,
+      0.886
+     ],
+     "source": "vision",
+     "local_id": "OPC4"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC5",
+   "type": "OffPageConnector",
+   "label": "H2 VENT GAS B50-491 TO HEADER",
+   "name": "H2 VENT GAS B50-491 TO HEADER",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "out",
+    "other_drawing": "B50-491",
+    "other_item": "H2 vent header",
+    "line_number": "2\"-H2-B50H-390038"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.042,
+      0.557,
+      0.096,
+      0.584
+     ],
+     "source": "vision",
+     "local_id": "OPC5"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC6",
+   "type": "OffPageConnector",
+   "label": "H2 VENT GAS B50-491 TO HEADER",
+   "name": "H2 VENT GAS B50-491 TO HEADER",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "out",
+    "other_drawing": "B50-491",
+    "other_item": "H2 vent header",
+    "line_number": "\"-H2-B50H-360004"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.768,
+      0.182,
+      0.822,
+      0.208
+     ],
+     "source": "vision",
+     "local_id": "OPC6"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC7",
+   "type": "OffPageConnector",
+   "label": "H2 VENT GAS B50-491 TO HEADER",
+   "name": "H2 VENT GAS B50-491 TO HEADER",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "out",
+    "other_drawing": "B50-491",
+    "other_item": "H2 vent header",
+    "line_number": "12\"-H2-B50H-360002"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.768,
+      0.237,
+      0.822,
+      0.264
+     ],
+     "source": "vision",
+     "local_id": "OPC7"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC8",
+   "type": "OffPageConnector",
+   "label": "HYDROGEN GAS B50-101 TO BATTERY LIMIT",
+   "name": "HYDROGEN GAS B50-101 TO BATTERY LIMIT",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "out",
+    "other_drawing": "B50-101",
+    "other_item": "battery limit",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.768,
+      0.49,
+      0.822,
+      0.517
+     ],
+     "source": "vision",
+     "local_id": "OPC8"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC9",
+   "type": "OffPageConnector",
+   "label": "HYDROGEN GAS B50-341 FROM VE-39002A-I",
+   "name": "HYDROGEN GAS B50-341 FROM VE-39002A-I",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "in",
+    "other_drawing": "B50-341",
+    "other_item": "VE-39002A-I",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.785,
+      0.715,
+      0.822,
+      0.742
+     ],
+     "source": "vision",
+     "local_id": "OPC9"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC10",
+   "type": "OffPageConnector",
+   "label": "HYDROGEN GAS B50-341 TO VE-39001",
+   "name": "HYDROGEN GAS B50-341 TO VE-39001",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "out",
+    "other_drawing": "B50-341",
+    "other_item": "VE-39001",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.768,
+      0.786,
+      0.822,
+      0.813
+     ],
+     "source": "vision",
+     "local_id": "OPC10"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC11",
+   "type": "OffPageConnector",
+   "label": "SIGNAL B50-341 TO C-39001",
+   "name": "SIGNAL B50-341 TO C-39001",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "out",
+    "other_drawing": "B50-341",
+    "other_item": "C-39001"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.768,
+      0.823,
+      0.822,
+      0.85
+     ],
+     "source": "vision",
+     "local_id": "OPC11"
+    }
+   ]
+  },
+  {
+   "id": "P01.OPC12",
+   "type": "OffPageConnector",
+   "label": "WASTE WATER B50-481 TO PT-80001",
+   "name": "WASTE WATER B50-481 TO PT-80001",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "direction": "out",
+    "other_drawing": "B50-481",
+    "other_item": "PT-80001",
+    "line_number": "1\"-WW-A81-800081"
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "bbox": [
+      0.768,
+      0.859,
+      0.822,
+      0.886
+     ],
+     "source": "vision",
+     "local_id": "OPC12"
+    }
+   ]
+  },
+  {
+   "id": "P01.L1.1",
+   "type": "PipeSegment",
+   "label": "4\"-CWS-A10-610033 [1/2]",
+   "tag": "4\"-CWS-A10-610033",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L1",
+    "line_number": "4\"-CWS-A10-610033",
+    "size": "4\"",
+    "service": "CWS",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L1"
+    }
+   ]
+  },
+  {
+   "id": "P01.L1.2",
+   "type": "PipeSegment",
+   "label": "4\"-CWS-A10-610033 [2/2]",
+   "tag": "4\"-CWS-A10-610033",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L1",
+    "line_number": "4\"-CWS-A10-610033",
+    "size": "4\"",
+    "service": "CWS",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L1"
+    }
+   ]
+  },
+  {
+   "id": "P01.L2.1",
+   "type": "PipeSegment",
+   "label": "4\"-CWS-A10-610099 [1/2]",
+   "tag": "4\"-CWS-A10-610099",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L2",
+    "line_number": "4\"-CWS-A10-610099",
+    "size": "4\"",
+    "service": "CWS",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L2"
+    }
+   ]
+  },
+  {
+   "id": "P01.L2.2",
+   "type": "PipeSegment",
+   "label": "4\"-CWS-A10-610099 [2/2]",
+   "tag": "4\"-CWS-A10-610099",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L2",
+    "line_number": "4\"-CWS-A10-610099",
+    "size": "4\"",
+    "service": "CWS",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L2"
+    }
+   ]
+  },
+  {
+   "id": "P01.L3.1",
+   "type": "PipeSegment",
+   "label": "4\"-CWR-A10-610024 [1/3]",
+   "tag": "4\"-CWR-A10-610024",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L3",
+    "line_number": "4\"-CWR-A10-610024",
+    "size": "4\"",
+    "service": "CWR",
+    "segment": 1,
+    "segments": 3
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L3"
+    }
+   ]
+  },
+  {
+   "id": "P01.L3.2",
+   "type": "PipeSegment",
+   "label": "4\"-CWR-A10-610024 [2/3]",
+   "tag": "4\"-CWR-A10-610024",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L3",
+    "line_number": "4\"-CWR-A10-610024",
+    "size": "4\"",
+    "service": "CWR",
+    "segment": 2,
+    "segments": 3
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L3"
+    }
+   ]
+  },
+  {
+   "id": "P01.L3.3",
+   "type": "PipeSegment",
+   "label": "4\"-CWR-A10-610024 [3/3]",
+   "tag": "4\"-CWR-A10-610024",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L3",
+    "line_number": "4\"-CWR-A10-610024",
+    "size": "4\"",
+    "service": "CWR",
+    "segment": 3,
+    "segments": 3
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L3"
+    }
+   ]
+  },
+  {
+   "id": "P01.L4.1",
+   "type": "PipeSegment",
+   "label": "4\"-CWR-A10-610100 [1/3]",
+   "tag": "4\"-CWR-A10-610100",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L4",
+    "line_number": "4\"-CWR-A10-610100",
+    "size": "4\"",
+    "service": "CWR",
+    "segment": 1,
+    "segments": 3
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L4"
+    }
+   ]
+  },
+  {
+   "id": "P01.L4.2",
+   "type": "PipeSegment",
+   "label": "4\"-CWR-A10-610100 [2/3]",
+   "tag": "4\"-CWR-A10-610100",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L4",
+    "line_number": "4\"-CWR-A10-610100",
+    "size": "4\"",
+    "service": "CWR",
+    "segment": 2,
+    "segments": 3
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L4"
+    }
+   ]
+  },
+  {
+   "id": "P01.L4.3",
+   "type": "PipeSegment",
+   "label": "4\"-CWR-A10-610100 [3/3]",
+   "tag": "4\"-CWR-A10-610100",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L4",
+    "line_number": "4\"-CWR-A10-610100",
+    "size": "4\"",
+    "service": "CWR",
+    "segment": 3,
+    "segments": 3
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L4"
+    }
+   ]
+  },
+  {
+   "id": "P01.L5.1",
+   "type": "PipeSegment",
+   "label": "1\"-IA-A12-660023 [1/2]",
+   "tag": "1\"-IA-A12-660023",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L5",
+    "line_number": "1\"-IA-A12-660023",
+    "size": "1\"",
+    "service": "IA",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L5"
+    }
+   ]
+  },
+  {
+   "id": "P01.L5.2",
+   "type": "PipeSegment",
+   "label": "1\"-IA-A12-660023 [2/2]",
+   "tag": "1\"-IA-A12-660023",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L5",
+    "line_number": "1\"-IA-A12-660023",
+    "size": "1\"",
+    "service": "IA",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L5"
+    }
+   ]
+  },
+  {
+   "id": "P01.L6.1",
+   "type": "PipeSegment",
+   "label": "1\"-IA-A12-660077 [1/2]",
+   "tag": "1\"-IA-A12-660077",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L6",
+    "line_number": "1\"-IA-A12-660077",
+    "size": "1\"",
+    "service": "IA",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L6"
+    }
+   ]
+  },
+  {
+   "id": "P01.L6.2",
+   "type": "PipeSegment",
+   "label": "1\"-IA-A12-660077 [2/2]",
+   "tag": "1\"-IA-A12-660077",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L6",
+    "line_number": "1\"-IA-A12-660077",
+    "size": "1\"",
+    "service": "IA",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L6"
+    }
+   ]
+  },
+  {
+   "id": "P01.L7.1",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-340003 [1/2]",
+   "tag": "4\"-H2-C50H-340003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L7",
+    "line_number": "4\"-H2-C50H-340003",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L7"
+    }
+   ]
+  },
+  {
+   "id": "P01.L7.2",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-340003 [2/2]",
+   "tag": "4\"-H2-C50H-340003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L7",
+    "line_number": "4\"-H2-C50H-340003",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L7"
+    }
+   ]
+  },
+  {
+   "id": "P01.L8.1",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-340033 [1/2]",
+   "tag": "4\"-H2-C50H-340033",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L8",
+    "line_number": "4\"-H2-C50H-340033",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L8"
+    }
+   ]
+  },
+  {
+   "id": "P01.L8.2",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-340033 [2/2]",
+   "tag": "4\"-H2-C50H-340033",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L8",
+    "line_number": "4\"-H2-C50H-340033",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L8"
+    }
+   ]
+  },
+  {
+   "id": "P01.L9.1",
+   "type": "PipeSegment",
+   "label": "1\"-WW-A81-800081 [1/2]",
+   "tag": "1\"-WW-A81-800081",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L9",
+    "line_number": "1\"-WW-A81-800081",
+    "size": "1\"",
+    "service": "WW",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L9"
+    }
+   ]
+  },
+  {
+   "id": "P01.L9.2",
+   "type": "PipeSegment",
+   "label": "1\"-WW-A81-800081 [2/2]",
+   "tag": "1\"-WW-A81-800081",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L9",
+    "line_number": "1\"-WW-A81-800081",
+    "size": "1\"",
+    "service": "WW",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L9"
+    }
+   ]
+  },
+  {
+   "id": "P01.L10.1",
+   "type": "PipeSegment",
+   "label": "1\"-WW-A81-800008 [1/2]",
+   "tag": "1\"-WW-A81-800008",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L10",
+    "line_number": "1\"-WW-A81-800008",
+    "size": "1\"",
+    "service": "WW",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L10"
+    }
+   ]
+  },
+  {
+   "id": "P01.L10.2",
+   "type": "PipeSegment",
+   "label": "1\"-WW-A81-800008 [2/2]",
+   "tag": "1\"-WW-A81-800008",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L10",
+    "line_number": "1\"-WW-A81-800008",
+    "size": "1\"",
+    "service": "WW",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L10"
+    }
+   ]
+  },
+  {
+   "id": "P01.L11.1",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360001 [1/8]",
+   "tag": "4\"-H2-C50H-360001",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L11",
+    "line_number": "4\"-H2-C50H-360001",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L11"
+    }
+   ]
+  },
+  {
+   "id": "P01.L11.2",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360001 [2/8]",
+   "tag": "4\"-H2-C50H-360001",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L11",
+    "line_number": "4\"-H2-C50H-360001",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L11"
+    }
+   ]
+  },
+  {
+   "id": "P01.L11.3",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360001 [3/8]",
+   "tag": "4\"-H2-C50H-360001",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L11",
+    "line_number": "4\"-H2-C50H-360001",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 3,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L11"
+    }
+   ]
+  },
+  {
+   "id": "P01.L11.4",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360001 [4/8]",
+   "tag": "4\"-H2-C50H-360001",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L11",
+    "line_number": "4\"-H2-C50H-360001",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 4,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L11"
+    }
+   ]
+  },
+  {
+   "id": "P01.L11.5",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360001 [5/8]",
+   "tag": "4\"-H2-C50H-360001",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L11",
+    "line_number": "4\"-H2-C50H-360001",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 5,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L11"
+    }
+   ]
+  },
+  {
+   "id": "P01.L11.6",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360001 [6/8]",
+   "tag": "4\"-H2-C50H-360001",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L11",
+    "line_number": "4\"-H2-C50H-360001",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 6,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L11"
+    }
+   ]
+  },
+  {
+   "id": "P01.L11.7",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360001 [7/8]",
+   "tag": "4\"-H2-C50H-360001",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L11",
+    "line_number": "4\"-H2-C50H-360001",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 7,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L11"
+    }
+   ]
+  },
+  {
+   "id": "P01.L11.8",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360001 [8/8]",
+   "tag": "4\"-H2-C50H-360001",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L11",
+    "line_number": "4\"-H2-C50H-360001",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 8,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L11"
+    }
+   ]
+  },
+  {
+   "id": "P01.L12.1",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360011 [1/2]",
+   "tag": "4\"-H2-C50H-360011",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L12",
+    "line_number": "4\"-H2-C50H-360011",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L12"
+    }
+   ]
+  },
+  {
+   "id": "P01.L12.2",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360011 [2/2]",
+   "tag": "4\"-H2-C50H-360011",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L12",
+    "line_number": "4\"-H2-C50H-360011",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L12"
+    }
+   ]
+  },
+  {
+   "id": "P01.L13.1",
+   "type": "PipeSegment",
+   "label": "2\"-H2-C50H-390031 [1/5]",
+   "tag": "2\"-H2-C50H-390031",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L13",
+    "line_number": "2\"-H2-C50H-390031",
+    "size": "2\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 5
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L13"
+    }
+   ]
+  },
+  {
+   "id": "P01.L13.2",
+   "type": "PipeSegment",
+   "label": "2\"-H2-C50H-390031 [2/5]",
+   "tag": "2\"-H2-C50H-390031",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L13",
+    "line_number": "2\"-H2-C50H-390031",
+    "size": "2\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 5
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L13"
+    }
+   ]
+  },
+  {
+   "id": "P01.L13.3",
+   "type": "PipeSegment",
+   "label": "2\"-H2-C50H-390031 [3/5]",
+   "tag": "2\"-H2-C50H-390031",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L13",
+    "line_number": "2\"-H2-C50H-390031",
+    "size": "2\"",
+    "service": "H2",
+    "segment": 3,
+    "segments": 5
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L13"
+    }
+   ]
+  },
+  {
+   "id": "P01.L13.4",
+   "type": "PipeSegment",
+   "label": "2\"-H2-C50H-390031 [4/5]",
+   "tag": "2\"-H2-C50H-390031",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L13",
+    "line_number": "2\"-H2-C50H-390031",
+    "size": "2\"",
+    "service": "H2",
+    "segment": 4,
+    "segments": 5
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L13"
+    }
+   ]
+  },
+  {
+   "id": "P01.L13.5",
+   "type": "PipeSegment",
+   "label": "2\"-H2-C50H-390031 [5/5]",
+   "tag": "2\"-H2-C50H-390031",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L13",
+    "line_number": "2\"-H2-C50H-390031",
+    "size": "2\"",
+    "service": "H2",
+    "segment": 5,
+    "segments": 5
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L13"
+    }
+   ]
+  },
+  {
+   "id": "P01.L14.1",
+   "type": "PipeSegment",
+   "label": "L14 [1/2]",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L14",
+    "size": "1\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L14"
+    }
+   ]
+  },
+  {
+   "id": "P01.L14.2",
+   "type": "PipeSegment",
+   "label": "L14 [2/2]",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L14",
+    "size": "1\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L14"
+    }
+   ]
+  },
+  {
+   "id": "P01.L15.1",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360002 [1/8]",
+   "tag": "4\"-H2-C50H-360002",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L15",
+    "line_number": "4\"-H2-C50H-360002",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L15"
+    }
+   ]
+  },
+  {
+   "id": "P01.L15.2",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360002 [2/8]",
+   "tag": "4\"-H2-C50H-360002",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L15",
+    "line_number": "4\"-H2-C50H-360002",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L15"
+    }
+   ]
+  },
+  {
+   "id": "P01.L15.3",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360002 [3/8]",
+   "tag": "4\"-H2-C50H-360002",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L15",
+    "line_number": "4\"-H2-C50H-360002",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 3,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L15"
+    }
+   ]
+  },
+  {
+   "id": "P01.L15.4",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360002 [4/8]",
+   "tag": "4\"-H2-C50H-360002",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L15",
+    "line_number": "4\"-H2-C50H-360002",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 4,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L15"
+    }
+   ]
+  },
+  {
+   "id": "P01.L15.5",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360002 [5/8]",
+   "tag": "4\"-H2-C50H-360002",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L15",
+    "line_number": "4\"-H2-C50H-360002",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 5,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L15"
+    }
+   ]
+  },
+  {
+   "id": "P01.L15.6",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360002 [6/8]",
+   "tag": "4\"-H2-C50H-360002",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L15",
+    "line_number": "4\"-H2-C50H-360002",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 6,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L15"
+    }
+   ]
+  },
+  {
+   "id": "P01.L15.7",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360002 [7/8]",
+   "tag": "4\"-H2-C50H-360002",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L15",
+    "line_number": "4\"-H2-C50H-360002",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 7,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L15"
+    }
+   ]
+  },
+  {
+   "id": "P01.L15.8",
+   "type": "PipeSegment",
+   "label": "4\"-H2-C50H-360002 [8/8]",
+   "tag": "4\"-H2-C50H-360002",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L15",
+    "line_number": "4\"-H2-C50H-360002",
+    "size": "4\"",
+    "service": "H2",
+    "segment": 8,
+    "segments": 8
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L15"
+    }
+   ]
+  },
+  {
+   "id": "P01.L16.1",
+   "type": "PipeSegment",
+   "label": "1\"-H2-C50H-360010 [1/2]",
+   "tag": "1\"-H2-C50H-360010",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L16",
+    "line_number": "1\"-H2-C50H-360010",
+    "size": "1\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L16"
+    }
+   ]
+  },
+  {
+   "id": "P01.L16.2",
+   "type": "PipeSegment",
+   "label": "1\"-H2-C50H-360010 [2/2]",
+   "tag": "1\"-H2-C50H-360010",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L16",
+    "line_number": "1\"-H2-C50H-360010",
+    "size": "1\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L16"
+    }
+   ]
+  },
+  {
+   "id": "P01.L17.1",
+   "type": "PipeSegment",
+   "label": "X\"-H2-C50H-360012 [1/2]",
+   "tag": "X\"-H2-C50H-360012",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L17",
+    "line_number": "X\"-H2-C50H-360012",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L17"
+    }
+   ]
+  },
+  {
+   "id": "P01.L17.2",
+   "type": "PipeSegment",
+   "label": "X\"-H2-C50H-360012 [2/2]",
+   "tag": "X\"-H2-C50H-360012",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L17",
+    "line_number": "X\"-H2-C50H-360012",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L17"
+    }
+   ]
+  },
+  {
+   "id": "P01.L18.1",
+   "type": "PipeSegment",
+   "label": "\"-H2-B50H-360004 [1/2]",
+   "tag": "H2-B50H-360004",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L18",
+    "line_number": "\"-H2-B50H-360004",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L18"
+    }
+   ]
+  },
+  {
+   "id": "P01.L18.2",
+   "type": "PipeSegment",
+   "label": "\"-H2-B50H-360004 [2/2]",
+   "tag": "H2-B50H-360004",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L18",
+    "line_number": "\"-H2-B50H-360004",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L18"
+    }
+   ]
+  },
+  {
+   "id": "P01.L19.1",
+   "type": "PipeSegment",
+   "label": "X\"-H2-B50H-360013 [1/2]",
+   "tag": "X\"-H2-B50H-360013",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L19",
+    "line_number": "X\"-H2-B50H-360013",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L19"
+    }
+   ]
+  },
+  {
+   "id": "P01.L19.2",
+   "type": "PipeSegment",
+   "label": "X\"-H2-B50H-360013 [2/2]",
+   "tag": "X\"-H2-B50H-360013",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L19",
+    "line_number": "X\"-H2-B50H-360013",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L19"
+    }
+   ]
+  },
+  {
+   "id": "P01.L20.1",
+   "type": "PipeSegment",
+   "label": "X\"-H2-B50H-360014 [1/2]",
+   "tag": "X\"-H2-B50H-360014",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L20",
+    "line_number": "X\"-H2-B50H-360014",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L20"
+    }
+   ]
+  },
+  {
+   "id": "P01.L20.2",
+   "type": "PipeSegment",
+   "label": "X\"-H2-B50H-360014 [2/2]",
+   "tag": "X\"-H2-B50H-360014",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L20",
+    "line_number": "X\"-H2-B50H-360014",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L20"
+    }
+   ]
+  },
+  {
+   "id": "P01.L21.1",
+   "type": "PipeSegment",
+   "label": "L21",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "line_id": "L21",
+    "service": "H2",
+    "segment": 1,
+    "segments": 1
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L21"
+    }
+   ]
+  },
+  {
+   "id": "P01.L22.1",
+   "type": "PipeSegment",
+   "label": "L22",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "line_id": "L22",
+    "service": "H2",
+    "segment": 1,
+    "segments": 1
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L22"
+    }
+   ]
+  },
+  {
+   "id": "P01.L23.1",
+   "type": "PipeSegment",
+   "label": "L23",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "line_id": "L23",
+    "service": "H2",
+    "segment": 1,
+    "segments": 1
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L23"
+    }
+   ]
+  },
+  {
+   "id": "P01.L24.1",
+   "type": "PipeSegment",
+   "label": "L24",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "line_id": "L24",
+    "service": "H2",
+    "segment": 1,
+    "segments": 1
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L24"
+    }
+   ]
+  },
+  {
+   "id": "P01.L30.1",
+   "type": "PipeSegment",
+   "label": "1\"-H2-G53H-390003 [1/9]",
+   "tag": "1\"-H2-G53H-390003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L30",
+    "line_number": "1\"-H2-G53H-390003",
+    "service": "H2",
+    "segment": 1,
+    "segments": 9
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L30"
+    }
+   ]
+  },
+  {
+   "id": "P01.L30.2",
+   "type": "PipeSegment",
+   "label": "1\"-H2-G53H-390003 [2/9]",
+   "tag": "1\"-H2-G53H-390003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L30",
+    "line_number": "1\"-H2-G53H-390003",
+    "service": "H2",
+    "segment": 2,
+    "segments": 9
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L30"
+    }
+   ]
+  },
+  {
+   "id": "P01.L30.3",
+   "type": "PipeSegment",
+   "label": "1\"-H2-G53H-390003 [3/9]",
+   "tag": "1\"-H2-G53H-390003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L30",
+    "line_number": "1\"-H2-G53H-390003",
+    "service": "H2",
+    "segment": 3,
+    "segments": 9
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L30"
+    }
+   ]
+  },
+  {
+   "id": "P01.L30.4",
+   "type": "PipeSegment",
+   "label": "1\"-H2-G53H-390003 [4/9]",
+   "tag": "1\"-H2-G53H-390003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L30",
+    "line_number": "1\"-H2-G53H-390003",
+    "service": "H2",
+    "segment": 4,
+    "segments": 9
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L30"
+    }
+   ]
+  },
+  {
+   "id": "P01.L30.5",
+   "type": "PipeSegment",
+   "label": "1\"-H2-G53H-390003 [5/9]",
+   "tag": "1\"-H2-G53H-390003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L30",
+    "line_number": "1\"-H2-G53H-390003",
+    "service": "H2",
+    "segment": 5,
+    "segments": 9
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L30"
+    }
+   ]
+  },
+  {
+   "id": "P01.L30.6",
+   "type": "PipeSegment",
+   "label": "1\"-H2-G53H-390003 [6/9]",
+   "tag": "1\"-H2-G53H-390003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L30",
+    "line_number": "1\"-H2-G53H-390003",
+    "service": "H2",
+    "segment": 6,
+    "segments": 9
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L30"
+    }
+   ]
+  },
+  {
+   "id": "P01.L30.7",
+   "type": "PipeSegment",
+   "label": "1\"-H2-G53H-390003 [7/9]",
+   "tag": "1\"-H2-G53H-390003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L30",
+    "line_number": "1\"-H2-G53H-390003",
+    "service": "H2",
+    "segment": 7,
+    "segments": 9
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L30"
+    }
+   ]
+  },
+  {
+   "id": "P01.L30.8",
+   "type": "PipeSegment",
+   "label": "1\"-H2-G53H-390003 [8/9]",
+   "tag": "1\"-H2-G53H-390003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L30",
+    "line_number": "1\"-H2-G53H-390003",
+    "service": "H2",
+    "segment": 8,
+    "segments": 9
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L30"
+    }
+   ]
+  },
+  {
+   "id": "P01.L30.9",
+   "type": "PipeSegment",
+   "label": "1\"-H2-G53H-390003 [9/9]",
+   "tag": "1\"-H2-G53H-390003",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L30",
+    "line_number": "1\"-H2-G53H-390003",
+    "service": "H2",
+    "segment": 9,
+    "segments": 9
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L30"
+    }
+   ]
+  },
+  {
+   "id": "P01.L31.1",
+   "type": "PipeSegment",
+   "label": "L31 [1/3]",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L31",
+    "service": "H2",
+    "segment": 1,
+    "segments": 3
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L31"
+    }
+   ]
+  },
+  {
+   "id": "P01.L31.2",
+   "type": "PipeSegment",
+   "label": "L31 [2/3]",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L31",
+    "service": "H2",
+    "segment": 2,
+    "segments": 3
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L31"
+    }
+   ]
+  },
+  {
+   "id": "P01.L31.3",
+   "type": "PipeSegment",
+   "label": "L31 [3/3]",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L31",
+    "service": "H2",
+    "segment": 3,
+    "segments": 3
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L31"
+    }
+   ]
+  },
+  {
+   "id": "P01.L32.1",
+   "type": "PipeSegment",
+   "label": "1\"-H2-C50H-390036 [1/2]",
+   "tag": "1\"-H2-C50H-390036",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L32",
+    "line_number": "1\"-H2-C50H-390036",
+    "size": "1\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L32"
+    }
+   ]
+  },
+  {
+   "id": "P01.L32.2",
+   "type": "PipeSegment",
+   "label": "1\"-H2-C50H-390036 [2/2]",
+   "tag": "1\"-H2-C50H-390036",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L32",
+    "line_number": "1\"-H2-C50H-390036",
+    "size": "1\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L32"
+    }
+   ]
+  },
+  {
+   "id": "P01.L33.1",
+   "type": "PipeSegment",
+   "label": "1\"-H2-C50H-390035 [1/2]",
+   "tag": "1\"-H2-C50H-390035",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L33",
+    "line_number": "1\"-H2-C50H-390035",
+    "size": "1\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L33"
+    }
+   ]
+  },
+  {
+   "id": "P01.L33.2",
+   "type": "PipeSegment",
+   "label": "1\"-H2-C50H-390035 [2/2]",
+   "tag": "1\"-H2-C50H-390035",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L33",
+    "line_number": "1\"-H2-C50H-390035",
+    "size": "1\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L33"
+    }
+   ]
+  },
+  {
+   "id": "P01.L34.1",
+   "type": "PipeSegment",
+   "label": "2\"-H2-B50H-390038 [1/2]",
+   "tag": "2\"-H2-B50H-390038",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L34",
+    "line_number": "2\"-H2-B50H-390038",
+    "size": "2\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L34"
+    }
+   ]
+  },
+  {
+   "id": "P01.L34.2",
+   "type": "PipeSegment",
+   "label": "2\"-H2-B50H-390038 [2/2]",
+   "tag": "2\"-H2-B50H-390038",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L34",
+    "line_number": "2\"-H2-B50H-390038",
+    "size": "2\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L34"
+    }
+   ]
+  },
+  {
+   "id": "P01.L35.1",
+   "type": "PipeSegment",
+   "label": "2\"-H2-B50H-390037 [1/2]",
+   "tag": "2\"-H2-B50H-390037",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L35",
+    "line_number": "2\"-H2-B50H-390037",
+    "size": "2\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L35"
+    }
+   ]
+  },
+  {
+   "id": "P01.L35.2",
+   "type": "PipeSegment",
+   "label": "2\"-H2-B50H-390037 [2/2]",
+   "tag": "2\"-H2-B50H-390037",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "line_id": "L35",
+    "line_number": "2\"-H2-B50H-390037",
+    "size": "2\"",
+    "service": "H2",
+    "segment": 2,
+    "segments": 2
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L35"
+    }
+   ]
+  },
+  {
+   "id": "P01.L36.1",
+   "type": "PipeSegment",
+   "label": "L36",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "line_id": "L36",
+    "service": "H2",
+    "segment": 1,
+    "segments": 1
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L36"
+    }
+   ]
+  },
+  {
+   "id": "P01.L37.1",
+   "type": "PipeSegment",
+   "label": "L37",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "line_id": "L37",
+    "service": "H2",
+    "segment": 1,
+    "segments": 1
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L37"
+    }
+   ]
+  },
+  {
+   "id": "P01.L38.1",
+   "type": "PipeSegment",
+   "label": "L38",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "line_id": "L38",
+    "service": "H2",
+    "segment": 1,
+    "segments": 1
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L38"
+    }
+   ]
+  },
+  {
+   "id": "P01.L39.1",
+   "type": "PipeSegment",
+   "label": "L39",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "line_id": "L39",
+    "service": "H2",
+    "segment": 1,
+    "segments": 1
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L39"
+    }
+   ]
+  },
+  {
+   "id": "P01.L40.1",
+   "type": "PipeSegment",
+   "label": "L40",
+   "dexpi_class": "PipingNetworkSegment",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.75,
+   "attributes": {
+    "line_id": "L40",
+    "size": "1\"",
+    "service": "H2",
+    "segment": 1,
+    "segments": 1
+   },
+   "provenance": [
+    {
+     "sheet": "SHEET:AQ010-B50-333",
+     "page": 1,
+     "source": "vision",
+     "local_id": "L40"
+    }
+   ]
+  },
+  {
+   "id": "LOOP:A-36001",
+   "type": "ControlLoop",
+   "label": "A-36001",
+   "kind": "control",
+   "dexpi_class": "InstrumentationLoopFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "variable": "analysis",
+    "loop_type": "control",
+    "sensors": [
+     "AT-36001"
+    ],
+    "controllers": [
+     "AC-36001"
+    ],
+    "measured_at": [
+     "4\"-H2-C50H-360001 (ball valve -> ball valve)"
+    ],
+    "description": "Control loop A-36001 (analysis). Sensed by AT-36001 (4\"-H2-C50H-360001 (ball valve -> ball valve)). Controlled by AC-36001 (dcs)."
+   },
+   "provenance": []
+  },
+  {
+   "id": "LOOP:A-36002",
+   "type": "ControlLoop",
+   "label": "A-36002",
+   "kind": "control",
+   "dexpi_class": "InstrumentationLoopFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.9,
+   "attributes": {
+    "variable": "analysis",
+    "loop_type": "control",
+    "sensors": [
+     "AT-36002"
+    ],
+    "controllers": [
+     "AC-36002"
+    ],
+    "measured_at": [
+     "4\"-H2-C50H-360001 (ball valve -> ball valve)"
+    ],
+    "description": "Control loop A-36002 (analysis). Sensed by AT-36002 (4\"-H2-C50H-360001 (ball valve -> ball valve)). Controlled by AC-36002 (dcs)."
+   },
+   "provenance": []
+  },
+  {
+   "id": "LOOP:F-39001",
+   "type": "ControlLoop",
+   "label": "F-39001",
+   "kind": "control",
+   "dexpi_class": "InstrumentationLoopFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "variable": "flow",
+    "loop_type": "control",
+    "sensors": [
+     "FT-39001"
+    ],
+    "controllers": [
+     "FC-39001"
+    ],
+    "measured_at": [
+     "in-line on 2\"-H2-C50H-390031 (ZV-39001 -> HYDROGEN GAS B50-341 TO VE-39001)"
+    ],
+    "description": "Control loop F-39001 (flow). Sensed by FT-39001 (in-line on 2\"-H2-C50H-390031 (ZV-39001 -> HYDROGEN GAS B50-341 TO VE-39001)). Controlled by FC-39001 (dcs)."
+   },
+   "provenance": []
+  },
+  {
+   "id": "LOOP:F-39002",
+   "type": "ControlLoop",
+   "label": "F-39002",
+   "kind": "control",
+   "dexpi_class": "InstrumentationLoopFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "variable": "flow",
+    "loop_type": "control",
+    "sensors": [
+     "PI-39004"
+    ],
+    "controllers": [
+     "FC-39002"
+    ],
+    "final_elements": [
+     "FV-39001"
+    ],
+    "manipulated_at": [
+     "FV-39001 on 1\"-H2-G53H-390003"
+    ],
+    "description": "Control loop F-39002 (flow). Sensed by PI-39004. Controlled by FC-39002 (dcs). Acts on FV-39001 on 1\"-H2-G53H-390003."
+   },
+   "provenance": []
+  },
+  {
+   "id": "LOOP:F-39003",
+   "type": "ControlLoop",
+   "label": "F-39003",
+   "kind": "control",
+   "dexpi_class": "InstrumentationLoopFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "variable": "flow",
+    "loop_type": "control",
+    "sensors": [
+     "FT-39002",
+     "PI-39004"
+    ],
+    "controllers": [
+     "FC-39003"
+    ],
+    "final_elements": [
+     "FV-39002"
+    ],
+    "measured_at": [
+     "in-line on 1\"-H2-G53H-390003 (HYDROGEN GAS B50-341 FROM VE-39002A-I -> globe valve)"
+    ],
+    "description": "Control loop F-39003 (flow). Sensed by FT-39002, PI-39004 (in-line on 1\"-H2-G53H-390003 (HYDROGEN GAS B50-341 FROM VE-39002A-I -> globe valve)). Controlled by FC-39003 (dcs). Acts on FV-39002."
+   },
+   "provenance": []
+  },
+  {
+   "id": "LOOP:P-36001",
+   "type": "ControlLoop",
+   "label": "P-36001",
+   "kind": "control",
+   "dexpi_class": "InstrumentationLoopFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "variable": "pressure",
+    "loop_type": "control",
+    "sensors": [
+     "PT-36001"
+    ],
+    "controllers": [
+     "PC-36001"
+    ],
+    "final_elements": [
+     "PV-36001",
+     "PV-36002"
+    ],
+    "measured_at": [
+     "4\"-H2-C50H-360001 (ball valve -> ball valve)"
+    ],
+    "manipulated_at": [
+     "PV-36001 on 4\"-H2-C50H-360001",
+     "PV-36002 on 4\"-H2-C50H-360002"
+    ],
+    "description": "Control loop P-36001 (pressure). Sensed by PT-36001 (4\"-H2-C50H-360001 (ball valve -> ball valve)). Controlled by PC-36001 (dcs). Acts on PV-36001 on 4\"-H2-C50H-360001; PV-36002 on 4\"-H2-C50H-360002."
+   },
+   "provenance": []
+  },
+  {
+   "id": "LOOP:P-39001",
+   "type": "ControlLoop",
+   "label": "P-39001",
+   "kind": "monitoring",
+   "dexpi_class": "InstrumentationLoopFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "variable": "pressure",
+    "loop_type": "monitoring",
+    "description": "Monitoring loop P-39001 (pressure)."
+   },
+   "provenance": []
+  },
+  {
+   "id": "LOOP:P-39004",
+   "type": "ControlLoop",
+   "label": "P-39004",
+   "kind": "monitoring",
+   "dexpi_class": "InstrumentationLoopFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "variable": "pressure",
+    "loop_type": "monitoring",
+    "sensors": [
+     "PT-39004"
+    ],
+    "readouts": [
+     "PI-39004"
+    ],
+    "measured_at": [
+     "1\"-H2-G53H-390003 (HYDROGEN GAS B50-341 FROM VE-39002A-I -> FT-39002)"
+    ],
+    "description": "Monitoring loop P-39004 (pressure). Sensed by PT-39004 (1\"-H2-G53H-390003 (HYDROGEN GAS B50-341 FROM VE-39002A-I -> FT-39002))."
+   },
+   "provenance": []
+  },
+  {
+   "id": "LOOP:T-36001",
+   "type": "ControlLoop",
+   "label": "T-36001",
+   "kind": "monitoring",
+   "dexpi_class": "InstrumentationLoopFunction",
+   "sheets": [
+    "SHEET:AQ010-B50-333"
+   ],
+   "confidence": 0.95,
+   "attributes": {
+    "variable": "temperature",
+    "loop_type": "monitoring",
+    "sensors": [
+     "TT-36001"
+    ],
+    "readouts": [
+     "TI-36001"
+    ],
+    "measured_at": [
+     "4\"-H2-C50H-360001 (ball valve -> ball valve)"
+    ],
+    "description": "Monitoring loop T-36001 (temperature). Sensed by TT-36001 (4\"-H2-C50H-360001 (ball valve -> ball valve))."
+   },
+   "provenance": []
+  },
+  {
+   "id": "PLANT:h2-gas-purification-unit",
+   "type": "Plant",
+   "label": "H2 Gas Purification Unit",
+   "name": "H2 Gas Purification Unit",
+   "sheets": [],
+   "confidence": 1.0,
+   "attributes": {
+    "source_file": "AQ010-B50-333_PID_H2_GAS_PURIFICATION_UNIT.pdf"
+   },
+   "provenance": []
+  }
+ ],
+ "edges": [
+  {
+   "id": "E00001",
+   "source": "P01.L1.1",
+   "target": "P01.V3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWS-A10-610033"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00002",
+   "source": "P01.V3",
+   "target": "P01.L1.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWS-A10-610033"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00003",
+   "source": "P01.L2.1",
+   "target": "P01.V1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWS-A10-610099"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00004",
+   "source": "P01.V1",
+   "target": "P01.L2.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWS-A10-610099"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00005",
+   "source": "P01.L3.1",
+   "target": "SG-36001B",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610024"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00006",
+   "source": "SG-36001B",
+   "target": "P01.L3.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610024"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00007",
+   "source": "P01.L3.2",
+   "target": "P01.V4",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610024"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00008",
+   "source": "P01.V4",
+   "target": "P01.L3.3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610024"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00009",
+   "source": "P01.L4.1",
+   "target": "SG-36001A",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610100"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00010",
+   "source": "SG-36001A",
+   "target": "P01.L4.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610100"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00011",
+   "source": "P01.L4.2",
+   "target": "P01.V2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610100"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00012",
+   "source": "P01.V2",
+   "target": "P01.L4.3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610100"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00013",
+   "source": "P01.L5.1",
+   "target": "P01.V6",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-IA-A12-660023"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00014",
+   "source": "P01.V6",
+   "target": "P01.L5.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-IA-A12-660023"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00015",
+   "source": "P01.L6.1",
+   "target": "P01.V5",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-IA-A12-660077"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00016",
+   "source": "P01.V5",
+   "target": "P01.L6.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-IA-A12-660077"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00017",
+   "source": "P01.L7.1",
+   "target": "P01.V8",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-340003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00018",
+   "source": "P01.V8",
+   "target": "P01.L7.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-340003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00019",
+   "source": "P01.L8.1",
+   "target": "P01.V7",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-340033"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00020",
+   "source": "P01.V7",
+   "target": "P01.L8.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-340033"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00021",
+   "source": "P01.L9.1",
+   "target": "P01.V12",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-WW-A81-800081"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00022",
+   "source": "P01.V12",
+   "target": "P01.L9.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-WW-A81-800081"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00023",
+   "source": "P01.L10.1",
+   "target": "P01.V10",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-WW-A81-800008"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00024",
+   "source": "P01.V10",
+   "target": "P01.L10.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-WW-A81-800008"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00025",
+   "source": "P01.L11.1",
+   "target": "P01.V11",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00026",
+   "source": "P01.V11",
+   "target": "P01.L11.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00027",
+   "source": "P01.L11.2",
+   "target": "P01.V16",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00028",
+   "source": "P01.V16",
+   "target": "P01.L11.3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00029",
+   "source": "P01.L11.3",
+   "target": "P01.R1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00030",
+   "source": "P01.R1",
+   "target": "P01.L11.4",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00031",
+   "source": "P01.L11.4",
+   "target": "PV-36001",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00032",
+   "source": "PV-36001",
+   "target": "P01.L11.5",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00033",
+   "source": "P01.L11.5",
+   "target": "P01.R2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00034",
+   "source": "P01.R2",
+   "target": "P01.L11.6",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00035",
+   "source": "P01.L11.6",
+   "target": "ZV-36001",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00036",
+   "source": "ZV-36001",
+   "target": "P01.L11.7",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00037",
+   "source": "P01.L11.7",
+   "target": "P01.CV1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00038",
+   "source": "P01.CV1",
+   "target": "P01.L11.8",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00039",
+   "source": "P01.L12.1",
+   "target": "P01.V9",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360011"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00040",
+   "source": "P01.V9",
+   "target": "P01.L12.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360011"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00041",
+   "source": "P01.L13.1",
+   "target": "P01.V13",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00042",
+   "source": "P01.V13",
+   "target": "P01.L13.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00043",
+   "source": "P01.L13.2",
+   "target": "P01.SB1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00044",
+   "source": "P01.SB1",
+   "target": "P01.L13.3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00045",
+   "source": "P01.L13.3",
+   "target": "ZV-39001",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00046",
+   "source": "ZV-39001",
+   "target": "P01.L13.4",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00047",
+   "source": "P01.L13.4",
+   "target": "FT-39001",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00048",
+   "source": "FT-39001",
+   "target": "P01.L13.5",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00049",
+   "source": "P01.L14.1",
+   "target": "P01.V14",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00050",
+   "source": "P01.V14",
+   "target": "P01.L14.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00051",
+   "source": "P01.L15.1",
+   "target": "P01.V15",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00052",
+   "source": "P01.V15",
+   "target": "P01.L15.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00053",
+   "source": "P01.L15.2",
+   "target": "P01.CV2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00054",
+   "source": "P01.CV2",
+   "target": "P01.L15.3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00055",
+   "source": "P01.L15.3",
+   "target": "P01.X1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00056",
+   "source": "P01.X1",
+   "target": "P01.L15.4",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00057",
+   "source": "P01.L15.4",
+   "target": "ZV-36002",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00058",
+   "source": "ZV-36002",
+   "target": "P01.L15.5",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00059",
+   "source": "P01.L15.5",
+   "target": "P01.R3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00060",
+   "source": "P01.R3",
+   "target": "P01.L15.6",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00061",
+   "source": "P01.L15.6",
+   "target": "PV-36002",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00062",
+   "source": "PV-36002",
+   "target": "P01.L15.7",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00063",
+   "source": "P01.L15.7",
+   "target": "P01.R4",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00064",
+   "source": "P01.R4",
+   "target": "P01.L15.8",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00065",
+   "source": "P01.L16.1",
+   "target": "P01.V17",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-360010"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00066",
+   "source": "P01.V17",
+   "target": "P01.L16.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-360010"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00067",
+   "source": "P01.L17.1",
+   "target": "P01.V18",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-C50H-360012"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00068",
+   "source": "P01.V18",
+   "target": "P01.L17.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-C50H-360012"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00069",
+   "source": "P01.L18.1",
+   "target": "P01.V21",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "\"-H2-B50H-360004"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00070",
+   "source": "P01.V21",
+   "target": "P01.L18.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "\"-H2-B50H-360004"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00071",
+   "source": "P01.L19.1",
+   "target": "P01.V22",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-B50H-360013"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00072",
+   "source": "P01.V22",
+   "target": "P01.L19.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-B50H-360013"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00073",
+   "source": "P01.L20.1",
+   "target": "P01.V25",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-B50H-360014"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00074",
+   "source": "P01.V25",
+   "target": "P01.L20.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-B50H-360014"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00075",
+   "source": "P01.L30.1",
+   "target": "FT-39002",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00076",
+   "source": "FT-39002",
+   "target": "P01.L30.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00077",
+   "source": "P01.L30.2",
+   "target": "P01.V34",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00078",
+   "source": "P01.V34",
+   "target": "P01.L30.3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00079",
+   "source": "P01.L30.3",
+   "target": "ZV-39004",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00080",
+   "source": "ZV-39004",
+   "target": "P01.L30.4",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00081",
+   "source": "P01.L30.4",
+   "target": "FV-39001",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00082",
+   "source": "FV-39001",
+   "target": "P01.L30.5",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00083",
+   "source": "P01.L30.5",
+   "target": "P01.CV3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00084",
+   "source": "P01.CV3",
+   "target": "P01.L30.6",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00085",
+   "source": "P01.L30.6",
+   "target": "P01.V35",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00086",
+   "source": "P01.V35",
+   "target": "P01.L30.7",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00087",
+   "source": "P01.L30.7",
+   "target": "P01.SB2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00088",
+   "source": "P01.SB2",
+   "target": "P01.L30.8",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00089",
+   "source": "P01.L30.8",
+   "target": "P01.V37",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00090",
+   "source": "P01.V37",
+   "target": "P01.L30.9",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00091",
+   "source": "P01.L31.1",
+   "target": "ZV-39005",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00092",
+   "source": "ZV-39005",
+   "target": "P01.L31.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00093",
+   "source": "P01.L31.2",
+   "target": "FV-39002",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00094",
+   "source": "FV-39002",
+   "target": "P01.L31.3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00095",
+   "source": "P01.L32.1",
+   "target": "P01.V30",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-390036"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00096",
+   "source": "P01.V30",
+   "target": "P01.L32.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-390036"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00097",
+   "source": "P01.L33.1",
+   "target": "P01.V26",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-390035"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00098",
+   "source": "P01.V26",
+   "target": "P01.L33.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-390035"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00099",
+   "source": "P01.L34.1",
+   "target": "P01.V33",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-B50H-390038"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00100",
+   "source": "P01.V33",
+   "target": "P01.L34.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-B50H-390038"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00101",
+   "source": "P01.L35.1",
+   "target": "P01.V29",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-B50H-390037"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00102",
+   "source": "P01.V29",
+   "target": "P01.L35.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-B50H-390037"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00103",
+   "source": "P01.OPC1",
+   "target": "P01.L1.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWS-A10-610033"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00104",
+   "source": "P01.L1.2",
+   "target": "U-36001B",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWS-A10-610033"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00105",
+   "source": "P01.L1.1",
+   "target": "P01.L2.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWS-A10-610099"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00106",
+   "source": "P01.L2.2",
+   "target": "U-36001A",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWS-A10-610099"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00107",
+   "source": "U-36001B",
+   "target": "P01.L3.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610024"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00108",
+   "source": "P01.L3.3",
+   "target": "P01.OPC2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610024"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00109",
+   "source": "U-36001A",
+   "target": "P01.L4.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610100"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00110",
+   "source": "P01.L4.3",
+   "target": "P01.L3.3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-CWR-A10-610100"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00111",
+   "source": "P01.OPC3",
+   "target": "P01.L5.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-IA-A12-660023"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00112",
+   "source": "P01.L5.2",
+   "target": "U-36001B",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-IA-A12-660023"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00113",
+   "source": "P01.L5.1",
+   "target": "P01.L6.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-IA-A12-660077"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00114",
+   "source": "P01.L6.2",
+   "target": "U-36001A",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-IA-A12-660077"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00115",
+   "source": "P01.OPC4",
+   "target": "P01.L7.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-340003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00116",
+   "source": "P01.L7.2",
+   "target": "U-36001B",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-340003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00117",
+   "source": "P01.L7.1",
+   "target": "P01.L8.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-340033"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00118",
+   "source": "P01.L8.2",
+   "target": "U-36001A",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-340033"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00119",
+   "source": "U-36001B",
+   "target": "P01.L9.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-WW-A81-800081"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00120",
+   "source": "P01.L9.2",
+   "target": "P01.OPC12",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-WW-A81-800081"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00121",
+   "source": "U-36001A",
+   "target": "P01.L10.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-WW-A81-800008"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00122",
+   "source": "P01.L10.2",
+   "target": "P01.L9.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-WW-A81-800008"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00123",
+   "source": "U-36001B",
+   "target": "P01.L11.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00124",
+   "source": "P01.L11.8",
+   "target": "P01.OPC8",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360001"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00125",
+   "source": "U-36001A",
+   "target": "P01.L12.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360011"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00126",
+   "source": "P01.L12.2",
+   "target": "P01.L11.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360011"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00127",
+   "source": "P01.L11.2",
+   "target": "P01.L13.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00128",
+   "source": "P01.L13.5",
+   "target": "P01.OPC10",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-C50H-390031"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00129",
+   "source": "P01.L11.2",
+   "target": "P01.L14.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00130",
+   "source": "P01.L14.2",
+   "target": "P01.SP1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00131",
+   "source": "P01.L11.2",
+   "target": "P01.L15.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00132",
+   "source": "P01.L15.8",
+   "target": "P01.OPC7",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "4\"-H2-C50H-360002"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00133",
+   "source": "P01.L11.8",
+   "target": "P01.L16.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-360010"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00134",
+   "source": "P01.L16.2",
+   "target": "P01.L15.3",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-360010"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00135",
+   "source": "P01.L11.2",
+   "target": "P01.L17.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-C50H-360012"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00136",
+   "source": "P01.L17.2",
+   "target": "PSV-36001A",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-C50H-360012"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00137",
+   "source": "PSV-36001A",
+   "target": "P01.L18.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "\"-H2-B50H-360004"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00138",
+   "source": "P01.L18.2",
+   "target": "P01.OPC6",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "\"-H2-B50H-360004"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00139",
+   "source": "P01.L17.1",
+   "target": "P01.L19.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-B50H-360013"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00140",
+   "source": "P01.L19.2",
+   "target": "PSV-36001B",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-B50H-360013"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00141",
+   "source": "PSV-36001B",
+   "target": "P01.L20.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-B50H-360014"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00142",
+   "source": "P01.L20.2",
+   "target": "P01.L18.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "X\"-H2-B50H-360014"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00143",
+   "source": "P01.L17.2",
+   "target": "P01.L21.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00144",
+   "source": "P01.L21.1",
+   "target": "P01.V19",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00145",
+   "source": "P01.L18.1",
+   "target": "P01.L22.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00146",
+   "source": "P01.L22.1",
+   "target": "P01.V20",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00147",
+   "source": "P01.L19.2",
+   "target": "P01.L23.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00148",
+   "source": "P01.L23.1",
+   "target": "P01.V23",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00149",
+   "source": "P01.L20.1",
+   "target": "P01.L24.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00150",
+   "source": "P01.L24.1",
+   "target": "P01.V24",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00151",
+   "source": "P01.OPC9",
+   "target": "P01.L30.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00152",
+   "source": "P01.L30.9",
+   "target": "P01.L11.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-G53H-390003"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00153",
+   "source": "P01.L30.3",
+   "target": "P01.L31.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00154",
+   "source": "P01.L31.3",
+   "target": "P01.L30.5",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00155",
+   "source": "P01.L30.5",
+   "target": "P01.L32.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-390036"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00156",
+   "source": "P01.L32.2",
+   "target": "PSV-39001B",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-390036"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00157",
+   "source": "P01.L32.1",
+   "target": "P01.L33.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-390035"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00158",
+   "source": "P01.L33.2",
+   "target": "PSV-39001A",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "1\"-H2-C50H-390035"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00159",
+   "source": "PSV-39001B",
+   "target": "P01.L34.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-B50H-390038"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00160",
+   "source": "P01.L34.2",
+   "target": "P01.OPC5",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-B50H-390038"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00161",
+   "source": "PSV-39001A",
+   "target": "P01.L35.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-B50H-390037"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00162",
+   "source": "P01.L35.2",
+   "target": "P01.L34.2",
+   "type": "FLOWS_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown",
+    "line_number": "2\"-H2-B50H-390037"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00163",
+   "source": "P01.L32.2",
+   "target": "P01.L36.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00164",
+   "source": "P01.L36.1",
+   "target": "P01.V31",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00165",
+   "source": "P01.L34.1",
+   "target": "P01.L37.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00166",
+   "source": "P01.L37.1",
+   "target": "P01.V32",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00167",
+   "source": "P01.L33.2",
+   "target": "P01.L38.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00168",
+   "source": "P01.L38.1",
+   "target": "P01.V27",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00169",
+   "source": "P01.L35.1",
+   "target": "P01.L39.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00170",
+   "source": "P01.L39.1",
+   "target": "P01.V28",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00171",
+   "source": "P01.L30.8",
+   "target": "P01.L40.1",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00172",
+   "source": "P01.L40.1",
+   "target": "P01.V36",
+   "type": "FLOWS_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "flow_direction": "shown"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00173",
+   "source": "TT-36001",
+   "target": "P01.L11.2",
+   "type": "MEASURES",
+   "confidence": 0.95,
+   "derived": false,
+   "attributes": {},
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00174",
+   "source": "AT-36002",
+   "target": "P01.L11.2",
+   "type": "MEASURES",
+   "confidence": 0.9,
+   "derived": false,
+   "attributes": {},
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00175",
+   "source": "AT-36001",
+   "target": "P01.L11.2",
+   "type": "MEASURES",
+   "confidence": 0.95,
+   "derived": false,
+   "attributes": {},
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00176",
+   "source": "PT-36001",
+   "target": "P01.L11.2",
+   "type": "MEASURES",
+   "confidence": 0.95,
+   "derived": false,
+   "attributes": {},
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00177",
+   "source": "FT-39001",
+   "target": "P01.L13.4",
+   "type": "MEASURES",
+   "confidence": 0.95,
+   "derived": false,
+   "attributes": {
+    "inline": true
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00178",
+   "source": "FT-39002",
+   "target": "P01.L30.1",
+   "type": "MEASURES",
+   "confidence": 0.95,
+   "derived": false,
+   "attributes": {
+    "inline": true
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00179",
+   "source": "PT-39004",
+   "target": "P01.L30.1",
+   "type": "MEASURES",
+   "confidence": 0.95,
+   "derived": false,
+   "attributes": {},
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00180",
+   "source": "TT-36001",
+   "target": "TI-36001",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "measurement"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00181",
+   "source": "AT-36002",
+   "target": "AC-36002",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "measurement"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00182",
+   "source": "AT-36001",
+   "target": "AC-36001",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "measurement"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00183",
+   "source": "PT-36001",
+   "target": "PC-36001",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "measurement"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00184",
+   "source": "PC-36001",
+   "target": "PV-36001",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "control"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00185",
+   "source": "PC-36001",
+   "target": "PV-36002",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "control"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00186",
+   "source": "FT-39001",
+   "target": "FC-39001",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "measurement"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00187",
+   "source": "FC-39001",
+   "target": "P01.OPC11",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "control"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00188",
+   "source": "PT-39004",
+   "target": "PI-39004",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "measurement"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00189",
+   "source": "PI-39004",
+   "target": "FC-39002",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "software",
+    "purpose": "measurement"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00190",
+   "source": "PI-39004",
+   "target": "FC-39003",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "software",
+    "purpose": "measurement"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00191",
+   "source": "FT-39002",
+   "target": "FC-39003",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "measurement"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00192",
+   "source": "FC-39002",
+   "target": "FV-39001",
+   "type": "SIGNAL_TO",
+   "confidence": 0.85,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "control"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00193",
+   "source": "FC-39003",
+   "target": "FV-39002",
+   "type": "SIGNAL_TO",
+   "confidence": 0.75,
+   "derived": false,
+   "attributes": {
+    "signal_type": "electrical",
+    "purpose": "control"
+   },
+   "sheet": "SHEET:AQ010-B50-333"
+  },
+  {
+   "id": "E00194",
+   "source": "PC-36001",
+   "target": "PV-36002",
+   "type": "ACTUATES",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {}
+  },
+  {
+   "id": "E00195",
+   "source": "PC-36001",
+   "target": "PV-36001",
+   "type": "ACTUATES",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {}
+  },
+  {
+   "id": "E00196",
+   "source": "FC-39002",
+   "target": "FV-39001",
+   "type": "ACTUATES",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {}
+  },
+  {
+   "id": "E00197",
+   "source": "FC-39003",
+   "target": "FV-39002",
+   "type": "ACTUATES",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {}
+  },
+  {
+   "id": "E00198",
+   "source": "AT-36001",
+   "target": "LOOP:A-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "transmitter"
+   }
+  },
+  {
+   "id": "E00199",
+   "source": "AC-36001",
+   "target": "LOOP:A-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "controller"
+   }
+  },
+  {
+   "id": "E00200",
+   "source": "AT-36002",
+   "target": "LOOP:A-36002",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "transmitter"
+   }
+  },
+  {
+   "id": "E00201",
+   "source": "AC-36002",
+   "target": "LOOP:A-36002",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "controller"
+   }
+  },
+  {
+   "id": "E00202",
+   "source": "FT-39001",
+   "target": "LOOP:F-39001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "transmitter"
+   }
+  },
+  {
+   "id": "E00203",
+   "source": "FC-39001",
+   "target": "LOOP:F-39001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "controller"
+   }
+  },
+  {
+   "id": "E00204",
+   "source": "FV-39001",
+   "target": "LOOP:F-39002",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "final_element"
+   }
+  },
+  {
+   "id": "E00205",
+   "source": "FC-39002",
+   "target": "LOOP:F-39002",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "controller"
+   }
+  },
+  {
+   "id": "E00206",
+   "source": "PI-39004",
+   "target": "LOOP:F-39002",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "sensor_input"
+   }
+  },
+  {
+   "id": "E00207",
+   "source": "FV-39002",
+   "target": "LOOP:F-39003",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "final_element"
+   }
+  },
+  {
+   "id": "E00208",
+   "source": "FT-39002",
+   "target": "LOOP:F-39003",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "transmitter"
+   }
+  },
+  {
+   "id": "E00209",
+   "source": "FC-39003",
+   "target": "LOOP:F-39003",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "controller"
+   }
+  },
+  {
+   "id": "E00210",
+   "source": "PI-39004",
+   "target": "LOOP:F-39003",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "sensor_input"
+   }
+  },
+  {
+   "id": "E00211",
+   "source": "PV-36001",
+   "target": "LOOP:P-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "final_element"
+   }
+  },
+  {
+   "id": "E00212",
+   "source": "PSV-36001A",
+   "target": "LOOP:P-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "relief_device"
+   }
+  },
+  {
+   "id": "E00213",
+   "source": "PSV-36001B",
+   "target": "LOOP:P-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "relief_device"
+   }
+  },
+  {
+   "id": "E00214",
+   "source": "PT-36001",
+   "target": "LOOP:P-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "transmitter"
+   }
+  },
+  {
+   "id": "E00215",
+   "source": "PC-36001",
+   "target": "LOOP:P-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "controller"
+   }
+  },
+  {
+   "id": "E00216",
+   "source": "PV-36002",
+   "target": "LOOP:P-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "final_element"
+   }
+  },
+  {
+   "id": "E00217",
+   "source": "PSV-39001A",
+   "target": "LOOP:P-39001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "relief_device"
+   }
+  },
+  {
+   "id": "E00218",
+   "source": "PSV-39001B",
+   "target": "LOOP:P-39001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "relief_device"
+   }
+  },
+  {
+   "id": "E00219",
+   "source": "PT-39004",
+   "target": "LOOP:P-39004",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "transmitter"
+   }
+  },
+  {
+   "id": "E00220",
+   "source": "PI-39004",
+   "target": "LOOP:P-39004",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "readout"
+   }
+  },
+  {
+   "id": "E00221",
+   "source": "TT-36001",
+   "target": "LOOP:T-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "transmitter"
+   }
+  },
+  {
+   "id": "E00222",
+   "source": "TI-36001",
+   "target": "LOOP:T-36001",
+   "type": "MEMBER_OF",
+   "confidence": 1.0,
+   "derived": true,
+   "attributes": {
+    "role": "readout"
+   }
+  },
+  {
+   "id": "E00223",
+   "source": "SHEET:AQ010-B50-333",
+   "target": "PLANT:h2-gas-purification-unit",
+   "type": "PART_OF",
+   "confidence": 1.0,
+   "derived": false,
+   "attributes": {}
+  }
+ ],
+ "stats": {
+  "nodes": 189,
+  "edges": 223,
+  "nodes_by_type": {
+   "Component": 63,
+   "ControlLoop": 9,
+   "Equipment": 2,
+   "Instrument": 15,
+   "OffPageConnector": 12,
+   "PipeSegment": 86,
+   "Plant": 1,
+   "Sheet": 1
+  },
+  "edges_by_type": {
+   "ACTUATES": 4,
+   "FLOWS_TO": 172,
+   "MEASURES": 7,
+   "MEMBER_OF": 25,
+   "PART_OF": 1,
+   "SIGNAL_TO": 14
+  },
+  "loops_by_type": {
+   "control": 6,
+   "monitoring": 3
+  },
+  "issues_by_severity": {
+   "warning": 15,
+   "info": 1
+  }
+ },
+ "issues": [
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'COOLING WATER RETURN B50-423 TO HEADER' (to B50-423) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC2",
+   "bbox": [
+    0.042,
+    0.666,
+    0.096,
+    0.693
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'H2 VENT GAS B50-491 TO HEADER' (to B50-491) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC5",
+   "bbox": [
+    0.042,
+    0.557,
+    0.096,
+    0.584
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'H2 VENT GAS B50-491 TO HEADER' (to B50-491) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC6",
+   "bbox": [
+    0.768,
+    0.182,
+    0.822,
+    0.208
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'H2 VENT GAS B50-491 TO HEADER' (to B50-491) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC7",
+   "bbox": [
+    0.768,
+    0.237,
+    0.822,
+    0.264
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'HYDROGEN GAS B50-101 TO BATTERY LIMIT' (to B50-101) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC8",
+   "bbox": [
+    0.768,
+    0.49,
+    0.822,
+    0.517
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'HYDROGEN GAS B50-341 TO VE-39001' (to B50-341) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC10",
+   "bbox": [
+    0.768,
+    0.786,
+    0.822,
+    0.813
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'SIGNAL B50-341 TO C-39001' (to B50-341) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC11",
+   "bbox": [
+    0.768,
+    0.823,
+    0.822,
+    0.85
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'WASTE WATER B50-481 TO PT-80001' (to B50-481) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC12",
+   "bbox": [
+    0.768,
+    0.859,
+    0.822,
+    0.886
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'COOLING WATER SUPPLY B50-423 FROM HEADER' (from B50-423) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC1",
+   "bbox": [
+    0.042,
+    0.625,
+    0.096,
+    0.651
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'INSTRUMENT AIR B50-451 FROM HEADER' (from B50-451) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC3",
+   "bbox": [
+    0.042,
+    0.776,
+    0.096,
+    0.802
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'HYDROGEN GAS B50-332 FROM C-34001A/B' (from B50-332) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC4",
+   "bbox": [
+    0.042,
+    0.86,
+    0.096,
+    0.886
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "unmatched_off_page",
+   "message": "off-page connector 'HYDROGEN GAS B50-341 FROM VE-39002A-I' (from B50-341) has no matching connector or item",
+   "sheet": "SHEET:AQ010-B50-333",
+   "node": "P01.OPC9",
+   "bbox": [
+    0.785,
+    0.715,
+    0.822,
+    0.742
+   ]
+  },
+  {
+   "severity": "warning",
+   "code": "loop_no_final_element",
+   "message": "control loop A-36001 has a controller but no final element",
+   "node": "LOOP:A-36001"
+  },
+  {
+   "severity": "warning",
+   "code": "loop_no_final_element",
+   "message": "control loop A-36002 has a controller but no final element",
+   "node": "LOOP:A-36002"
+  },
+  {
+   "severity": "warning",
+   "code": "loop_no_final_element",
+   "message": "control loop F-39001 has a controller but no final element",
+   "node": "LOOP:F-39001"
+  },
+  {
+   "severity": "info",
+   "code": "low_confidence",
+   "message": "in-line item: rectangle with diagonal and pivot dot was read with confidence 0.50",
+   "node": "P01.X1",
+   "sheet": "SHEET:AQ010-B50-333",
+   "page": 1,
+   "bbox": [
+    0.722,
+    0.4105,
+    0.734,
+    0.4225
+   ]
+  }
+ ]
+}

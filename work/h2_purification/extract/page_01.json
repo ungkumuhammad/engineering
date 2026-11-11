@@ -1,0 +1,1915 @@
+{
+ "schema_version": "1.0",
+ "page": 1,
+ "sheet": {
+  "drawing_number": "AQ010-B50-333",
+  "title": "P&ID H2 GAS PURIFICATION UNIT",
+  "revision": "A",
+  "drawing_type": "pid",
+  "issue_status": "FOR APPROVAL (Apr-12-2024)",
+  "rotation": 0,
+  "legend_notes": [
+   "Contractor DWG NO DG-A000-12251-333; job code 000145-00-0000; Project Kronos FEED (Asahi Kasei / Gentari / JGC).",
+   "GENERAL NOTE 1: All components on the drawing belong to AK assets.",
+   "GENERAL NOTE 2: Refer to B50-001 thru B50-002 for symbols and abbreviations.",
+   "NOTE 1: Details shall be provided by vendor.",
+   "NOTE 2: PSV orifice designation, PSV inlet and outlet line size to be finalized during detail engineering.",
+   "HOLD 1: Detail configuration of flow control to cover wide range of pressure drop to utilize H2 in the upstream storage as much as possible.",
+   "HOLD 2: Requirement of H2 gas analyzer to be finalized during detail engineering.",
+   "FB = full bore; CSO/CSC = car sealed open/closed."
+  ]
+ },
+ "equipment": [
+  {
+   "id": "U-36001A",
+   "tag": "U-36001A",
+   "kind": "package_unit",
+   "name": "H2 GAS PURIFICATION UNIT (U-36001A/B, train A)",
+   "bbox": [
+    0.203,
+    0.277,
+    0.347,
+    0.445
+   ],
+   "notes": "Dashed vendor package boundary. NOTE 1: details shall be provided by vendor.",
+   "confidence": 0.95
+  },
+  {
+   "id": "U-36001B",
+   "tag": "U-36001B",
+   "kind": "package_unit",
+   "name": "H2 GAS PURIFICATION UNIT (U-36001A/B, train B)",
+   "bbox": [
+    0.203,
+    0.747,
+    0.347,
+    0.914
+   ],
+   "notes": "Dashed vendor package boundary. NOTE 1: details shall be provided by vendor.",
+   "confidence": 0.95
+  }
+ ],
+ "components": [
+  {
+   "id": "V1",
+   "kind": "globe_valve",
+   "bbox": [
+    0.304,
+    0.249,
+    0.316,
+    0.261
+   ],
+   "size": "4\"",
+   "confidence": 0.75,
+   "notes": "Bowtie with filled dot; read as globe valve."
+  },
+  {
+   "id": "V2",
+   "kind": "ball_valve",
+   "bbox": [
+    0.232,
+    0.23,
+    0.244,
+    0.242
+   ],
+   "confidence": 0.8
+  },
+  {
+   "id": "SG-36001A",
+   "kind": "sight_glass",
+   "bbox": [
+    0.232,
+    0.252,
+    0.244,
+    0.264
+   ],
+   "tag": "SG-36001A",
+   "confidence": 0.9,
+   "notes": "Flow sight glass on CW return."
+  },
+  {
+   "id": "V3",
+   "kind": "globe_valve",
+   "bbox": [
+    0.268,
+    0.716,
+    0.28,
+    0.728
+   ],
+   "size": "4\"",
+   "confidence": 0.75,
+   "notes": "Bowtie with filled dot; read as globe valve."
+  },
+  {
+   "id": "V4",
+   "kind": "ball_valve",
+   "bbox": [
+    0.22,
+    0.694,
+    0.232,
+    0.706
+   ],
+   "confidence": 0.8
+  },
+  {
+   "id": "SG-36001B",
+   "kind": "sight_glass",
+   "bbox": [
+    0.22,
+    0.714,
+    0.232,
+    0.726
+   ],
+   "tag": "SG-36001B",
+   "confidence": 0.9,
+   "notes": "Flow sight glass on CW return."
+  },
+  {
+   "id": "V5",
+   "kind": "ball_valve",
+   "bbox": [
+    0.192,
+    0.313,
+    0.204,
+    0.325
+   ],
+   "confidence": 0.85,
+   "notes": "Instrument air inlet to U-36001A."
+  },
+  {
+   "id": "V6",
+   "kind": "ball_valve",
+   "bbox": [
+    0.192,
+    0.78,
+    0.204,
+    0.792
+   ],
+   "confidence": 0.85,
+   "notes": "Instrument air inlet to U-36001B."
+  },
+  {
+   "id": "V7",
+   "kind": "ball_valve",
+   "bbox": [
+    0.192,
+    0.396,
+    0.204,
+    0.408
+   ],
+   "confidence": 0.85,
+   "notes": "H2 feed inlet to U-36001A."
+  },
+  {
+   "id": "V8",
+   "kind": "ball_valve",
+   "bbox": [
+    0.192,
+    0.863,
+    0.204,
+    0.875
+   ],
+   "confidence": 0.85,
+   "notes": "H2 feed inlet to U-36001B."
+  },
+  {
+   "id": "V9",
+   "kind": "ball_valve",
+   "bbox": [
+    0.343,
+    0.313,
+    0.355,
+    0.325
+   ],
+   "confidence": 0.85,
+   "notes": "Purified H2 outlet of U-36001A."
+  },
+  {
+   "id": "V10",
+   "kind": "ball_valve",
+   "bbox": [
+    0.343,
+    0.396,
+    0.355,
+    0.408
+   ],
+   "confidence": 0.85,
+   "notes": "Waste water outlet of U-36001A."
+  },
+  {
+   "id": "V11",
+   "kind": "ball_valve",
+   "bbox": [
+    0.315,
+    0.734,
+    0.327,
+    0.746
+   ],
+   "confidence": 0.85,
+   "notes": "Purified H2 outlet (top) of U-36001B."
+  },
+  {
+   "id": "V12",
+   "kind": "ball_valve",
+   "bbox": [
+    0.343,
+    0.863,
+    0.355,
+    0.875
+   ],
+   "confidence": 0.85,
+   "notes": "Waste water outlet of U-36001B."
+  },
+  {
+   "id": "V13",
+   "kind": "ball_valve",
+   "bbox": [
+    0.474,
+    0.481,
+    0.486,
+    0.493
+   ],
+   "size": "2\"",
+   "confidence": 0.8
+  },
+  {
+   "id": "SB1",
+   "kind": "spectacle_blind",
+   "bbox": [
+    0.479,
+    0.492,
+    0.491,
+    0.504
+   ],
+   "confidence": 0.75
+  },
+  {
+   "id": "ZV-39001",
+   "kind": "on_off_valve",
+   "bbox": [
+    0.474,
+    0.529,
+    0.486,
+    0.541
+   ],
+   "tag": "ZV-39001",
+   "actuator": "solenoid",
+   "fail_position": "FC",
+   "size": "2\"",
+   "confidence": 0.9
+  },
+  {
+   "id": "V14",
+   "kind": "globe_valve",
+   "bbox": [
+    0.525,
+    0.481,
+    0.537,
+    0.493
+   ],
+   "size": "1\"",
+   "confidence": 0.75,
+   "notes": "Sample connection valve."
+  },
+  {
+   "id": "SP1",
+   "kind": "sample_point",
+   "bbox": [
+    0.525,
+    0.46,
+    0.537,
+    0.472
+   ],
+   "name": "S",
+   "confidence": 0.85
+  },
+  {
+   "id": "V15",
+   "kind": "ball_valve",
+   "bbox": [
+    0.57,
+    0.48,
+    0.582,
+    0.492
+   ],
+   "size": "4\"",
+   "confidence": 0.8
+  },
+  {
+   "id": "V16",
+   "kind": "ball_valve",
+   "bbox": [
+    0.581,
+    0.497,
+    0.593,
+    0.509
+   ],
+   "size": "4\"",
+   "confidence": 0.8
+  },
+  {
+   "id": "R1",
+   "kind": "reducer",
+   "bbox": [
+    0.596,
+    0.497,
+    0.608,
+    0.509
+   ],
+   "confidence": 0.75
+  },
+  {
+   "id": "PV-36001",
+   "kind": "control_valve",
+   "bbox": [
+    0.606,
+    0.497,
+    0.618,
+    0.509
+   ],
+   "tag": "PV-36001",
+   "actuator": "pneumatic",
+   "fail_position": "FC",
+   "confidence": 0.95
+  },
+  {
+   "id": "R2",
+   "kind": "reducer",
+   "bbox": [
+    0.619,
+    0.497,
+    0.631,
+    0.509
+   ],
+   "confidence": 0.75
+  },
+  {
+   "id": "ZV-36001",
+   "kind": "on_off_valve",
+   "bbox": [
+    0.632,
+    0.497,
+    0.644,
+    0.509
+   ],
+   "tag": "ZV-36001",
+   "actuator": "solenoid",
+   "fail_position": "FC",
+   "confidence": 0.95
+  },
+  {
+   "id": "CV1",
+   "kind": "check_valve",
+   "bbox": [
+    0.651,
+    0.497,
+    0.663,
+    0.509
+   ],
+   "size": "4\"",
+   "confidence": 0.85
+  },
+  {
+   "id": "V17",
+   "kind": "ball_valve",
+   "bbox": [
+    0.664,
+    0.48,
+    0.676,
+    0.492
+   ],
+   "size": "1\"",
+   "confidence": 0.8
+  },
+  {
+   "id": "CV2",
+   "kind": "check_valve",
+   "bbox": [
+    0.591,
+    0.386,
+    0.603,
+    0.398
+   ],
+   "size": "4\"",
+   "confidence": 0.85
+  },
+  {
+   "id": "X1",
+   "kind": "other",
+   "bbox": [
+    0.722,
+    0.4105,
+    0.734,
+    0.4225
+   ],
+   "size": "4\"",
+   "name": "in-line item: rectangle with diagonal and pivot dot",
+   "confidence": 0.5,
+   "notes": "Symbol type uncertain (possibly flame arrestor or wafer-type check valve); confirm against legend B50-001/002."
+  },
+  {
+   "id": "ZV-36002",
+   "kind": "on_off_valve",
+   "bbox": [
+    0.737,
+    0.369,
+    0.749,
+    0.381
+   ],
+   "tag": "ZV-36002",
+   "actuator": "solenoid",
+   "fail_position": "FO",
+   "confidence": 0.95
+  },
+  {
+   "id": "R3",
+   "kind": "reducer",
+   "bbox": [
+    0.737,
+    0.355,
+    0.749,
+    0.367
+   ],
+   "confidence": 0.75
+  },
+  {
+   "id": "PV-36002",
+   "kind": "control_valve",
+   "bbox": [
+    0.737,
+    0.343,
+    0.749,
+    0.355
+   ],
+   "tag": "PV-36002",
+   "actuator": "pneumatic",
+   "fail_position": "FO",
+   "confidence": 0.95,
+   "notes": "Spec break C50H/B50H at valve."
+  },
+  {
+   "id": "R4",
+   "kind": "reducer",
+   "bbox": [
+    0.737,
+    0.327,
+    0.749,
+    0.339
+   ],
+   "confidence": 0.75
+  },
+  {
+   "id": "V18",
+   "kind": "ball_valve",
+   "bbox": [
+    0.485,
+    0.334,
+    0.497,
+    0.346
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO"
+   },
+   "normal_position": "open"
+  },
+  {
+   "id": "PSV-36001A",
+   "kind": "relief_valve",
+   "bbox": [
+    0.475,
+    0.175,
+    0.487,
+    0.187
+   ],
+   "tag": "PSV-36001A",
+   "actuator": "self",
+   "confidence": 0.95,
+   "notes": "NOTE 2: orifice designation and inlet/outlet line sizes to be finalized."
+  },
+  {
+   "id": "V19",
+   "kind": "ball_valve",
+   "bbox": [
+    0.499,
+    0.205,
+    0.511,
+    0.217
+   ],
+   "confidence": 0.75,
+   "notes": "Valve on a short bleed/vent stub (open end)."
+  },
+  {
+   "id": "V20",
+   "kind": "ball_valve",
+   "bbox": [
+    0.499,
+    0.171,
+    0.511,
+    0.183
+   ],
+   "confidence": 0.75,
+   "notes": "Valve on a short bleed/vent stub (open end)."
+  },
+  {
+   "id": "V21",
+   "kind": "ball_valve",
+   "bbox": [
+    0.513,
+    0.189,
+    0.525,
+    0.201
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO"
+   },
+   "normal_position": "open"
+  },
+  {
+   "id": "V22",
+   "kind": "ball_valve",
+   "bbox": [
+    0.526,
+    0.334,
+    0.538,
+    0.346
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSC"
+   },
+   "normal_position": "closed"
+  },
+  {
+   "id": "PSV-36001B",
+   "kind": "relief_valve",
+   "bbox": [
+    0.516,
+    0.227,
+    0.528,
+    0.239
+   ],
+   "tag": "PSV-36001B",
+   "actuator": "self",
+   "confidence": 0.95,
+   "notes": "NOTE 2. Inlet valve car-sealed closed: spare/standby PSV."
+  },
+  {
+   "id": "V23",
+   "kind": "ball_valve",
+   "bbox": [
+    0.54,
+    0.257,
+    0.552,
+    0.269
+   ],
+   "confidence": 0.75,
+   "notes": "Valve on a short bleed/vent stub (open end)."
+  },
+  {
+   "id": "V24",
+   "kind": "ball_valve",
+   "bbox": [
+    0.54,
+    0.226,
+    0.552,
+    0.238
+   ],
+   "confidence": 0.75,
+   "notes": "Valve on a short bleed/vent stub (open end)."
+  },
+  {
+   "id": "V25",
+   "kind": "ball_valve",
+   "bbox": [
+    0.553,
+    0.241,
+    0.565,
+    0.253
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO"
+   },
+   "normal_position": "open"
+  },
+  {
+   "id": "V26",
+   "kind": "ball_valve",
+   "bbox": [
+    0.512,
+    0.684,
+    0.524,
+    0.696
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO"
+   },
+   "normal_position": "open"
+  },
+  {
+   "id": "PSV-39001A",
+   "kind": "relief_valve",
+   "bbox": [
+    0.522,
+    0.586,
+    0.534,
+    0.598
+   ],
+   "tag": "PSV-39001A",
+   "actuator": "self",
+   "confidence": 0.95,
+   "notes": "NOTE 2."
+  },
+  {
+   "id": "V27",
+   "kind": "ball_valve",
+   "bbox": [
+    0.5,
+    0.621,
+    0.512,
+    0.633
+   ],
+   "confidence": 0.75,
+   "notes": "Valve on a short bleed/vent stub (open end)."
+  },
+  {
+   "id": "V28",
+   "kind": "ball_valve",
+   "bbox": [
+    0.496,
+    0.587,
+    0.508,
+    0.599
+   ],
+   "confidence": 0.75,
+   "notes": "Valve on a short bleed/vent stub (open end)."
+  },
+  {
+   "id": "V29",
+   "kind": "ball_valve",
+   "bbox": [
+    0.483,
+    0.599,
+    0.495,
+    0.611
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO"
+   },
+   "normal_position": "open"
+  },
+  {
+   "id": "V30",
+   "kind": "ball_valve",
+   "bbox": [
+    0.559,
+    0.684,
+    0.571,
+    0.696
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSC"
+   },
+   "normal_position": "closed"
+  },
+  {
+   "id": "PSV-39001B",
+   "kind": "relief_valve",
+   "bbox": [
+    0.569,
+    0.551,
+    0.581,
+    0.563
+   ],
+   "tag": "PSV-39001B",
+   "actuator": "self",
+   "confidence": 0.95,
+   "notes": "NOTE 2. Inlet valve car-sealed closed: spare/standby PSV."
+  },
+  {
+   "id": "V31",
+   "kind": "ball_valve",
+   "bbox": [
+    0.547,
+    0.579,
+    0.559,
+    0.591
+   ],
+   "confidence": 0.75,
+   "notes": "Valve on a short bleed/vent stub (open end)."
+  },
+  {
+   "id": "V32",
+   "kind": "ball_valve",
+   "bbox": [
+    0.547,
+    0.545,
+    0.559,
+    0.557
+   ],
+   "confidence": 0.75,
+   "notes": "Valve on a short bleed/vent stub (open end)."
+  },
+  {
+   "id": "V33",
+   "kind": "ball_valve",
+   "bbox": [
+    0.533,
+    0.56,
+    0.545,
+    0.572
+   ],
+   "confidence": 0.85,
+   "attributes": {
+    "bore": "FB",
+    "car_seal": "CSO"
+   },
+   "normal_position": "open"
+  },
+  {
+   "id": "V34",
+   "kind": "globe_valve",
+   "bbox": [
+    0.658,
+    0.722,
+    0.67,
+    0.734
+   ],
+   "size": "1\"",
+   "confidence": 0.8,
+   "notes": "Bowtie with filled dot; read as globe valve."
+  },
+  {
+   "id": "ZV-39004",
+   "kind": "on_off_valve",
+   "bbox": [
+    0.632,
+    0.694,
+    0.644,
+    0.706
+   ],
+   "tag": "ZV-39004",
+   "actuator": "solenoid",
+   "fail_position": "FC",
+   "confidence": 0.95,
+   "notes": "HOLD 1"
+  },
+  {
+   "id": "FV-39001",
+   "kind": "control_valve",
+   "bbox": [
+    0.599,
+    0.694,
+    0.611,
+    0.706
+   ],
+   "tag": "FV-39001",
+   "actuator": "pneumatic",
+   "fail_position": "FC",
+   "confidence": 0.95,
+   "loop": "F-39002",
+   "notes": "HOLD 1. Driven by FC-39002 per signal line (not FC-39001)."
+  },
+  {
+   "id": "ZV-39005",
+   "kind": "on_off_valve",
+   "bbox": [
+    0.632,
+    0.744,
+    0.644,
+    0.756
+   ],
+   "tag": "ZV-39005",
+   "actuator": "solenoid",
+   "fail_position": "FC",
+   "confidence": 0.95,
+   "notes": "HOLD 1"
+  },
+  {
+   "id": "FV-39002",
+   "kind": "control_valve",
+   "bbox": [
+    0.599,
+    0.744,
+    0.611,
+    0.756
+   ],
+   "tag": "FV-39002",
+   "actuator": "pneumatic",
+   "fail_position": "FC",
+   "confidence": 0.95,
+   "loop": "F-39003",
+   "notes": "HOLD 1. Driven by FC-39003 per signal line."
+  },
+  {
+   "id": "CV3",
+   "kind": "check_valve",
+   "bbox": [
+    0.472,
+    0.678,
+    0.484,
+    0.69
+   ],
+   "size": "4\"",
+   "confidence": 0.85
+  },
+  {
+   "id": "V35",
+   "kind": "ball_valve",
+   "bbox": [
+    0.472,
+    0.657,
+    0.484,
+    0.669
+   ],
+   "size": "4\"",
+   "confidence": 0.8
+  },
+  {
+   "id": "SB2",
+   "kind": "spectacle_blind",
+   "bbox": [
+    0.478,
+    0.648,
+    0.49,
+    0.66
+   ],
+   "confidence": 0.75
+  },
+  {
+   "id": "V36",
+   "kind": "ball_valve",
+   "bbox": [
+    0.484,
+    0.634,
+    0.496,
+    0.646
+   ],
+   "size": "1\"",
+   "confidence": 0.75,
+   "notes": "Valve on a short bleed/vent stub (open end)."
+  },
+  {
+   "id": "V37",
+   "kind": "ball_valve",
+   "bbox": [
+    0.472,
+    0.622,
+    0.484,
+    0.634
+   ],
+   "size": "4\"",
+   "confidence": 0.8
+  }
+ ],
+ "instruments": [
+  {
+   "id": "TT-36001",
+   "tag": "TT-36001",
+   "location": "field",
+   "measures": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "bbox": [
+    0.4,
+    0.438,
+    0.411,
+    0.454
+   ],
+   "confidence": 0.95,
+   "notes": "1\" connection on combined purified-H2 header."
+  },
+  {
+   "id": "TI-36001",
+   "tag": "TI-36001",
+   "location": "dcs",
+   "bbox": [
+    0.4,
+    0.398,
+    0.411,
+    0.409
+   ],
+   "attributes": {
+    "alarms": [
+     "HH",
+     "H"
+    ]
+   },
+   "confidence": 0.95
+  },
+  {
+   "id": "AT-36002",
+   "tag": "AT-36002",
+   "location": "field",
+   "measures": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "bbox": [
+    0.426,
+    0.443,
+    0.437,
+    0.454
+   ],
+   "attributes": {
+    "component": "H2"
+   },
+   "confidence": 0.9,
+   "notes": "Labelled H2. HOLD 2: requirement of H2 gas analyzer to be finalized."
+  },
+  {
+   "id": "AC-36002",
+   "tag": "AC-36002",
+   "location": "dcs",
+   "bbox": [
+    0.426,
+    0.398,
+    0.437,
+    0.409
+   ],
+   "attributes": {
+    "alarms": [
+     "H"
+    ]
+   },
+   "confidence": 0.95,
+   "notes": "HOLD 2"
+  },
+  {
+   "id": "AT-36001",
+   "tag": "AT-36001",
+   "location": "field",
+   "measures": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "bbox": [
+    0.45,
+    0.443,
+    0.46,
+    0.454
+   ],
+   "attributes": {
+    "component": "O2"
+   },
+   "confidence": 0.95
+  },
+  {
+   "id": "AC-36001",
+   "tag": "AC-36001",
+   "location": "dcs",
+   "bbox": [
+    0.45,
+    0.398,
+    0.46,
+    0.409
+   ],
+   "attributes": {
+    "alarms": [
+     "H"
+    ]
+   },
+   "confidence": 0.95,
+   "notes": "NOTE 1 (vendor)."
+  },
+  {
+   "id": "PT-36001",
+   "tag": "PT-36001",
+   "location": "field",
+   "measures": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "bbox": [
+    0.543,
+    0.461,
+    0.554,
+    0.472
+   ],
+   "confidence": 0.95,
+   "notes": "Tap upstream of PV-36001, 1\" root valve."
+  },
+  {
+   "id": "PC-36001",
+   "tag": "PC-36001",
+   "location": "dcs",
+   "bbox": [
+    0.543,
+    0.421,
+    0.554,
+    0.432
+   ],
+   "attributes": {
+    "alarms": [
+     "HH",
+     "H",
+     "L"
+    ]
+   },
+   "confidence": 0.95
+  },
+  {
+   "id": "FT-39001",
+   "tag": "FT-39001",
+   "location": "field",
+   "bbox": [
+    0.405,
+    0.713,
+    0.416,
+    0.724
+   ],
+   "confidence": 0.95,
+   "notes": "In-line flowmeter on 2\"-H2-C50H-390031 (in path of L13)."
+  },
+  {
+   "id": "FC-39001",
+   "tag": "FC-39001",
+   "location": "dcs",
+   "bbox": [
+    0.386,
+    0.83,
+    0.397,
+    0.842
+   ],
+   "confidence": 0.95,
+   "notes": "Output leaves the sheet as SIGNAL B50-341 TO C-39001."
+  },
+  {
+   "id": "FT-39002",
+   "tag": "FT-39002",
+   "location": "field",
+   "loop": "F-39003",
+   "bbox": [
+    0.676,
+    0.71,
+    0.687,
+    0.721
+   ],
+   "confidence": 0.95,
+   "notes": "In-line flowmeter on 1\"-H2-G53H-390003 (in path of L30)."
+  },
+  {
+   "id": "PT-39004",
+   "tag": "PT-39004",
+   "location": "field",
+   "measures": {
+    "line": "L30"
+   },
+   "bbox": [
+    0.713,
+    0.7,
+    0.724,
+    0.711
+   ],
+   "confidence": 0.95,
+   "notes": "Tap upstream of FT-39002."
+  },
+  {
+   "id": "PI-39004",
+   "tag": "PI-39004",
+   "location": "dcs",
+   "bbox": [
+    0.713,
+    0.661,
+    0.724,
+    0.672
+   ],
+   "confidence": 0.95,
+   "notes": "Provides pressure compensation (COMP) to FC-39002 and FC-39003."
+  },
+  {
+   "id": "FC-39002",
+   "tag": "FC-39002",
+   "location": "dcs",
+   "bbox": [
+    0.676,
+    0.64,
+    0.687,
+    0.652
+   ],
+   "attributes": {
+    "alarms": [
+     "H",
+     "L"
+    ]
+   },
+   "confidence": 0.95,
+   "notes": "Only measurement input drawn is COMP from PI-39004; no flow transmitter signal drawn into FC-39002. HOLD 1."
+  },
+  {
+   "id": "FC-39003",
+   "tag": "FC-39003",
+   "location": "dcs",
+   "bbox": [
+    0.676,
+    0.661,
+    0.688,
+    0.672
+   ],
+   "attributes": {
+    "alarms": [
+     "H",
+     "L"
+    ]
+   },
+   "confidence": 0.95,
+   "notes": "HOLD 1."
+  }
+ ],
+ "lines": [
+  {
+   "id": "L1",
+   "line_number": "4\"-CWS-A10-610033",
+   "from": "OPC1",
+   "to": "U-36001B",
+   "path": [
+    "V3"
+   ],
+   "service": "CWS",
+   "size": "4\""
+  },
+  {
+   "id": "L2",
+   "line_number": "4\"-CWS-A10-610099",
+   "from": {
+    "line": "L1"
+   },
+   "to": "U-36001A",
+   "path": [
+    "V1"
+   ],
+   "service": "CWS",
+   "size": "4\""
+  },
+  {
+   "id": "L3",
+   "line_number": "4\"-CWR-A10-610024",
+   "from": "U-36001B",
+   "to": "OPC2",
+   "path": [
+    "SG-36001B",
+    "V4"
+   ],
+   "service": "CWR",
+   "size": "4\""
+  },
+  {
+   "id": "L4",
+   "line_number": "4\"-CWR-A10-610100",
+   "from": "U-36001A",
+   "to": {
+    "line": "L3",
+    "after": "V4"
+   },
+   "path": [
+    "SG-36001A",
+    "V2"
+   ],
+   "service": "CWR",
+   "size": "4\""
+  },
+  {
+   "id": "L5",
+   "line_number": "1\"-IA-A12-660023",
+   "from": "OPC3",
+   "to": "U-36001B",
+   "path": [
+    "V6"
+   ],
+   "service": "IA",
+   "size": "1\""
+  },
+  {
+   "id": "L6",
+   "line_number": "1\"-IA-A12-660077",
+   "from": {
+    "line": "L5"
+   },
+   "to": "U-36001A",
+   "path": [
+    "V5"
+   ],
+   "service": "IA",
+   "size": "1\""
+  },
+  {
+   "id": "L7",
+   "line_number": "4\"-H2-C50H-340003",
+   "from": "OPC4",
+   "to": "U-36001B",
+   "path": [
+    "V8"
+   ],
+   "service": "H2",
+   "size": "4\"",
+   "notes": "NO LIQUID POCKET"
+  },
+  {
+   "id": "L8",
+   "line_number": "4\"-H2-C50H-340033",
+   "from": {
+    "line": "L7"
+   },
+   "to": "U-36001A",
+   "path": [
+    "V7"
+   ],
+   "service": "H2",
+   "size": "4\"",
+   "notes": "NO LIQUID POCKET"
+  },
+  {
+   "id": "L9",
+   "line_number": "1\"-WW-A81-800081",
+   "from": "U-36001B",
+   "to": "OPC12",
+   "path": [
+    "V12"
+   ],
+   "service": "WW",
+   "size": "1\"",
+   "notes": "FREE DRAIN"
+  },
+  {
+   "id": "L10",
+   "line_number": "1\"-WW-A81-800008",
+   "from": "U-36001A",
+   "to": {
+    "line": "L9",
+    "after": "V12"
+   },
+   "path": [
+    "V10"
+   ],
+   "service": "WW",
+   "size": "1\""
+  },
+  {
+   "id": "L11",
+   "line_number": "4\"-H2-C50H-360001",
+   "from": "U-36001B",
+   "to": "OPC8",
+   "path": [
+    "V11",
+    "V16",
+    "R1",
+    "PV-36001",
+    "R2",
+    "ZV-36001",
+    "CV1"
+   ],
+   "service": "H2",
+   "size": "4\"",
+   "confidence": 0.85,
+   "notes": "Riser from U-36001B and the collecting header (with TT/AT taps) carry no printed line number; number taken from the main run. Ownership break AK/GEN near the battery limit."
+  },
+  {
+   "id": "L12",
+   "line_number": "4\"-H2-C50H-360011",
+   "from": "U-36001A",
+   "to": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "path": [
+    "V9"
+   ],
+   "service": "H2",
+   "size": "4\""
+  },
+  {
+   "id": "L13",
+   "line_number": "2\"-H2-C50H-390031",
+   "from": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "to": "OPC10",
+   "path": [
+    "V13",
+    "SB1",
+    "ZV-39001",
+    "FT-39001"
+   ],
+   "service": "H2",
+   "size": "2\""
+  },
+  {
+   "id": "L14",
+   "line_number": null,
+   "from": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "to": "SP1",
+   "path": [
+    "V14"
+   ],
+   "service": "H2",
+   "size": "1\"",
+   "notes": "Sample connection 'S'."
+  },
+  {
+   "id": "L15",
+   "line_number": "4\"-H2-C50H-360002",
+   "from": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "to": "OPC7",
+   "path": [
+    "V15",
+    "CV2",
+    "X1",
+    "ZV-36002",
+    "R3",
+    "PV-36002",
+    "R4"
+   ],
+   "service": "H2",
+   "size": "4\"",
+   "notes": "Continues as 12\"-H2-B50H-360002 downstream of PV-36002 (spec break C50H/B50H). FREE DRAIN."
+  },
+  {
+   "id": "L16",
+   "line_number": "1\"-H2-C50H-360010",
+   "from": {
+    "line": "L11",
+    "after": "CV1"
+   },
+   "to": {
+    "line": "L15",
+    "after": "CV2"
+   },
+   "path": [
+    "V17"
+   ],
+   "service": "H2",
+   "size": "1\""
+  },
+  {
+   "id": "L17",
+   "line_number": "X\"-H2-C50H-360012",
+   "from": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "to": "PSV-36001A",
+   "path": [
+    "V18"
+   ],
+   "service": "H2",
+   "notes": "PSV inlet; FREE DRAIN. Ties into the drop between the purified-H2 header and 360001."
+  },
+  {
+   "id": "L18",
+   "line_number": "\"-H2-B50H-360004",
+   "from": "PSV-36001A",
+   "to": "OPC6",
+   "path": [
+    "V21"
+   ],
+   "service": "H2",
+   "notes": "Size printed blank (NOTE 2: PSV outlet line size TBD). FREE DRAIN."
+  },
+  {
+   "id": "L19",
+   "line_number": "X\"-H2-B50H-360013",
+   "from": {
+    "line": "L17"
+   },
+   "to": "PSV-36001B",
+   "path": [
+    "V22"
+   ],
+   "service": "H2",
+   "notes": "FREE DRAIN"
+  },
+  {
+   "id": "L20",
+   "line_number": "X\"-H2-B50H-360014",
+   "from": "PSV-36001B",
+   "to": {
+    "line": "L18",
+    "after": "V21"
+   },
+   "path": [
+    "V25"
+   ],
+   "service": "H2"
+  },
+  {
+   "id": "L21",
+   "line_number": null,
+   "from": {
+    "line": "L17",
+    "after": "V18"
+   },
+   "to": "V19",
+   "path": [],
+   "service": "H2",
+   "confidence": 0.75,
+   "notes": "PSV inlet bleed stub."
+  },
+  {
+   "id": "L22",
+   "line_number": null,
+   "from": {
+    "line": "L18"
+   },
+   "to": "V20",
+   "path": [],
+   "service": "H2",
+   "confidence": 0.75,
+   "notes": "PSV outlet vent stub."
+  },
+  {
+   "id": "L23",
+   "line_number": null,
+   "from": {
+    "line": "L19",
+    "after": "V22"
+   },
+   "to": "V23",
+   "path": [],
+   "service": "H2",
+   "confidence": 0.75,
+   "notes": "PSV inlet bleed stub."
+  },
+  {
+   "id": "L24",
+   "line_number": null,
+   "from": {
+    "line": "L20"
+   },
+   "to": "V24",
+   "path": [],
+   "service": "H2",
+   "confidence": 0.75,
+   "notes": "PSV outlet vent stub."
+  },
+  {
+   "id": "L30",
+   "line_number": "1\"-H2-G53H-390003",
+   "from": "OPC9",
+   "to": {
+    "line": "L11",
+    "after": "V11"
+   },
+   "path": [
+    "FT-39002",
+    "V34",
+    "ZV-39004",
+    "FV-39001",
+    "CV3",
+    "V35",
+    "SB2",
+    "V37"
+   ],
+   "service": "H2",
+   "confidence": 0.85,
+   "notes": "Spec break G53H->C50H at the FV station; downstream 4\" run back to the 360001 header has no printed line number."
+  },
+  {
+   "id": "L31",
+   "line_number": null,
+   "from": {
+    "line": "L30",
+    "after": "V34"
+   },
+   "to": {
+    "line": "L30",
+    "after": "FV-39001"
+   },
+   "path": [
+    "ZV-39005",
+    "FV-39002"
+   ],
+   "service": "H2",
+   "notes": "Parallel control-valve leg of the FV-39001/FV-39002 station."
+  },
+  {
+   "id": "L32",
+   "line_number": "1\"-H2-C50H-390036",
+   "from": {
+    "line": "L30",
+    "after": "FV-39001"
+   },
+   "to": "PSV-39001B",
+   "path": [
+    "V30"
+   ],
+   "service": "H2",
+   "size": "1\"",
+   "notes": "FREE DRAIN. 'MIN.' distance marked between FV station and PSV take-off."
+  },
+  {
+   "id": "L33",
+   "line_number": "1\"-H2-C50H-390035",
+   "from": {
+    "line": "L32"
+   },
+   "to": "PSV-39001A",
+   "path": [
+    "V26"
+   ],
+   "service": "H2",
+   "size": "1\"",
+   "notes": "FREE DRAIN"
+  },
+  {
+   "id": "L34",
+   "line_number": "2\"-H2-B50H-390038",
+   "from": "PSV-39001B",
+   "to": "OPC5",
+   "path": [
+    "V33"
+   ],
+   "service": "H2",
+   "size": "2\"",
+   "notes": "FREE DRAIN"
+  },
+  {
+   "id": "L35",
+   "line_number": "2\"-H2-B50H-390037",
+   "from": "PSV-39001A",
+   "to": {
+    "line": "L34",
+    "after": "V33"
+   },
+   "path": [
+    "V29"
+   ],
+   "service": "H2",
+   "size": "2\""
+  },
+  {
+   "id": "L36",
+   "line_number": null,
+   "from": {
+    "line": "L32",
+    "after": "V30"
+   },
+   "to": "V31",
+   "path": [],
+   "service": "H2",
+   "confidence": 0.75,
+   "notes": "PSV inlet bleed stub."
+  },
+  {
+   "id": "L37",
+   "line_number": null,
+   "from": {
+    "line": "L34"
+   },
+   "to": "V32",
+   "path": [],
+   "service": "H2",
+   "confidence": 0.75,
+   "notes": "PSV outlet vent stub."
+  },
+  {
+   "id": "L38",
+   "line_number": null,
+   "from": {
+    "line": "L33",
+    "after": "V26"
+   },
+   "to": "V27",
+   "path": [],
+   "service": "H2",
+   "confidence": 0.75,
+   "notes": "PSV inlet bleed stub."
+  },
+  {
+   "id": "L39",
+   "line_number": null,
+   "from": {
+    "line": "L35"
+   },
+   "to": "V28",
+   "path": [],
+   "service": "H2",
+   "confidence": 0.75,
+   "notes": "PSV outlet vent stub."
+  },
+  {
+   "id": "L40",
+   "line_number": null,
+   "from": {
+    "line": "L30",
+    "after": "SB2"
+   },
+   "to": "V36",
+   "path": [],
+   "service": "H2",
+   "size": "1\"",
+   "confidence": 0.75,
+   "notes": "1\" drain stub."
+  }
+ ],
+ "signals": [
+  {
+   "from": "TT-36001",
+   "to": "TI-36001",
+   "type": "electrical",
+   "purpose": "measurement"
+  },
+  {
+   "from": "AT-36002",
+   "to": "AC-36002",
+   "type": "electrical",
+   "purpose": "measurement"
+  },
+  {
+   "from": "AT-36001",
+   "to": "AC-36001",
+   "type": "electrical",
+   "purpose": "measurement"
+  },
+  {
+   "from": "PT-36001",
+   "to": "PC-36001",
+   "type": "electrical",
+   "purpose": "measurement"
+  },
+  {
+   "from": "PC-36001",
+   "to": "PV-36001",
+   "type": "electrical",
+   "purpose": "control"
+  },
+  {
+   "from": "PC-36001",
+   "to": "PV-36002",
+   "type": "electrical",
+   "purpose": "control",
+   "notes": "Same PC output also drives PV-36001: split-range pressure control (product vs. vent)."
+  },
+  {
+   "from": "FT-39001",
+   "to": "FC-39001",
+   "type": "electrical",
+   "purpose": "measurement"
+  },
+  {
+   "from": "FC-39001",
+   "to": "OPC11",
+   "type": "electrical",
+   "purpose": "control",
+   "notes": "SIGNAL to C-39001 on B50-341."
+  },
+  {
+   "from": "PT-39004",
+   "to": "PI-39004",
+   "type": "electrical",
+   "purpose": "measurement"
+  },
+  {
+   "from": "PI-39004",
+   "to": "FC-39002",
+   "type": "software",
+   "purpose": "measurement",
+   "notes": "COMP (pressure compensation)."
+  },
+  {
+   "from": "PI-39004",
+   "to": "FC-39003",
+   "type": "software",
+   "purpose": "measurement",
+   "notes": "COMP (pressure compensation)."
+  },
+  {
+   "from": "FT-39002",
+   "to": "FC-39003",
+   "type": "electrical",
+   "purpose": "measurement"
+  },
+  {
+   "from": "FC-39002",
+   "to": "FV-39001",
+   "type": "electrical",
+   "purpose": "control"
+  },
+  {
+   "from": "FC-39003",
+   "to": "FV-39002",
+   "type": "electrical",
+   "purpose": "control",
+   "confidence": 0.75,
+   "notes": "Dashed route from FC-39003 passes beside FV-39001; read as ending at FV-39002."
+  }
+ ],
+ "off_page_connectors": [
+  {
+   "id": "OPC1",
+   "direction": "in",
+   "name": "COOLING WATER SUPPLY B50-423 FROM HEADER",
+   "other_drawing": "B50-423",
+   "other_item": "CWS header",
+   "line_number": "4\"-CWS-A10-610033",
+   "bbox": [
+    0.042,
+    0.625,
+    0.096,
+    0.651
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC2",
+   "direction": "out",
+   "name": "COOLING WATER RETURN B50-423 TO HEADER",
+   "other_drawing": "B50-423",
+   "other_item": "CWR header",
+   "line_number": "4\"-CWR-A10-610024",
+   "bbox": [
+    0.042,
+    0.666,
+    0.096,
+    0.693
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC3",
+   "direction": "in",
+   "name": "INSTRUMENT AIR B50-451 FROM HEADER",
+   "other_drawing": "B50-451",
+   "other_item": "IA header",
+   "line_number": "1\"-IA-A12-660023",
+   "bbox": [
+    0.042,
+    0.776,
+    0.096,
+    0.802
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC4",
+   "direction": "in",
+   "name": "HYDROGEN GAS B50-332 FROM C-34001A/B",
+   "other_drawing": "B50-332",
+   "other_item": "C-34001A/B",
+   "line_number": "4\"-H2-C50H-340003",
+   "bbox": [
+    0.042,
+    0.86,
+    0.096,
+    0.886
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC5",
+   "direction": "out",
+   "name": "H2 VENT GAS B50-491 TO HEADER",
+   "other_drawing": "B50-491",
+   "other_item": "H2 vent header",
+   "line_number": "2\"-H2-B50H-390038",
+   "bbox": [
+    0.042,
+    0.557,
+    0.096,
+    0.584
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC6",
+   "direction": "out",
+   "name": "H2 VENT GAS B50-491 TO HEADER",
+   "other_drawing": "B50-491",
+   "other_item": "H2 vent header",
+   "line_number": "\"-H2-B50H-360004",
+   "bbox": [
+    0.768,
+    0.182,
+    0.822,
+    0.208
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC7",
+   "direction": "out",
+   "name": "H2 VENT GAS B50-491 TO HEADER",
+   "other_drawing": "B50-491",
+   "other_item": "H2 vent header",
+   "line_number": "12\"-H2-B50H-360002",
+   "bbox": [
+    0.768,
+    0.237,
+    0.822,
+    0.264
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC8",
+   "direction": "out",
+   "name": "HYDROGEN GAS B50-101 TO BATTERY LIMIT",
+   "other_drawing": "B50-101",
+   "other_item": "battery limit",
+   "line_number": "4\"-H2-C50H-360001",
+   "bbox": [
+    0.768,
+    0.49,
+    0.822,
+    0.517
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC9",
+   "direction": "in",
+   "name": "HYDROGEN GAS B50-341 FROM VE-39002A-I",
+   "other_drawing": "B50-341",
+   "other_item": "VE-39002A-I",
+   "line_number": "1\"-H2-G53H-390003",
+   "bbox": [
+    0.785,
+    0.715,
+    0.822,
+    0.742
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC10",
+   "direction": "out",
+   "name": "HYDROGEN GAS B50-341 TO VE-39001",
+   "other_drawing": "B50-341",
+   "other_item": "VE-39001",
+   "line_number": "2\"-H2-C50H-390031",
+   "bbox": [
+    0.768,
+    0.786,
+    0.822,
+    0.813
+   ],
+   "confidence": 0.95
+  },
+  {
+   "id": "OPC11",
+   "direction": "out",
+   "name": "SIGNAL B50-341 TO C-39001",
+   "other_drawing": "B50-341",
+   "other_item": "C-39001",
+   "line_number": null,
+   "bbox": [
+    0.768,
+    0.823,
+    0.822,
+    0.85
+   ],
+   "confidence": 0.95,
+   "notes": "Instrument signal connector, not a process line."
+  },
+  {
+   "id": "OPC12",
+   "direction": "out",
+   "name": "WASTE WATER B50-481 TO PT-80001",
+   "other_drawing": "B50-481",
+   "other_item": "PT-80001",
+   "line_number": "1\"-WW-A81-800081",
+   "bbox": [
+    0.768,
+    0.859,
+    0.822,
+    0.886
+   ],
+   "confidence": 0.95
+  }
+ ],
+ "boundaries": [],
+ "tiles_reviewed": [
+  "r1c1",
+  "r1c2",
+  "r1c3",
+  "r1c4",
+  "r2c1",
+  "r2c2",
+  "r2c3",
+  "r2c4",
+  "r3c1",
+  "r3c2",
+  "r3c3",
+  "r3c4"
+ ],
+ "unreadable": []
+}
